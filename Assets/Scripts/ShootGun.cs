@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class ShootGun : MonoBehaviour
 {
@@ -30,6 +31,8 @@ public class ShootGun : MonoBehaviour
     public TMPro.TextMeshProUGUI ammoText;
     public TMPro.TextMeshProUGUI reloadText;
 
+    [SerializeField] private AudioClip[] gunShotSfx;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,6 +58,9 @@ public class ShootGun : MonoBehaviour
                 {
                     enableFlash();
                 }
+
+                AudioManager.instance.PlayRandomSfx(gunShotSfx, transform, 1f);
+
                 ammo -= 1;
                 shootIntervalTimer = 0;
                 Vector3 newFoce = new Vector3(0, 0, 0);
