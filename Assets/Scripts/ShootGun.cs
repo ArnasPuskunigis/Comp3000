@@ -32,6 +32,8 @@ public class ShootGun : MonoBehaviour
     public TMPro.TextMeshProUGUI reloadText;
 
     [SerializeField] private AudioClip[] gunShotSfx;
+    [SerializeField] private AudioClip reloadSfx;
+    [SerializeField] private AudioClip clickSfx;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +46,15 @@ public class ShootGun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            if (ammo == 0)
+            {
+                AudioManager.instance.PlaySfx(clickSfx, transform, 1f);
+            }
+        }
+
         if (Input.GetKey(KeyCode.Mouse0))
         {
             if (ammo == 0)
@@ -87,6 +98,7 @@ public class ShootGun : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.R))
             {
                 reloading = true;
+                AudioManager.instance.PlaySfx(reloadSfx, transform, 0.5f);
             }
         }
 

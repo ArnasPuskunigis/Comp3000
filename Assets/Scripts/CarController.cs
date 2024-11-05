@@ -35,17 +35,20 @@ public class CarController : MonoBehaviour
     public multiplierManager multManager;
     public driftTextManager driftTextManager;
 
+    public EngineAudioScript carEngineAudioScript;
+
     // Start is called before the first frame update
     void Start()
     {
         playerRB = gameObject.GetComponent<Rigidbody>();
+        carEngineAudioScript = transform.gameObject.GetComponent<EngineAudioScript>();
         InstantiateSmoke();
         //wheelParticles.FRWheel.Play();
         //wheelParticles.FLWheel.Play();
         wheelParticles.RRWheel.Play();
         wheelParticles.RLWheel.Play();
     }
-
+     
     void InstantiateSmoke()
     {
         wheelParticles.FRWheel = Instantiate(smokePrefab, colliders.FRWheel.transform.position-Vector3.up*colliders.FRWheel.radius, Quaternion.identity, colliders.FRWheel.transform)
@@ -215,6 +218,7 @@ public class CarController : MonoBehaviour
     {
         if (isDrifting1 || isDrifting2 || isDrifting3 || isDrifting4)
         {
+            carEngineAudioScript.drifting = true;
             if (driftCounter > 1)
             {
                 driftCounter += Time.deltaTime * 2;
@@ -235,6 +239,7 @@ public class CarController : MonoBehaviour
         }
         else
         {
+            carEngineAudioScript.drifting = false;
             driftPoints += driftCounter;
             expManager.addDriftPoints(driftCounter);
             multManager.getDrift(driftCounter);
