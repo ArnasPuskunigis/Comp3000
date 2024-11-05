@@ -37,6 +37,10 @@ public class exp : MonoBehaviour
     public xpSliderController xpSliderController;
     public int driftExpGain;
 
+    public bool levelInit;
+
+    public AudioClip levelUpSound;
+    public AudioClip xpUpSound;
 
     // Start is called before the first frame update
     void Awake()
@@ -54,12 +58,15 @@ public class exp : MonoBehaviour
             moneyManager.addToMoney(50);
         }
         saveManager.SaveXp(xp);
+        AudioManager.instance.PlaySfx(xpUpSound, transform, 0.1f);
     }
 
     public void setExp(float xpAmount)
     {
+        levelInit = false;
         xp = xpAmount;
         checkLevel();
+        levelInit = true;
     }
 
     public void checkLevel()
@@ -71,6 +78,10 @@ public class exp : MonoBehaviour
             {
                 if (level < allLevels.Length - 2)
                 {
+                    if (levelInit == true)
+                    {
+                        AudioManager.instance.PlaySfx(levelUpSound, transform, 1f);
+                    }
                     level += 1;
                     nextXp = allLevels[level];
                     xpSliderController.levelUp(level, nextXp, xp, allLevels[level-1]);
