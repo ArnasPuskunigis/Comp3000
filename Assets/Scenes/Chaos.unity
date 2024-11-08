@@ -15187,6 +15187,7 @@ MonoBehaviour:
   carColourStr: 
   carWeaponStr: 
   carPerkStr: 
+  totalTargetsHit: 0
   xpManager: {fileID: 649540946}
   moneyManager: {fileID: 224940238}
 --- !u!4 &839795033
@@ -32859,6 +32860,58 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64bc74b6b3ad7e549b253dbe1b275247, type: 3}
+--- !u!1 &1837091893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1837091895}
+  - component: {fileID: 1837091894}
+  m_Layer: 0
+  m_Name: MasteryManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1837091894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837091893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10c6552541a5b9b448072b3d7e72e69e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bronzeMasteryUnlocked: 0
+  silverMasteryUnlocked: 0
+  goldMasteryUnlocked: 0
+  bronzeMasteryReq: 50
+  silverMasteryReq: 150
+  goldMasteryReq: 500
+  totalTargetsHit: 0
+  saveManager: {fileID: 839795032}
+--- !u!4 &1837091895
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837091893}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.550012, y: -29.398134, z: -90.99198}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1838282288
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40576,6 +40629,7 @@ SceneRoots:
   - {fileID: 918878856}
   - {fileID: 998050563}
   - {fileID: 625912217}
+  - {fileID: 1837091895}
   - {fileID: 776899231}
   - {fileID: 1660903076}
   - {fileID: 374141359}

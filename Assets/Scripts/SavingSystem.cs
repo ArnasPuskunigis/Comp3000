@@ -10,6 +10,8 @@ public class SavingSystem : MonoBehaviour
     public string carWeaponStr;
     public string carPerkStr;
 
+    public int totalTargetsHit;
+
     public exp xpManager;
     public moneyManager moneyManager;
 
@@ -18,6 +20,22 @@ public class SavingSystem : MonoBehaviour
         xpManager.setExp(LoadXp());
         moneyManager.updateMoney(LoadMoney());
         LoadCar();
+        totalTargetsHit = loadTargetsHit();
+    }
+
+    public int loadTargetsHit()
+    {
+        int temp = PlayerPrefs.GetInt("TotalTargetsHit");
+        Debug.Log(temp);
+        return temp;
+    }
+
+    public void addToTargetsHit()
+    {
+        totalTargetsHit++;
+        PlayerPrefs.SetInt("TotalTargetsHit", totalTargetsHit);
+        Debug.Log(totalTargetsHit);
+        PlayerPrefs.Save();
     }
 
     public void SaveMoney(int money)
@@ -134,5 +152,6 @@ public class SavingSystem : MonoBehaviour
     {
 
     }
+
 
 }

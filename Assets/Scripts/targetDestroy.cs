@@ -14,12 +14,15 @@ public class targetDestroy : MonoBehaviour
     [SerializeField] exp expManager;
     public multiplierManager multManager;
 
+    public SavingSystem saveManager;
+
     // Start is called before the first frame update
     void Start()
     {
         targetsParent = GameObject.Find("destroyed");
         theScoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
         expManager = GameObject.Find("ExpManager").GetComponent<exp>();
+        saveManager = GameObject.Find("SaveManager").GetComponent<SavingSystem>();
     }
 
     void OnCollisionEnter(Collision collision)
@@ -32,6 +35,7 @@ public class targetDestroy : MonoBehaviour
                 //theScoreManager.addScore(1);
                 expManager.targetHit(1);
                 multManager.getTargets(1);
+                saveManager.addToTargetsHit();
             }
             else
             {
