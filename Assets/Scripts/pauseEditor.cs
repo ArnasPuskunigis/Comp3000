@@ -7,12 +7,12 @@ public class pauseEditor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!UnityEditor.EditorApplication.isPaused)
-        {
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                Debug.Break();
-            }
-        }
+        //if (!UnityEditor.isPaused)
+        //{
+        //    if (Input.GetKeyDown(KeyCode.L))
+        //    {
+        //        Debug.Break();
+        //    }
+        //}
     }
 }
