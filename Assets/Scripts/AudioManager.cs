@@ -34,6 +34,21 @@ public class AudioManager : MonoBehaviour
 
     }
 
+    public AudioSource GetPlaySfx(AudioClip audioClip, Transform spawnTransform, float volume)
+    {
+        AudioSource audioSource = Instantiate(soundFxObject, spawnTransform.position, Quaternion.identity);
+
+        audioSource.clip = audioClip;
+
+        audioSource.volume = volume;
+
+        audioSource.Play();
+
+        float clipLength = audioSource.clip.length;
+
+        return audioSource;
+    }
+
     public void PlayRandomSfx(AudioClip[] audioClip, Transform spawnTransform, float volume)
     {
         int rand = Random.Range(0, audioClip.Length);
