@@ -8690,8 +8690,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 4.0557765e-11, y: 0.99972874, z: 0.02329106, w: -0.0000000017408722}
-  m_LocalPosition: {x: 172.81, y: 3.826, z: 51.879997}
+  m_LocalRotation: {x: 4.0557762e-11, y: 0.99972874, z: 0.02329106, w: -0.0000000017408722}
+  m_LocalPosition: {x: 156.04, y: 3.826, z: 51.879997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9306,6 +9306,8 @@ MonoBehaviour:
   lavenderColour: {fileID: 2100000, guid: 3487197174f60844a9bbfff641fc9961, type: 2}
   peachColour: {fileID: 2100000, guid: 8751941ab5b04554099f0d8993030c52, type: 2}
   pinkColour: {fileID: 2100000, guid: 74126c34b9e79ae4bbcc6a49da3c6660, type: 2}
+  bronzeColour: {fileID: 2100000, guid: 40958b145f905e845bd1c1fbc6764b2d, type: 2}
+  silverColour: {fileID: 2100000, guid: df2ecd11508fe13489d55c84bb958001, type: 2}
   goldColour: {fileID: 2100000, guid: 426ea42629003c04a96152548e05a433, type: 2}
   tintWindowsColour: {fileID: 2100000, guid: 498319704a0bcfe49962304bf0f0cb83, type: 2}
   slowCarWeaponPistol: {fileID: 7247640272918309812}
@@ -10565,8 +10567,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 458410234}
   serializedVersion: 2
-  m_LocalRotation: {x: 4.0557765e-11, y: 0.99972874, z: 0.02329106, w: -0.0000000017408722}
-  m_LocalPosition: {x: 172.81, y: 3.826, z: 51.879997}
+  m_LocalRotation: {x: 4.0557762e-11, y: 0.99972874, z: 0.02329106, w: -0.0000000017408722}
+  m_LocalPosition: {x: 156.04, y: 3.826, z: 51.879997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12501,6 +12503,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5956937305071388701}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 20.58}
+--- !u!1 &648776564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 59b350461e58145458b7f4ed85389374,
+    type: 3}
+  m_PrefabInstance: {fileID: 1894195285}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &648776565
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 648776564}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4579454407841743219, guid: 59b350461e58145458b7f4ed85389374, type: 3}
 --- !u!1 &649540945
 GameObject:
   m_ObjectHideFlags: 0
@@ -15188,6 +15218,7 @@ MonoBehaviour:
   carWeaponStr: 
   carPerkStr: 
   totalTargetsHit: 0
+  totalDriftPoints: 0
   xpManager: {fileID: 649540946}
   moneyManager: {fileID: 224940238}
 --- !u!4 &839795033
@@ -32860,58 +32891,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64bc74b6b3ad7e549b253dbe1b275247, type: 3}
---- !u!1 &1837091893
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1837091895}
-  - component: {fileID: 1837091894}
-  m_Layer: 0
-  m_Name: MasteryManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1837091894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1837091893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10c6552541a5b9b448072b3d7e72e69e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bronzeMasteryUnlocked: 0
-  silverMasteryUnlocked: 0
-  goldMasteryUnlocked: 0
-  bronzeMasteryReq: 50
-  silverMasteryReq: 150
-  goldMasteryReq: 500
-  totalTargetsHit: 0
-  saveManager: {fileID: 839795032}
---- !u!4 &1837091895
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1837091893}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.550012, y: -29.398134, z: -90.99198}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1838282288
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33509,7 +33488,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 59b350461e58145458b7f4ed85389374,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 648776565}
   m_SourcePrefab: {fileID: 100100000, guid: 59b350461e58145458b7f4ed85389374, type: 3}
 --- !u!1 &1894219745
 GameObject:
@@ -37474,7 +37457,7 @@ PrefabInstance:
     - target: {fileID: 8838256023224454652, guid: 1381bd1a6ba88ef4b977152fb2924844,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 170.06
+      value: 153.29
       objectReference: {fileID: 0}
     - target: {fileID: 8838256023224454652, guid: 1381bd1a6ba88ef4b977152fb2924844,
         type: 3}
@@ -38705,7 +38688,7 @@ PrefabInstance:
     - target: {fileID: 9134121969015456461, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 172.81
+      value: 156.04
       objectReference: {fileID: 0}
     - target: {fileID: 9134121969015456461, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
         type: 3}
@@ -39454,7 +39437,7 @@ PrefabInstance:
     - target: {fileID: 7568741472700998974, guid: 54612deb9d68572429c433477696517d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 175.85
+      value: 159.08
       objectReference: {fileID: 0}
     - target: {fileID: 7568741472700998974, guid: 54612deb9d68572429c433477696517d,
         type: 3}
@@ -40629,7 +40612,6 @@ SceneRoots:
   - {fileID: 918878856}
   - {fileID: 998050563}
   - {fileID: 625912217}
-  - {fileID: 1837091895}
   - {fileID: 776899231}
   - {fileID: 1660903076}
   - {fileID: 374141359}

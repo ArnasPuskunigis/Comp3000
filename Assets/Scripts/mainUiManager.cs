@@ -32,6 +32,7 @@ public class mainUiManager : MonoBehaviour
     public GameObject weaponMenuItems;
     public GameObject paintMenuItems;
     public GameObject perkMenuItems;
+    public GameObject masteryMenuItems;
 
     public UnityEngine.UI.Button playBackButton;
     public UnityEngine.UI.Button garageBackButton;
@@ -365,6 +366,18 @@ public class mainUiManager : MonoBehaviour
         mainMenuItems.SetActive(false);
     }
 
+    public void masteryPressed()
+    {
+        masteryMenuItems.SetActive(true);
+        mainMenuItems.SetActive(false);
+    }
+
+    public void masteryBackPressed()
+    {
+        masteryMenuItems.SetActive(false);
+        mainMenuItems.SetActive(true);
+    }
+
     public void garagePressed()
     {
         if (bodyButton != null)
@@ -558,20 +571,28 @@ public class mainUiManager : MonoBehaviour
         {
             key = 8;
         }
-        else if (color == "gold")
+        else if (color == "bronze")
         {
             key = 9;
         }
-        else if (color == "ice")
+        else if (color == "silver")
         {
             key = 10;
+        }
+        else if (color == "gold")
+        {
+            key = 11;
+        }
+        else if (color == "ice")
+        {
+            key = 12;
         }
 
         for (int i = 0; i < carColourButtons.Length; i++)
         {
             if (i == key)
             {
-                if (key == 10)
+                if (key == 12)
                 {
                     MeshFilter carMeshFilter = currentCar.GetComponent<MeshFilter>();
                     MeshRenderer carMeshRenderer = currentCar.GetComponent<MeshRenderer>();
@@ -607,15 +628,15 @@ public class mainUiManager : MonoBehaviour
                     tempMats = carRenderer.materials;
                     tempMats[0] = carMaterials[i];
 
-                    if (color == "gold")
+                    if (color == "gold" || color == "silver" || color == "bronze")
                     {
                         if (currentCarStr == "medium")
                         {
-                            tempMats[5] = carMaterials[i + 1];
+                            tempMats[5] = carMaterials[carMaterials.Length - 1];
                         }
                         else
                         {
-                            tempMats[1] = carMaterials[i + 1];
+                            tempMats[1] = carMaterials[carMaterials.Length - 1];
                         }
                     }
                     else

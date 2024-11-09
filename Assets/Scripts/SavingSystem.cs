@@ -11,6 +11,7 @@ public class SavingSystem : MonoBehaviour
     public string carPerkStr;
 
     public int totalTargetsHit;
+    public int totalDriftPoints;
 
     public exp xpManager;
     public moneyManager moneyManager;
@@ -21,12 +22,18 @@ public class SavingSystem : MonoBehaviour
         moneyManager.updateMoney(LoadMoney());
         LoadCar();
         totalTargetsHit = loadTargetsHit();
+        totalDriftPoints = loadDriftPoints();
     }
 
     public int loadTargetsHit()
     {
         int temp = PlayerPrefs.GetInt("TotalTargetsHit");
-        Debug.Log(temp);
+        return temp;
+    }
+
+    public int loadDriftPoints()
+    {
+        int temp = PlayerPrefs.GetInt("TotalDriftPoints");
         return temp;
     }
 
@@ -34,7 +41,13 @@ public class SavingSystem : MonoBehaviour
     {
         totalTargetsHit++;
         PlayerPrefs.SetInt("TotalTargetsHit", totalTargetsHit);
-        Debug.Log(totalTargetsHit);
+        PlayerPrefs.Save();
+    }
+
+    public void addToDriftPoints(int driftPoints)
+    {
+        totalDriftPoints += driftPoints;
+        PlayerPrefs.SetInt("TotalDriftPoints", totalDriftPoints);
         PlayerPrefs.Save();
     }
 

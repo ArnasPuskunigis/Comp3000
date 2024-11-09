@@ -37,7 +37,6 @@ public class moneyManager : MonoBehaviour
 
     public void addToMoney(int newMoney)
     {
-        Debug.LogError("Adding money");
         money += newMoney;
         if (moneyText != null)
         {

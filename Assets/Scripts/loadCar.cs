@@ -30,6 +30,8 @@ public class loadCar : MonoBehaviour
     public Material lavenderColour;
     public Material peachColour;
     public Material pinkColour;
+    public Material bronzeColour;
+    public Material silverColour;
     public Material goldColour;
     public Material tintWindowsColour;
 
@@ -160,6 +162,42 @@ public class loadCar : MonoBehaviour
                 Material[] tempMats;
                 tempMats = carRenderer.materials;
                 tempMats[0] = goldColour;
+
+                if (SaveManagerScript.carTypeStr == "medium")
+                {
+                    tempMats[5] = tintWindowsColour;
+                }
+                else
+                {
+                    tempMats[1] = tintWindowsColour;
+                }
+                carRenderer.materials = tempMats;
+            }
+            else if (SaveManagerScript.carColourStr == "silver")
+            {
+                MeshRenderer carRenderer;
+                carRenderer = currentCarBody.GetComponent<MeshRenderer>();
+                Material[] tempMats;
+                tempMats = carRenderer.materials;
+                tempMats[0] = silverColour;
+
+                if (SaveManagerScript.carTypeStr == "medium")
+                {
+                    tempMats[5] = tintWindowsColour;
+                }
+                else
+                {
+                    tempMats[1] = tintWindowsColour;
+                }
+                carRenderer.materials = tempMats;
+            }
+            else if (SaveManagerScript.carColourStr == "bronze")
+            {
+                MeshRenderer carRenderer;
+                carRenderer = currentCarBody.GetComponent<MeshRenderer>();
+                Material[] tempMats;
+                tempMats = carRenderer.materials;
+                tempMats[0] = bronzeColour;
 
                 if (SaveManagerScript.carTypeStr == "medium")
                 {

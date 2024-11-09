@@ -129,6 +129,7 @@ public class exp : MonoBehaviour
             addExp((input * expMultiplier));
             driftExpGain = (int)((input * expMultiplier));
             Instantiate(driftText, uiSpawner.transform.position, new Quaternion());
+            saveManager.addToDriftPoints((int)input);
         }
         //driftPoints += input;
     }
