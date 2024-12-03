@@ -50,10 +50,18 @@ public class openCrate : MonoBehaviour
     public string recentRarirty;
     public bool itemReceived;
 
+    public moneyManager moneyManager;
+
+    public TMPro.TextMeshProUGUI moneyRewardText;
+
+    public int tempMoneyWon;
+
     // Start is called before the first frame update
     void Start()
     {
+        crateCount = PlayerPrefs.GetInt("CrateCount");
         crateCountText.text = "Crates Remaining: " + crateCount;
+
     }
 
     public void showRarity(Animator rarityImage)
@@ -67,23 +75,30 @@ public class openCrate : MonoBehaviour
     {
         if (recentRarirty == "common")
         {
-            //add money 50
+            moneyRewardText.text = "$50!";
+            tempMoneyWon = 50;
+            Invoke("showRewardText", 1f);
             //add matte skins for s-31
             //add matte skins for pistol
         }
         else if (recentRarirty == "rare")
         {
-            //add money 100
-            //add gold skin for m-71
-            //add gold skin for smg
+            moneyRewardText.text = "$200!";
+            tempMoneyWon = 200;
+            Invoke("showRewardText", 1f);
         }
         else if (recentRarirty == "epic")
         {
+            moneyRewardText.text = "$500!";
+            tempMoneyWon = 500;
+            Invoke("showRewardText", 1f);
             //add perks 1,2, or 3
-            //add xp tokens??
         }
         else if (recentRarirty == "legendary")
         {
+            moneyRewardText.text = "$1500!";
+            tempMoneyWon = 1500;
+            Invoke("showRewardText", 1f);
             //add ice skin for f-71
             //add ice skin for smg
         }
@@ -91,38 +106,50 @@ public class openCrate : MonoBehaviour
         itemReceived = true;
     }
 
+    public void showRewardText()
+    {
+        moneyRewardText.gameObject.SetActive(true);
+        moneyManager.addToMoney(tempMoneyWon);
+    }
+
     // Update is called once per frame
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            crateCount+=5;
-            crateCountText.text = "Crates Remaining: " + crateCount;
-        }
+        //if (Input.GetKeyDown(KeyCode.UpArrow))
+        //{
+        //    crateCount+=5;
+        //    crateCountText.text = "Crates Remaining: " + crateCount;
+        //}
 
         if (Input.GetKeyDown(KeyCode.Space) && crateCount >=1 && itemReceived)
         //if (crateCount >= 1)
         {
             if (boxAnimManager.exploded)
             {
-                boxAnimManager.resetBox();
-                commonImage.GetComponent<Animator>().SetBool("fadeIn", false);
-                rareImage.GetComponent<Animator>().SetBool("fadeIn", false);
-                epicImage.GetComponent<Animator>().SetBool("fadeIn", false);
-                legendaryImage.GetComponent<Animator>().SetBool("fadeIn", false);
+                resetBoxUI();
             }
             else
             {
                 openTheCrate();
-                
             }
-
 
         }
 
     }
 
+    public void resetBoxUI()
+    {
+        if (boxAnimManager.exploded)
+        {
+            boxAnimManager.resetBox();
+            moneyRewardText.gameObject.SetActive(false);
+            commonImage.GetComponent<Animator>().SetBool("fadeIn", false);
+            rareImage.GetComponent<Animator>().SetBool("fadeIn", false);
+            epicImage.GetComponent<Animator>().SetBool("fadeIn", false);
+            legendaryImage.GetComponent<Animator>().SetBool("fadeIn", false);
+        }
+    }
     public void openTheCrate()
     {
         crateCount--;
@@ -164,6 +191,9 @@ public class openCrate : MonoBehaviour
             showRarity(legendaryImage.GetComponent<Animator>());
             legendaryCount++;
         }
+
+        PlayerPrefs.SetInt("CrateCount", crateCount);
+        PlayerPrefs.Save();
     }
 
     public void chooseItem()

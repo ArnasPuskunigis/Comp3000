@@ -150,6 +150,8 @@ public class mainUiManager : MonoBehaviour
     ColorBlock paintButtonCB;
     ColorBlock perkButtonCB;
 
+    public openCrate crateManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -341,6 +343,7 @@ public class mainUiManager : MonoBehaviour
 
     public void cratesPressed()
     {
+        crateManager.crateCount = PlayerPrefs.GetInt("CrateCount");
         cratesMenuItems.SetActive(true);
         mainMenuItems.SetActive(false);
         mainCamera.transform.localPosition = new Vector3(104f, 1.49f, -117f);
@@ -977,9 +980,9 @@ public class mainUiManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.M)) 
-        {
-            theMoneyManager.addToMoney(550);
-        }
+        //if (Input.GetKeyUp(KeyCode.M)) 
+        //{
+        //    theMoneyManager.addToMoney(550);
+        //}
     }
 }

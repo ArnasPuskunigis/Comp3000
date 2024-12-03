@@ -14,4 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chaos.unity
     guid: bac815c648ff2554fa5b2851b03dabc3
-  m_configObjects: {}
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 119241e2d7a75c143864111fae2d879a,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: dd114aa021577df458e102f74c0b56da,
+      type: 2}

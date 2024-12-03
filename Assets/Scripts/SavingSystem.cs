@@ -94,11 +94,10 @@ public class SavingSystem : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.N))
+        if (Input.GetKey(KeyCode.N) && Input.GetKey(KeyCode.RightControl))
         {
             PlayerPrefs.DeleteAll();
         }
-
     }
 
     public void SaveMediumCarUnlock()

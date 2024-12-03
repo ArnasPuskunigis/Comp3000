@@ -9,10 +9,23 @@ public class RadioManager : MonoBehaviour
     public int currentMusicIndex;
     public float musicVolume;
 
+    public static RadioManager Instance { get; private set; }
+
     // Start is called before the first frame update
     void Awake()
    {
-        DontDestroyOnLoad(this);
+        if (Instance == null)
+        {
+            Instance = this;
+            // Make sure this instance persists across scenes
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            // Destroy duplicate instance if it already exists
+            Destroy(gameObject);
+        }
+
         if (soundtracks != null && soundtracks.Length > 0)
         {
             // Initialize the soundPlayers array

@@ -41,10 +41,33 @@ public class exp : MonoBehaviour
     public AudioClip levelUpSound;
     public AudioClip xpUpSound;
 
-    // Start is called before the first frame update
+    public ParticleSystem slowLvlUpParticles;
+    public ParticleSystem mediumLvlUpParticles;
+    public ParticleSystem fastLvlUpParticles;
+
+    public string carType;
+
+    public GameObject levelUpText;
+
     void Awake()
     {
         nextXp = allLevels[level];
+    }
+
+    private void Start()
+    {
+        if (saveManager.carTypeStr == "slow")
+        {
+            carType = "slow";
+        }
+        else if (saveManager.carTypeStr == "medium")
+        {
+            carType = "medium";
+        }
+        else if (saveManager.carTypeStr == "fast")
+        {
+            carType = "fast";
+        }
     }
 
     public void addExp(float xpAmount)
@@ -55,6 +78,22 @@ public class exp : MonoBehaviour
         if (level > currentLevel)
         {
             moneyManager.addToMoney(50);
+            int temp = PlayerPrefs.GetInt("CrateCount");
+            PlayerPrefs.SetInt("CrateCount", temp + 1);
+            PlayerPrefs.Save();
+            enableLevelUpText();
+            if (carType == "slow")
+            {
+                slowLvlUpParticles.Play();
+            }
+            else if (carType == "medium")
+            {
+                mediumLvlUpParticles.Play();
+            }
+            else if (carType == "fast")
+            {
+                fastLvlUpParticles.Play();
+            }
         }
         saveManager.SaveXp(xp);
         AudioManager.instance.PlaySfx(xpUpSound, transform, 0.1f);
@@ -133,8 +172,15 @@ public class exp : MonoBehaviour
         //driftPoints += input;
     }
 
-
-
+    public void enableLevelUpText()
+    {
+        levelUpText.SetActive(true);
+        Invoke("disableLevelUpText", 1);
+    }
+    public void disableLevelUpText()
+    {
+        levelUpText.SetActive(false);
+    }
 
 
     // Update is called once per frame
