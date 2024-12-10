@@ -16,6 +16,9 @@ public class SpinGun : MonoBehaviour
     public bool mouseControls;
     public Vector2 mousePos;
 
+    public bool EnableVR;
+    public GameObject rightHand;
+
     private void Start()
     {
         Cursor.visible = false;
@@ -43,12 +46,23 @@ public class SpinGun : MonoBehaviour
 
         if (mouseControls)
         {
-
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 10000f, ~IgnoreMe))
+            if (EnableVR) 
             {
-                gunRot.transform.LookAt(hit.point);
+                Ray ray = new Ray(rightHand.transform.position, rightHand.transform.forward);
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit, 10000f, ~IgnoreMe))
+                {
+                    gunRot.transform.LookAt(hit.point);
+                }
+            }
+            else
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+                if (Physics.Raycast(ray, out hit, 10000f, ~IgnoreMe))
+                {
+                    gunRot.transform.LookAt(hit.point);
+                }
             }
 
         }

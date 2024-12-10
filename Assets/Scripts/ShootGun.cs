@@ -35,6 +35,8 @@ public class ShootGun : MonoBehaviour
     [SerializeField] private AudioClip reloadSfx;
     [SerializeField] private AudioClip clickSfx;
 
+    public bool EnableVR;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,74 +48,147 @@ public class ShootGun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (EnableVR)
         {
-            if (ammo == 0)
+            if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger))
             {
-                AudioManager.instance.PlaySfx(clickSfx, transform, 1f);
-            }
-        }
-
-        if (Input.GetKey(KeyCode.Mouse0))
-        {
-            if (ammo == 0)
-            {
-                hasAmmo = false;
-                reloadText.gameObject.SetActive(true);
-            }
-
-            if (hasAmmo && shootIntervalTimer >= shootInterval)
-            {
-                if (!isFlashing)
+                if (ammo == 0)
                 {
-                    enableFlash();
+                    AudioManager.instance.PlaySfx(clickSfx, transform, 1f);
+                }
+            }
+
+            if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger))
+            {
+                if (ammo == 0)
+                {
+                    hasAmmo = false;
+                    reloadText.gameObject.SetActive(true);
                 }
 
-                AudioManager.instance.PlayRandomSfx(gunShotSfx, transform, 1f);
+                if (hasAmmo && shootIntervalTimer >= shootInterval)
+                {
+                    if (!isFlashing)
+                    {
+                        enableFlash();
+                    }
 
-                ammo -= 1;
-                shootIntervalTimer = 0;
-                Vector3 newFoce = new Vector3(0, 0, 0);
-                newFoce = gun.transform.forward;
+                    AudioManager.instance.PlayRandomSfx(gunShotSfx, transform, 1f);
 
-                //Add force to car for the bullet shot
-                carBody.AddForceAtPosition(-(newFoce * shootForce), forcePoint.position, ForceMode.Impulse);
+                    ammo -= 1;
+                    shootIntervalTimer = 0;
+                    Vector3 newFoce = new Vector3(0, 0, 0);
+                    newFoce = gun.transform.forward;
 
-                Instantiate(bulletObject, forcePoint.position, forcePoint.rotation, bulletParent.transform);
-                GameObject newParticles = Instantiate(bulletParticles, forcePoint.position, forcePoint.rotation, bulletParent.transform);
-                newParticles.transform.rotation = Quaternion.LookRotation(newParticles.transform.right);
-                ammoText.text = "Ammo: " + ammo.ToString() + "/" + ammoCapacity.ToString();
+                    //Add force to car for the bullet shot
+                    carBody.AddForceAtPosition(-(newFoce * shootForce), forcePoint.position, ForceMode.Impulse);
+
+                    Instantiate(bulletObject, forcePoint.position, forcePoint.rotation, bulletParent.transform);
+                    GameObject newParticles = Instantiate(bulletParticles, forcePoint.position, forcePoint.rotation, bulletParent.transform);
+                    newParticles.transform.rotation = Quaternion.LookRotation(newParticles.transform.right);
+                    ammoText.text = "Ammo: " + ammo.ToString() + "/" + ammoCapacity.ToString();
+                }
+
             }
 
-        }
-
-        if (hasAmmo && shootIntervalTimer < shootInterval && !reloading)
-        {
-            shootIntervalTimer += Time.deltaTime;
-        }
-
-        if (ammo != ammoCapacity && !reloading)
-        {
-            if (Input.GetKeyDown(KeyCode.R))
+            if (hasAmmo && shootIntervalTimer < shootInterval && !reloading)
             {
-                reloading = true;
-                AudioManager.instance.PlaySfx(reloadSfx, transform, 0.5f);
+                shootIntervalTimer += Time.deltaTime;
+            }
+
+            if (ammo != ammoCapacity && !reloading)
+            {
+                if (OVRInput.Get(OVRInput.Button.Two))
+                {
+                    reloading = true;
+                    AudioManager.instance.PlaySfx(reloadSfx, transform, 0.5f);
+                }
+            }
+
+            if (reloading)
+            {
+                reloadTimer += Time.deltaTime;
+                if (reloadTimer >= reloadTime)
+                {
+                    reloadTimer = 0;
+                    reloading = false;
+                    ammo = ammoCapacity;
+                    hasAmmo = true;
+                    reloadText.gameObject.SetActive(false);
+                    ammoText.text = "Ammo: " + ammo.ToString() + "/" + ammoCapacity.ToString();
+                }
             }
         }
-
-        if (reloading)
+        else
         {
-            reloadTimer += Time.deltaTime;
-            if (reloadTimer >= reloadTime)
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                reloadTimer = 0;
-                reloading = false;
-                ammo = ammoCapacity;
-                hasAmmo = true;
-                reloadText.gameObject.SetActive(false);
-                ammoText.text = "Ammo: " + ammo.ToString() + "/" + ammoCapacity.ToString();
-            } 
+                if (ammo == 0)
+                {
+                    AudioManager.instance.PlaySfx(clickSfx, transform, 1f);
+                }
+            }
+
+            if (Input.GetKey(KeyCode.Mouse0))
+            {
+                if (ammo == 0)
+                {
+                    hasAmmo = false;
+                    reloadText.gameObject.SetActive(true);
+                }
+
+                if (hasAmmo && shootIntervalTimer >= shootInterval)
+                {
+                    if (!isFlashing)
+                    {
+                        enableFlash();
+                    }
+
+                    AudioManager.instance.PlayRandomSfx(gunShotSfx, transform, 1f);
+
+                    ammo -= 1;
+                    shootIntervalTimer = 0;
+                    Vector3 newFoce = new Vector3(0, 0, 0);
+                    newFoce = gun.transform.forward;
+
+                    //Add force to car for the bullet shot
+                    carBody.AddForceAtPosition(-(newFoce * shootForce), forcePoint.position, ForceMode.Impulse);
+
+                    Instantiate(bulletObject, forcePoint.position, forcePoint.rotation, bulletParent.transform);
+                    GameObject newParticles = Instantiate(bulletParticles, forcePoint.position, forcePoint.rotation, bulletParent.transform);
+                    newParticles.transform.rotation = Quaternion.LookRotation(newParticles.transform.right);
+                    ammoText.text = "Ammo: " + ammo.ToString() + "/" + ammoCapacity.ToString();
+                }
+
+            }
+
+            if (hasAmmo && shootIntervalTimer < shootInterval && !reloading)
+            {
+                shootIntervalTimer += Time.deltaTime;
+            }
+
+            if (ammo != ammoCapacity && !reloading)
+            {
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    reloading = true;
+                    AudioManager.instance.PlaySfx(reloadSfx, transform, 0.5f);
+                }
+            }
+
+            if (reloading)
+            {
+                reloadTimer += Time.deltaTime;
+                if (reloadTimer >= reloadTime)
+                {
+                    reloadTimer = 0;
+                    reloading = false;
+                    ammo = ammoCapacity;
+                    hasAmmo = true;
+                    reloadText.gameObject.SetActive(false);
+                    ammoText.text = "Ammo: " + ammo.ToString() + "/" + ammoCapacity.ToString();
+                }
+            }
         }
 
     }

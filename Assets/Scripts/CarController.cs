@@ -37,6 +37,8 @@ public class CarController : MonoBehaviour
 
     public EngineAudioScript carEngineAudioScript;
 
+    public bool EnableVR;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -75,46 +77,32 @@ public class CarController : MonoBehaviour
 
     void CheckInput()
     {
-        gasInput = Input.GetAxis("Vertical");
-        if (gasInput > 0)
+        if (EnableVR)
         {
-        }
-        if (gasInput < 0)
-        {
-        }
-        steeringInput = Input.GetAxis("Horizontal");
-        if (steeringInput > 0)
-        {
-        }
-        if (steeringInput < 0)
-        {
-        }
-        slipAngle = Vector3.Angle(transform.forward, playerRB.velocity-transform.forward);
-
-                //fixed code to brake even after going on reverse by Andrew Alex 
-        float movingDirection = Vector3.Dot(transform.forward, playerRB.velocity);
-        if (movingDirection < -0.5f && gasInput > 0)
-        {
-            brakeInput = Mathf.Abs(gasInput);
-        }
-        else if (movingDirection > 0.5f && gasInput < 0)
-        {
-            brakeInput = Mathf.Abs(gasInput);
-        }
-        else
-        {
-            brakeInput = 0;
-        }
-        
-
-
-        /*
-        old tutorial code
-        if (slipAngle < 120f) {
-            if (gasInput < 0)
+            if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger))
             {
-                brakeInput = Mathf.Abs( gasInput);
+                gasInput = 1;
+            }
+            else if (OVRInput.Get(OVRInput.Button.PrimaryHandTrigger))
+            {
+                gasInput = -1;
+            }
+            else
+            {
                 gasInput = 0;
+            }
+
+            steeringInput = Input.GetAxis("Horizontal");
+            slipAngle = Vector3.Angle(transform.forward, playerRB.velocity - transform.forward);
+
+            float movingDirection = Vector3.Dot(transform.forward, playerRB.velocity);
+            if (movingDirection < -0.5f && gasInput > 0)
+            {
+                brakeInput = Mathf.Abs(gasInput);
+            }
+            else if (movingDirection > 0.5f && gasInput < 0)
+            {
+                brakeInput = Mathf.Abs(gasInput);
             }
             else
             {
@@ -123,8 +111,24 @@ public class CarController : MonoBehaviour
         }
         else
         {
-            brakeInput = 0;
-        }*/
+            gasInput = Input.GetAxis("Vertical");
+            steeringInput = Input.GetAxis("Horizontal");
+            slipAngle = Vector3.Angle(transform.forward, playerRB.velocity - transform.forward);
+
+            float movingDirection = Vector3.Dot(transform.forward, playerRB.velocity);
+            if (movingDirection < -0.5f && gasInput > 0)
+            {
+                brakeInput = Mathf.Abs(gasInput);
+            }
+            else if (movingDirection > 0.5f && gasInput < 0)
+            {
+                brakeInput = Mathf.Abs(gasInput);
+            }
+            else
+            {
+                brakeInput = 0;
+            }
+        }
 
     }
     void ApplyBrake()
@@ -134,14 +138,11 @@ public class CarController : MonoBehaviour
 
         colliders.RRWheel.brakeTorque = brakeInput * brakePower * 0.3f;
         colliders.RLWheel.brakeTorque = brakeInput * brakePower *0.3f;
-
-
     }
     void ApplyMotor() {
 
         colliders.RRWheel.motorTorque = motorPower * gasInput;
         colliders.RLWheel.motorTorque = motorPower * gasInput;
-
     }
     void ApplySteering()
     {
