@@ -12,7 +12,7 @@ public class PauseManager : MonoBehaviour
     public UnityEngine.UI.Button exitBtn;
 
     public bool paused;
-
+    public bool EnableVR;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,19 +24,40 @@ public class PauseManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.P) || (Input.GetKeyDown(KeyCode.Escape))))
+        if (EnableVR)
         {
-            if (paused)
+            if (OVRInput.GetDown(OVRInput.Button.Four))
             {
-                pauseMenu.SetActive(false);
-                paused = false;
-                Cursor.visible = false;
+                if (paused)
+                {
+                    pauseMenu.SetActive(false);
+                    paused = false;
+                    Cursor.visible = false;
+                }
+                else
+                {
+                    Cursor.visible = true;
+                    pauseMenu.SetActive(true);
+                    paused = true;
+                }
             }
-            else
+        }
+        else
+        {
+            if ((Input.GetKeyDown(KeyCode.P) || (Input.GetKeyDown(KeyCode.Escape))))
             {
-                Cursor.visible = true;
-                pauseMenu.SetActive(true);
-                paused = true;
+                if (paused)
+                {
+                    pauseMenu.SetActive(false);
+                    paused = false;
+                    Cursor.visible = false;
+                }
+                else
+                {
+                    Cursor.visible = true;
+                    pauseMenu.SetActive(true);
+                    paused = true;
+                }
             }
         }
     }

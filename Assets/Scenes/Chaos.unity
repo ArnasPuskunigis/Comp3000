@@ -22685,6 +22685,7 @@ MonoBehaviour:
   resumeBtn: {fileID: 1667160461}
   exitBtn: {fileID: 547998116}
   paused: 0
+  EnableVR: 1
 --- !u!4 &1391123891
 Transform:
   m_ObjectHideFlags: 0

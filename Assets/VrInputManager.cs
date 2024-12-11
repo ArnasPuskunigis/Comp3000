@@ -20,13 +20,13 @@ public class VrInputManager : MonoBehaviour
 
     void Update()
     {
-        if (OVRInput.Get(OVRInput.Button.One)) // Simulate Submit
+        if (OVRInput.GetDown(OVRInput.Button.One)) // Simulate Submit
         {
             ExecuteEvents.Execute(EventSystem.current.currentSelectedGameObject, new BaseEventData(EventSystem.current), ExecuteEvents.submitHandler);
             Debug.Log("Submit Triggered");
         }
 
-        if (OVRInput.Get(OVRInput.Button.PrimaryThumbstick)) // Simulate Navigation
+        if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstick)) // Simulate Navigation
         {
             NavigateToNextSelectable();
         }

@@ -56,6 +56,8 @@ public class openCrate : MonoBehaviour
 
     public int tempMoneyWon;
 
+    public bool EnableVR;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -122,18 +124,37 @@ public class openCrate : MonoBehaviour
         //    crateCountText.text = "Crates Remaining: " + crateCount;
         //}
 
-        if (Input.GetKeyDown(KeyCode.Space) && crateCount >=1 && itemReceived)
-        //if (crateCount >= 1)
+        if (EnableVR)
         {
-            if (boxAnimManager.exploded)
+            if (OVRInput.Get(OVRInput.Button.Four) && crateCount >= 1 && itemReceived)
+            //if (crateCount >= 1)
             {
-                resetBoxUI();
-            }
-            else
-            {
-                openTheCrate();
-            }
+                if (boxAnimManager.exploded)
+                {
+                    resetBoxUI();
+                }
+                else
+                {
+                    openTheCrate();
+                }
 
+            }
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && crateCount >= 1 && itemReceived)
+            //if (crateCount >= 1)
+            {
+                if (boxAnimManager.exploded)
+                {
+                    resetBoxUI();
+                }
+                else
+                {
+                    openTheCrate();
+                }
+
+            }
         }
 
     }
