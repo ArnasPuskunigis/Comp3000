@@ -16,6 +16,7 @@ public class VrInputManager : MonoBehaviour
     void Start()
     {
         current = defaultSelectedButton;
+        NavigateToNextSelectable("S");
     }
 
     void Update()
@@ -26,18 +27,69 @@ public class VrInputManager : MonoBehaviour
             Debug.Log("Submit Triggered");
         }
 
+        //if (current == null)
+        //{
+        //    Selectable next = current.GetComponent<Selectable>()?.FindSelectableOnDown(); // Or use FindSelectableOnUp/Left/Right
+        //    if (next != null)
+        //    {
+        //        next.Select();
+        //    }
+        //}
+
         if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstick)) // Simulate Navigation
         {
-            NavigateToNextSelectable();
+            NavigateToNextSelectable("S");
         }
+
+        if (EventSystem.current.currentSelectedGameObject == null ||
+        !EventSystem.current.currentSelectedGameObject.activeInHierarchy)
+        {
+            NavigateToNextSelectable("S");
+        }
+
+        //if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstickLeft)) // Simulate Navigation
+        //{
+        //    NavigateToNextSelectable("W");
+        //}
+        //else if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstickRight)) // Simulate Navigation
+        //{
+        //    NavigateToNextSelectable("E");
+        //}
+        //else if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstickUp)) // Simulate Navigation
+        //{
+        //    NavigateToNextSelectable("N");
+        //}
+        //else if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstickDown)) // Simulate Navigation
+        //{
+        //    NavigateToNextSelectable("S");
+        //}
+
     }
 
-    void NavigateToNextSelectable()
+    void NavigateToNextSelectable(string dir)
     {
 
         if (current != null)
         {
-            Selectable next = current.GetComponent<Selectable>()?.FindSelectableOnDown(); // Or use FindSelectableOnUp/Left/Right
+            Selectable next;
+
+            if (dir == "N")
+            {
+                next = current.GetComponent<Selectable>()?.FindSelectableOnUp(); // Or use FindSelectableOnUp/Left/Right
+            }
+            else if (dir == "E")
+            {
+                next = current.GetComponent<Selectable>()?.FindSelectableOnRight(); // Or use FindSelectableOnUp/Left/Right
+            }
+            else if (dir == "S")
+            {
+                next = current.GetComponent<Selectable>()?.FindSelectableOnDown(); // Or use FindSelectableOnUp/Left/Right
+            }
+            else
+            {
+                next = current.GetComponent<Selectable>()?.FindSelectableOnLeft(); // Or use FindSelectableOnUp/Left/Right
+            }
+
             if (next != null)
             {
                 next.Select();

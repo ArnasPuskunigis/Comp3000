@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class PauseManager : MonoBehaviour
 {
@@ -13,12 +14,17 @@ public class PauseManager : MonoBehaviour
 
     public bool paused;
     public bool EnableVR;
+
+    public GameObject defaultSelectedButton; // Assign your starting button in the Inspector
+    public GameObject current;
+
     // Start is called before the first frame update
     void Start()
     {
         resumeBtn.onClick.AddListener(resumeClicked);
         exitBtn.onClick.AddListener(exitClicked);
         Cursor.visible = false;
+        current = defaultSelectedButton;
     }
 
     // Update is called once per frame
@@ -41,6 +47,18 @@ public class PauseManager : MonoBehaviour
                     paused = true;
                 }
             }
+
+            if (OVRInput.GetDown(OVRInput.Button.One)) // Simulate Submit
+            {
+                ExecuteEvents.Execute(EventSystem.current.currentSelectedGameObject, new BaseEventData(EventSystem.current), ExecuteEvents.submitHandler);
+                Debug.Log("Submit Triggered");
+            }
+
+            if (OVRInput.GetDown(OVRInput.Button.PrimaryThumbstick)) // Simulate Navigation
+            {
+                NavigateToNextSelectable();
+            }
+
         }
         else
         {
@@ -59,6 +77,25 @@ public class PauseManager : MonoBehaviour
                     paused = true;
                 }
             }
+        }
+    }
+
+    void NavigateToNextSelectable()
+    {
+
+        if (current != null)
+        {
+            Selectable next = current.GetComponent<Selectable>()?.FindSelectableOnDown(); // Or use FindSelectableOnUp/Left/Right
+            if (next != null)
+            {
+                next.Select();
+                Debug.Log("Navigated to: " + next.name);
+            }
+        }
+        else if (defaultSelectedButton != null)
+        {
+            defaultSelectedButton.GetComponent<Selectable>().Select();
+            Debug.Log("No selection, defaulting to: " + defaultSelectedButton.name);
         }
     }
 
