@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -11,6 +12,8 @@ public class ResetCam : MonoBehaviour
     public GameObject fcar;
 
     public SavingSystem saveManager;
+
+    public CinemachineVirtualCamera camVirtualCamera;
 
     // Start is called before the first frame update
     void Start()
@@ -26,15 +29,19 @@ public class ResetCam : MonoBehaviour
 
             if (saveManager.carTypeStr == "slow")
             {
-                cam.transform.LookAt(scar.transform);
+                //cam.transform.LookAt(scar.transform);
+                camVirtualCamera.LookAt = scar.transform;
+                //camVirtualCamera.LookAt = null;
             }
             if (saveManager.carTypeStr == "medium")
             {
                 cam.transform.LookAt(mcar.transform);
+                camVirtualCamera.LookAt = mcar.transform;
             }
             if (saveManager.carTypeStr == "fast")
             {
-                cam.transform.LookAt(fcar.transform);
+                //cam.transform.LookAt(fcar.transform);
+                camVirtualCamera.LookAt = fcar.transform;
             }
         }
     }
