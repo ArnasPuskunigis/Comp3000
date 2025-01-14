@@ -45520,6 +45520,21 @@ PrefabInstance:
       propertyPath: near clip plane
       value: 0.01
       objectReference: {fileID: 0}
+    - target: {fileID: 3155254080283048195, guid: e4519b783ac5f4e4a9e3ad23cb942a55,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3155254080283048195, guid: e4519b783ac5f4e4a9e3ad23cb942a55,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 3155254080283048195, guid: e4519b783ac5f4e4a9e3ad23cb942a55,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.38
+      objectReference: {fileID: 0}
     - target: {fileID: 3197238423701722693, guid: e4519b783ac5f4e4a9e3ad23cb942a55,
         type: 3}
       propertyPath: near clip plane
@@ -45670,6 +45685,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1419901155}
+    - target: {fileID: 6121311176227038191, guid: e4519b783ac5f4e4a9e3ad23cb942a55,
+        type: 3}
+      propertyPath: m_text
+      value: -Y- OPEN CRATE
+      objectReference: {fileID: 0}
     - target: {fileID: 6368497391708003985, guid: e4519b783ac5f4e4a9e3ad23cb942a55,
         type: 3}
       propertyPath: m_Colors.m_SelectedColor.b
