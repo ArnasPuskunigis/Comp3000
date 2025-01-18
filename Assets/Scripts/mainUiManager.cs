@@ -47,6 +47,7 @@ public class mainUiManager : MonoBehaviour
 
     public UnityEngine.UI.Button[] carColourButtons;
     public UnityEngine.UI.Button[] gunColourButtons;
+    public UnityEngine.UI.Button tempColorBtn;
 
     public Material[] carMaterials;
 
@@ -114,6 +115,11 @@ public class mainUiManager : MonoBehaviour
     public UnityEngine.UI.Button smgBtn;
     public UnityEngine.UI.Button arBtn;
 
+    public UnityEngine.UI.Button cyanBtn;
+    public UnityEngine.UI.Button lavenderBtn;
+    public UnityEngine.UI.Button peachBtn;
+    public UnityEngine.UI.Button pinkBtn;
+
     public UnityEngine.UI.Button maggedBtn;
     public UnityEngine.UI.Button intelectBtn;
     public UnityEngine.UI.Button richesBtn;
@@ -137,6 +143,11 @@ public class mainUiManager : MonoBehaviour
 
     public bool smgUnlocked;
     public bool rifleUnlocked;
+
+    public bool cyanUnlocked;
+    public bool lavenderUnlocked;
+    public bool peachUnlocked;
+    public bool pinkUnlocked;
 
     public SavingSystem saveManager;
     public UnityEngine.UI.Button chaosBtn;
@@ -169,65 +180,9 @@ public class mainUiManager : MonoBehaviour
         paintButton.onClick.AddListener(paintButtonPressed);
         perkButton.onClick.AddListener(perkButtonPressed);
 
+        checkForUnlocks();
 
-        if (saveManager.LoadMediumCarUnlock())
-        {
-            mediumUnlocked = true;
-        }
-        if (saveManager.LoadFastCarUnlock())
-        {
-            fastUnlocked = true;
-        }
-        if (saveManager.LoadSmgUnlock())
-        {
-            smgUnlocked = true;
-        }
-        if (saveManager.LoadRifleUnlock())
-        {
-            rifleUnlocked = true;
-        }
-
-        if (maggedUnlocked)
-        {
-            maggedPerkUnlock.SetActive(false);
-            maggedBtn.interactable = true;
-        }
-        if (intelectUnlocked)
-        {
-            intelectPerkUnlock.SetActive(false);
-            intelectBtn.interactable = true;
-        }
-        if (richesUnlocked)
-        {
-            richesPerkUnlock.SetActive(false);
-            richesBtn.interactable = true;
-        }
-
-        if (mediumUnlocked)
-        {
-            mediumUnlock.SetActive(false);
-            mediumCarBtn.interactable = true;
-        }
-        if (fastUnlocked)
-        {
-            fastUnlock.SetActive(false);
-            fastCarBtn.interactable = true;
-        }
-
-        if (smgUnlocked)
-        {
-            smgUnlock.SetActive(false);
-            smgBtn.interactable = true;
-        }
-        if (rifleUnlocked)
-        {
-            rifleUnlock.SetActive(false);
-            arBtn.interactable = true;
-        }
-
-        //saveManager.SaveCar(currentCarStr, currentColourStr, currentGunStr, currentPerkStr);
-
-        if(saveManager.carTypeStr != "" && saveManager.carWeaponStr != "" && saveManager.carColourStr != "")
+        if (saveManager.carTypeStr != "" && saveManager.carWeaponStr != "" && saveManager.carColourStr != "")
         {
             currentCarStr = saveManager.carTypeStr;
             currentGunStr = saveManager.carWeaponStr;
@@ -267,10 +222,7 @@ public class mainUiManager : MonoBehaviour
             pistolPressed();
             carColourPressed("red");
             currentPerkStr = "";
-
-            
         }
-
 
         bodyButtonCB = bodyButton.colors;
         weaponButtonCB = weaponButton.colors;
@@ -279,7 +231,74 @@ public class mainUiManager : MonoBehaviour
 
         mainCamera.transform.localPosition = new Vector3(134, 24, -81);
         mainCamera.transform.eulerAngles = new Vector3(24f, 248f, 0f);
+    }
 
+    public void checkForUnlocks()
+    {
+        if (saveManager.LoadMediumCarUnlock())
+        {
+            mediumUnlocked = true;
+            mediumUnlock.SetActive(false);
+            mediumCarBtn.interactable = true;
+        }
+        if (saveManager.LoadFastCarUnlock())
+        {
+            fastUnlocked = true;
+            fastUnlock.SetActive(false);
+            fastCarBtn.interactable = true;
+        }
+        if (saveManager.LoadSmgUnlock())
+        {
+            smgUnlocked = true;
+            smgUnlock.SetActive(false);
+            smgBtn.interactable = true;
+        }
+        if (saveManager.LoadRifleUnlock())
+        {
+            rifleUnlocked = true;
+            rifleUnlock.SetActive(false);
+            arBtn.interactable = true;
+        }
+
+        if (saveManager.LoadCyanUnlock())
+        {
+            cyanUnlocked = true;
+            cyanBtn.interactable = true;
+        }
+
+        if (saveManager.LoadLavenderUnlock())
+        {
+            lavenderUnlocked = true;
+            lavenderBtn.interactable = true;
+        }
+
+        if (saveManager.LoadPeachUnlock())
+        {
+            peachUnlocked = true;
+            peachBtn.interactable = true;
+        }
+
+        if (saveManager.LoadPinkUnlock())
+        {
+            pinkUnlocked = true;
+            pinkBtn.interactable = true;
+        }
+
+        //if (maggedUnlocked)
+        //{
+        //    maggedPerkUnlock.SetActive(false);
+        //    maggedBtn.interactable = true;
+        //}
+        //if (intelectUnlocked)
+        //{
+        //    intelectPerkUnlock.SetActive(false);
+        //    intelectBtn.interactable = true;
+        //}
+        //if (richesUnlocked)
+        //{
+        //    richesPerkUnlock.SetActive(false);
+        //    richesBtn.interactable = true;
+        //}
     }
 
     public void resetCarVisuals()
@@ -625,7 +644,12 @@ public class mainUiManager : MonoBehaviour
                         currentCar.transform.localEulerAngles = new Vector3(270, 180, 0);
                     }
                     //add color unlocked?
+                    if (tempColorBtn != null)
+                    {
+                        tempColorBtn.interactable = true;
+                    }
                     carColourButtons[i].interactable = false;
+                    tempColorBtn = carColourButtons[i];
                     carRenderer = currentCar.GetComponent<MeshRenderer>();
                     Material[] tempMats;
                     tempMats = carRenderer.materials;
@@ -660,7 +684,7 @@ public class mainUiManager : MonoBehaviour
             }
             else
             {
-                carColourButtons[i].interactable = true;
+                //carColourButtons[i].interactable = true;
             }
         }
 

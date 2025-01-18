@@ -25,9 +25,9 @@ public class MasteryManager : MonoBehaviour
     public SavingSystem saveManager;
     public loadCar carLoader;
 
-    public GameObject bronzeButton;
-    public GameObject silverButton;
-    public GameObject goldButton;
+    public Button bronzeButton;
+    public Button silverButton;
+    public Button goldButton;
 
     public TMPro.TextMeshProUGUI bronzeProgressText;
     public TMPro.TextMeshProUGUI silverProgressText;
@@ -39,10 +39,6 @@ public class MasteryManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bronzeButton.SetActive(false);
-        silverButton.SetActive(false);
-        goldButton.SetActive(false);
-
         bronzeProgressText.color = red;
         silverProgressText.color = red;
         goldProgressText.color = red;
@@ -66,9 +62,9 @@ public class MasteryManager : MonoBehaviour
             silverMasteryUnlocked = true;
             bronzeMasteryUnlocked = true;
 
-            bronzeButton.SetActive(true);
-            silverButton.SetActive(true);
-            goldButton.SetActive(true);
+            bronzeButton.interactable = true;
+            silverButton.interactable = true;
+            goldButton.interactable = true;
             bronzeProgressText.color = green;
             silverProgressText.color = green;
             goldProgressText.color = green;
@@ -78,8 +74,8 @@ public class MasteryManager : MonoBehaviour
             silverMasteryUnlocked = true;
             bronzeMasteryUnlocked = true;
 
-            bronzeButton.SetActive(true);
-            silverButton.SetActive(true);
+            silverButton.interactable = true;
+            bronzeButton.interactable = true;
             bronzeProgressText.color = green;
             silverProgressText.color = green;
 
@@ -87,8 +83,7 @@ public class MasteryManager : MonoBehaviour
         else if (totalTargetsHit >= bronzeMasteryReq)
         {
             bronzeMasteryUnlocked = true;
-
-            bronzeButton.SetActive(true);
+            bronzeButton.interactable = true;
             bronzeProgressText.color = green;
         }
     }

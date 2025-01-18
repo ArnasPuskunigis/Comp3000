@@ -43,13 +43,15 @@ public class RadioManager : MonoBehaviour
             }
 
             // Start playing the first track
-            currentMusicIndex = 0;
+            currentMusicIndex = Random.Range(0, 19);
             soundPlayers[currentMusicIndex].UnPause();
         }
    }
 
     public void playNextSong()
     {
+        soundPlayers[currentMusicIndex].Stop();
+        soundPlayers[currentMusicIndex].Play();
         soundPlayers[currentMusicIndex].Pause();
 
         if (currentMusicIndex < soundtracks.Length - 1)

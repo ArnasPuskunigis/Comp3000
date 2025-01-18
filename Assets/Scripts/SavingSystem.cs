@@ -15,6 +15,7 @@ public class SavingSystem : MonoBehaviour
 
     public exp xpManager;
     public moneyManager moneyManager;
+    public mainUiManager uiManager;
 
     private void Awake()
     {
@@ -23,6 +24,27 @@ public class SavingSystem : MonoBehaviour
         LoadCar();
         totalTargetsHit = loadTargetsHit();
         totalDriftPoints = loadDriftPoints();
+
+
+
+    }
+
+    private void FixedUpdate()
+    {
+        //if (Input.GetKeyDown(KeyCode.R))
+        //{
+        //    resetRareColours();
+        //}
+    }
+
+    public void resetRareColours()
+    {
+        PlayerPrefs.SetInt("CyanUnlock", 0);
+        PlayerPrefs.SetInt("LavenderUnlock", 0);
+        PlayerPrefs.SetInt("PeachUnlock", 0);
+        PlayerPrefs.SetInt("PinkUnlock", 0);
+        PlayerPrefs.Save();
+        uiManager.checkForUnlocks();
     }
 
     public int loadTargetsHit()
@@ -124,6 +146,30 @@ public class SavingSystem : MonoBehaviour
         PlayerPrefs.Save();
     }
 
+    public void SaveCyanUnlock()
+    {
+        PlayerPrefs.SetInt("CyanUnlock", 1);
+        PlayerPrefs.Save();
+    }
+
+    public void SaveLavenderUnlock()
+    {
+        PlayerPrefs.SetInt("LavenderUnlock", 1);
+        PlayerPrefs.Save();
+    }
+
+    public void SavePeachUnlock()
+    {
+        PlayerPrefs.SetInt("PeachUnlock", 1);
+        PlayerPrefs.Save();
+    }
+
+    public void SavePinkUnlock()
+    {
+        PlayerPrefs.SetInt("PinkUnlock", 1);
+        PlayerPrefs.Save();
+    }
+
     public bool LoadMediumCarUnlock()
     {
         if (PlayerPrefs.GetInt("MediumCarUnlock") == 0)
@@ -150,6 +196,39 @@ public class SavingSystem : MonoBehaviour
         }
         return true;
     }
+    public bool LoadCyanUnlock()
+    {
+        if (PlayerPrefs.GetInt("CyanUnlock") == 0)
+        {
+            return false;
+        }
+        return true;
+    }
+
+    public bool LoadLavenderUnlock()
+    {
+        if (PlayerPrefs.GetInt("LavenderUnlock") == 0)
+        {
+            return false;
+        }
+        return true;
+    }
+    public bool LoadPeachUnlock()
+    {
+        if (PlayerPrefs.GetInt("PeachUnlock") == 0)
+        {
+            return false;
+        }
+        return true;
+    }
+    public bool LoadPinkUnlock()
+    {
+        if (PlayerPrefs.GetInt("PinkUnlock") == 0)
+        {
+            return false;
+        }
+        return true;
+    }
 
     public bool LoadRifleUnlock()
     {
@@ -160,10 +239,6 @@ public class SavingSystem : MonoBehaviour
         return true;
     }
 
-    public void GetLocks()
-    {
-
-    }
 
 
 }

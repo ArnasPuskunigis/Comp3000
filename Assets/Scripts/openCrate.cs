@@ -46,8 +46,13 @@ public class openCrate : MonoBehaviour
     public GameObject legendaryImage;
 
     public boxExplode boxAnimManager;
+    public SavingSystem saveManager;
+    public mainUiManager uiManager;
 
     public string recentRarirty;
+    public bool isItem;
+    public string recentItem;
+
     public bool itemReceived;
 
     public moneyManager moneyManager;
@@ -63,7 +68,6 @@ public class openCrate : MonoBehaviour
     {
         crateCount = PlayerPrefs.GetInt("CrateCount");
         crateCountText.text = "Crates Remaining: " + crateCount;
-
     }
 
     public void showRarity(Animator rarityImage)
@@ -77,35 +81,93 @@ public class openCrate : MonoBehaviour
     {
         if (recentRarirty == "common")
         {
-            moneyRewardText.text = "$50!";
-            tempMoneyWon = 50;
-            Invoke("showRewardText", 1f);
-            //add matte skins for s-31
-            //add matte skins for pistol
+            tempMoneyWon = Random.Range(25,101);
+            moneyRewardText.text = "$" + tempMoneyWon + "!";
         }
         else if (recentRarirty == "rare")
         {
-            moneyRewardText.text = "$200!";
-            tempMoneyWon = 200;
-            Invoke("showRewardText", 1f);
+            if (recentItem != null)
+            {
+                uiManager.checkForUnlocks();
+                if (recentItem == "cyan" && !checkIfColorOwned("cyan"))
+                {
+                    moneyRewardText.text = "VERY RARE ITEM RECEIVED! \n CYAN CAR COLOR!";
+                    saveManager.SaveCyanUnlock();
+                }
+                else if (recentItem == "lavender" && !checkIfColorOwned("lavender"))
+                {
+                    moneyRewardText.text = "VERY RARE ITEM RECEIVED! \n LAVENDER CAR COLOR!";
+                    saveManager.SaveLavenderUnlock();
+                }
+                else if (recentItem == "peach" && !checkIfColorOwned("peach"))
+                {
+                    saveManager.SavePeachUnlock();
+                    moneyRewardText.text = "VERY RARE ITEM RECEIVED! \n PEACH CAR COLOR!";
+                }
+                else if (recentItem == "pink" && !checkIfColorOwned("pink"))
+                {
+                    saveManager.SavePinkUnlock();
+                    moneyRewardText.text = "VERY RARE ITEM RECEIVED! \n PINK CAR COLOR!";
+                }
+                else
+                {
+                    tempMoneyWon = Random.Range(150, 301);
+                    moneyRewardText.text = "$" + tempMoneyWon + "!";
+                }
+                uiManager.checkForUnlocks();
+                recentItem = null;
+            }
+            else
+            {
+                tempMoneyWon = Random.Range(150, 301);
+                moneyRewardText.text = "$" + tempMoneyWon + "!";
+            }
         }
         else if (recentRarirty == "epic")
         {
-            moneyRewardText.text = "$500!";
-            tempMoneyWon = 500;
-            Invoke("showRewardText", 1f);
-            //add perks 1,2, or 3
+            tempMoneyWon = Random.Range(400, 701);
+            moneyRewardText.text = "$" + tempMoneyWon + "!";
         }
         else if (recentRarirty == "legendary")
         {
-            moneyRewardText.text = "$1500!";
-            tempMoneyWon = 1500;
-            Invoke("showRewardText", 1f);
-            //add ice skin for f-71
-            //add ice skin for smg
+            tempMoneyWon = Random.Range(1000, 1501);
+            moneyRewardText.text = "$" + tempMoneyWon + "!";
         }
-        Debug.Log("item");
+        Invoke("showRewardText", 1f);
         itemReceived = true;
+    }
+
+    public bool checkIfColorOwned(string colorName)
+    {
+        if (colorName == "cyan")
+        {
+            if (saveManager.LoadCyanUnlock())
+            {
+                return true;
+            }
+        }
+        else if (colorName == "lavender")
+        {
+            if (saveManager.LoadLavenderUnlock())
+            {
+                return true;
+            }
+        }
+        else if(colorName == "peach")
+        {
+            if (saveManager.LoadPeachUnlock())
+            {
+                return true;
+            }
+        }
+        else if(colorName == "pink")
+        {
+            if (saveManager.LoadPinkUnlock())
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     public void showRewardText()
@@ -118,11 +180,11 @@ public class openCrate : MonoBehaviour
     void Update()
     {
 
-        //if (Input.GetKeyDown(KeyCode.UpArrow))
-        //{
-        //    crateCount+=5;
-        //    crateCountText.text = "Crates Remaining: " + crateCount;
-        //}
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            crateCount += 5;
+            crateCountText.text = "Crates Remaining: " + crateCount;
+        }
 
         if (EnableVR)
         {
@@ -180,16 +242,36 @@ public class openCrate : MonoBehaviour
         boxAnimManager.explodeBox();
         boxAnimManager.exploded = true;
 
+
+        int rng = Random.Range(1, 4);
+        if (rng == 1)
+        {
+            isItem = true;
+        }
+        else
+        {
+            isItem = false;
+        }
+
         if (randomNumber <= commonChance)
         {
             print("common");
             recentRarirty = "common";
+
             commonImage.SetActive(true);
             showRarity(commonImage.GetComponent<Animator>());
             commonCount++;
         }
         else if (randomNumber > commonChance && randomNumber <= 100 - epicChance)
         {
+            if (isItem)
+            {
+                chooseItem();
+            }
+            else
+            {
+                recentItem = null;
+            }
             print("rare");
             recentRarirty = "rare";
             rareImage.SetActive(true);
@@ -221,24 +303,22 @@ public class openCrate : MonoBehaviour
     {
         int randomNumber = Random.Range(0, 4);
 
-
         if (randomNumber == 0)
         {
-
+            recentItem = "cyan";
         }
         else if (randomNumber == 1)
         {
-
+            recentItem = "lavender";
         }
         else if (randomNumber == 2)
         {
-
+            recentItem = "peach";
         }
-        else if (randomNumber == 3)
+        else
         {
-
+            recentItem = "pink";
         }
-
     }
 
 }
