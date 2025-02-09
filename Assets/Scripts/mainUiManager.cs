@@ -151,6 +151,8 @@ public class mainUiManager : MonoBehaviour
 
     public SavingSystem saveManager;
     public UnityEngine.UI.Button chaosBtn;
+    public UnityEngine.UI.Button desertBtn;
+    public UnityEngine.UI.Button cityBtn;
     public moneyManager theMoneyManager;
 
     public UnityEngine.Color normalBtnColour;
@@ -380,6 +382,16 @@ public class mainUiManager : MonoBehaviour
     public void chaosBtnPressed()
     {
         SceneManager.LoadScene(1);
+    }
+
+    public void desertBtnPressed()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void cityBtnPressed()
+    {
+        SceneManager.LoadScene(2);
     }
 
     public void playPressed()
