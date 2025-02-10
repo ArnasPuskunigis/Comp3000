@@ -379,19 +379,24 @@ public class mainUiManager : MonoBehaviour
         mainCamera.transform.eulerAngles = new Vector3(24f, 248f, 0f);
     }
 
-    public void chaosBtnPressed()
-    {
-        SceneManager.LoadScene(1);
-    }
+    //public void chaosBtnPressed()
+    //{
+    //    SceneManager.LoadScene(1);
+    //}
 
     public void desertBtnPressed()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     public void cityBtnPressed()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
+    }
+
+    public void volcanoBtnPressed()
+    {
+        SceneManager.LoadScene(3);
     }
 
     public void playPressed()
