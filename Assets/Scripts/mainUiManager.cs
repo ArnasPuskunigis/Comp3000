@@ -386,17 +386,17 @@ public class mainUiManager : MonoBehaviour
 
     public void desertBtnPressed()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 
     public void cityBtnPressed()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     public void volcanoBtnPressed()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
     }
 
     public void playPressed()
