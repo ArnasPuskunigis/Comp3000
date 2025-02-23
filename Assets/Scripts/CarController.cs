@@ -67,6 +67,11 @@ public class CarController : NetworkBehaviour
 
     void Update()
     {
+        if (!IsOwner) 
+        {
+            return;
+        }
+
         speed = playerRB.velocity.magnitude;
         CheckInput();
         ApplyMotor();

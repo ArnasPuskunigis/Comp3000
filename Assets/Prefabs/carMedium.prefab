@@ -707,6 +707,7 @@ GameObject:
   - component: {fileID: 7105639635749836206}
   - component: {fileID: 7235615052901318393}
   - component: {fileID: 3131367865720679425}
+  - component: {fileID: 6607941179647951741}
   m_Layer: 6
   m_Name: carMedium
   m_TagString: car
@@ -944,6 +945,32 @@ MonoBehaviour:
   AlwaysReplicateAsRoot: 0
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
+--- !u!114 &6607941179647951741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2935202571189132627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91795d0b52ad2094a9511269801f26c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SyncPositionX: 1
+  SyncPositionY: 1
+  SyncPositionZ: 1
+  SyncRotAngleX: 1
+  SyncRotAngleY: 1
+  SyncRotAngleZ: 1
+  SyncScaleX: 0
+  SyncScaleY: 0
+  SyncScaleZ: 0
+  PositionThreshold: 0.001
+  RotAngleThreshold: 0.01
+  ScaleThreshold: 0.01
+  InLocalSpace: 0
+  Interpolate: 1
 --- !u!1 &3247950688622740158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1578,7 +1605,6 @@ MonoBehaviour:
   allVectors: []
   laserHitObject: {fileID: 4119992319386144723, guid: 8307b2fbb750b8d4c9c1f40d708079bb,
     type: 3}
-  laserHitsParent: {fileID: 0}
   yes: {x: 4.7, y: 0, z: 2.2}
   layerMask: 256
 --- !u!1 &5367669852590895524
@@ -1851,7 +1877,6 @@ MonoBehaviour:
   allVectors: []
   laserHitObject: {fileID: 4119992319386144723, guid: 8307b2fbb750b8d4c9c1f40d708079bb,
     type: 3}
-  laserHitsParent: {fileID: 0}
   yes: {x: 4.7, y: 0, z: 2.2}
   layerMask: 256
 --- !u!1 &6873651175187030460
@@ -6837,7 +6862,6 @@ MonoBehaviour:
   allVectors: []
   laserHitObject: {fileID: 4119992319386144723, guid: 8307b2fbb750b8d4c9c1f40d708079bb,
     type: 3}
-  laserHitsParent: {fileID: 0}
   yes: {x: 4.7, y: 0, z: 2.2}
   layerMask: 256
 --- !u!1 &7393844647842059198
