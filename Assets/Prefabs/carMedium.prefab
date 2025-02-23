@@ -415,7 +415,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1571152117041747039}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2762e7f40f8f1dd46a9b4c0a652d9a9f, type: 3}
   m_Name: 
@@ -427,6 +427,8 @@ MonoBehaviour:
   rotationSpeed: 0.3
   mouseControls: 1
   mousePos: {x: 0, y: 0}
+  EnableVR: 0
+  rightHand: {fileID: 0}
 --- !u!114 &1214300641852454729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434,7 +436,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1571152117041747039}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2b209f6ec16e99469923a3ca750f751, type: 3}
   m_Name: 
@@ -460,6 +462,10 @@ MonoBehaviour:
   isFlashing: 0
   ammoText: {fileID: 0}
   reloadText: {fileID: 0}
+  gunShotSfx: []
+  reloadSfx: {fileID: 0}
+  clickSfx: {fileID: 0}
+  EnableVR: 0
 --- !u!1 &2173946652317076993
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,6 +706,7 @@ GameObject:
   - component: {fileID: 3626554758144314589}
   - component: {fileID: 7105639635749836206}
   - component: {fileID: 7235615052901318393}
+  - component: {fileID: 3131367865720679425}
   m_Layer: 6
   m_Name: carMedium
   m_TagString: car
@@ -867,17 +874,13 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  gasPedal: {fileID: 0}
-  brakePedal: {fileID: 0}
-  leftButton: {fileID: 0}
-  rightButton: {fileID: 0}
   isDrifting1: 0
   isDrifting2: 0
   isDrifting3: 0
   isDrifting4: 0
   driftCounter: 0
   driftPoints: 0
-  expManager: {fileID: 0}
+  EnableVR: 0
 --- !u!114 &7235615052901318393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -885,7 +888,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2935202571189132627}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55d247dfd66ef9c48a89b735d89cd8d3, type: 3}
   m_Name: 
@@ -924,6 +927,23 @@ MonoBehaviour:
     type: 3}
   checkPointOffset: {x: 0, y: 2, z: 0}
   expManager: {fileID: 0}
+  resetTargetsScript: {fileID: 0}
+--- !u!114 &3131367865720679425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2935202571189132627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 951099334
+  AlwaysReplicateAsRoot: 0
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!1 &3247950688622740158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,7 +1071,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3580426259372173084}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2b209f6ec16e99469923a3ca750f751, type: 3}
   m_Name: 
@@ -1077,6 +1097,10 @@ MonoBehaviour:
   isFlashing: 0
   ammoText: {fileID: 0}
   reloadText: {fileID: 0}
+  gunShotSfx: []
+  reloadSfx: {fileID: 0}
+  clickSfx: {fileID: 0}
+  EnableVR: 0
 --- !u!114 &8064139703768980118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1084,7 +1108,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3580426259372173084}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2762e7f40f8f1dd46a9b4c0a652d9a9f, type: 3}
   m_Name: 
@@ -1096,6 +1120,8 @@ MonoBehaviour:
   rotationSpeed: 0.3
   mouseControls: 1
   mousePos: {x: 0, y: 0}
+  EnableVR: 0
+  rightHand: {fileID: 0}
 --- !u!1 &4093899801358177913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1277,7 +1303,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4529332962191474089}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2762e7f40f8f1dd46a9b4c0a652d9a9f, type: 3}
   m_Name: 
@@ -1289,6 +1315,8 @@ MonoBehaviour:
   rotationSpeed: 0.3
   mouseControls: 1
   mousePos: {x: 0, y: 0}
+  EnableVR: 0
+  rightHand: {fileID: 0}
 --- !u!114 &8193966286444298675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1296,7 +1324,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4529332962191474089}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2b209f6ec16e99469923a3ca750f751, type: 3}
   m_Name: 
@@ -1322,6 +1350,10 @@ MonoBehaviour:
   isFlashing: 0
   ammoText: {fileID: 0}
   reloadText: {fileID: 0}
+  gunShotSfx: []
+  reloadSfx: {fileID: 0}
+  clickSfx: {fileID: 0}
+  EnableVR: 0
 --- !u!1 &4747021789595187450
 GameObject:
   m_ObjectHideFlags: 0
@@ -1548,6 +1580,7 @@ MonoBehaviour:
     type: 3}
   laserHitsParent: {fileID: 0}
   yes: {x: 4.7, y: 0, z: 2.2}
+  layerMask: 256
 --- !u!1 &5367669852590895524
 GameObject:
   m_ObjectHideFlags: 0
@@ -1820,6 +1853,7 @@ MonoBehaviour:
     type: 3}
   laserHitsParent: {fileID: 0}
   yes: {x: 4.7, y: 0, z: 2.2}
+  layerMask: 256
 --- !u!1 &6873651175187030460
 GameObject:
   m_ObjectHideFlags: 0
@@ -6805,6 +6839,7 @@ MonoBehaviour:
     type: 3}
   laserHitsParent: {fileID: 0}
   yes: {x: 4.7, y: 0, z: 2.2}
+  layerMask: 256
 --- !u!1 &7393844647842059198
 GameObject:
   m_ObjectHideFlags: 0

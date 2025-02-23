@@ -155,6 +155,7 @@ MonoBehaviour:
     type: 3}
   laserHitsParent: {fileID: 0}
   yes: {x: 4.7, y: 0, z: 2.2}
+  layerMask: 256
 --- !u!1 &1142975453054086671
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,6 +403,7 @@ MonoBehaviour:
     type: 3}
   laserHitsParent: {fileID: 0}
   yes: {x: 4.7, y: 0, z: 2.2}
+  layerMask: 256
 --- !u!1 &1537072254475059532
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,6 +644,7 @@ MonoBehaviour:
     type: 3}
   laserHitsParent: {fileID: 0}
   yes: {x: 4.7, y: 0, z: 2.2}
+  layerMask: 256
 --- !u!1 &3238832153466122642
 GameObject:
   m_ObjectHideFlags: 0
@@ -5594,6 +5597,10 @@ MonoBehaviour:
   isFlashing: 0
   ammoText: {fileID: 0}
   reloadText: {fileID: 0}
+  gunShotSfx: []
+  reloadSfx: {fileID: 0}
+  clickSfx: {fileID: 0}
+  EnableVR: 0
 --- !u!114 &4795486515033443005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5613,6 +5620,8 @@ MonoBehaviour:
   rotationSpeed: 0.3
   mouseControls: 1
   mousePos: {x: 0, y: 0}
+  EnableVR: 0
+  rightHand: {fileID: 0}
 --- !u!1 &3689197245552982261
 GameObject:
   m_ObjectHideFlags: 0
@@ -5721,6 +5730,8 @@ MonoBehaviour:
   rotationSpeed: 0.3
   mouseControls: 1
   mousePos: {x: 0, y: 0}
+  EnableVR: 0
+  rightHand: {fileID: 0}
 --- !u!114 &4681469906523298572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5754,6 +5765,10 @@ MonoBehaviour:
   isFlashing: 0
   ammoText: {fileID: 0}
   reloadText: {fileID: 0}
+  gunShotSfx: []
+  reloadSfx: {fileID: 0}
+  clickSfx: {fileID: 0}
+  EnableVR: 0
 --- !u!1 &4153130614869358693
 GameObject:
   m_ObjectHideFlags: 0
@@ -6251,6 +6266,7 @@ GameObject:
   - component: {fileID: 3261048276811079340}
   - component: {fileID: 8766872918021849567}
   - component: {fileID: 8421170352404458968}
+  - component: {fileID: -7677098082240653962}
   m_Layer: 6
   m_Name: carSlow
   m_TagString: car
@@ -6428,6 +6444,10 @@ MonoBehaviour:
   driftCounter: 0
   driftPoints: 0
   expManager: {fileID: 0}
+  multManager: {fileID: 0}
+  driftTextManager: {fileID: 0}
+  carEngineAudioScript: {fileID: 0}
+  EnableVR: 0
 --- !u!114 &8421170352404458968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6435,7 +6455,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6052153700888929018}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55d247dfd66ef9c48a89b735d89cd8d3, type: 3}
   m_Name: 
@@ -6474,6 +6494,23 @@ MonoBehaviour:
     type: 3}
   checkPointOffset: {x: 0, y: 2, z: 0}
   expManager: {fileID: 0}
+  resetTargetsScript: {fileID: 0}
+--- !u!114 &-7677098082240653962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6052153700888929018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 951099334
+  AlwaysReplicateAsRoot: 0
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!1 &6105965248937788254
 GameObject:
   m_ObjectHideFlags: 0
@@ -6852,6 +6889,8 @@ MonoBehaviour:
   rotationSpeed: 0.3
   mouseControls: 1
   mousePos: {x: 0, y: 0}
+  EnableVR: 0
+  rightHand: {fileID: 0}
 --- !u!114 &2020567743422181095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6885,6 +6924,10 @@ MonoBehaviour:
   isFlashing: 0
   ammoText: {fileID: 0}
   reloadText: {fileID: 0}
+  gunShotSfx: []
+  reloadSfx: {fileID: 0}
+  clickSfx: {fileID: 0}
+  EnableVR: 0
 --- !u!1 &8043708816435415998
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Netcode;
 
-public class CarController : MonoBehaviour
+public class CarController : NetworkBehaviour
 {
     private Rigidbody playerRB;
     public WheelColliders colliders;
@@ -18,10 +19,10 @@ public class CarController : MonoBehaviour
     public float speed;
     public AnimationCurve steeringCurve;
 
-    public Mybutton gasPedal;
-    public Mybutton brakePedal;
-    public Mybutton leftButton;
-    public Mybutton rightButton;
+    //public Mybutton gasPedal;
+    //public Mybutton brakePedal;
+    //public Mybutton leftButton;
+    //public Mybutton rightButton;
 
     public bool isDrifting1;
     public bool isDrifting2;
@@ -31,11 +32,11 @@ public class CarController : MonoBehaviour
     public float driftCounter;
     public float driftPoints;
 
-    public exp expManager;
-    public multiplierManager multManager;
-    public driftTextManager driftTextManager;
+    //public exp expManager;
+    //public multiplierManager multManager;
+    //public driftTextManager driftTextManager;
 
-    public EngineAudioScript carEngineAudioScript;
+    //public EngineAudioScript carEngineAudioScript;
 
     public bool EnableVR;
 
@@ -43,7 +44,7 @@ public class CarController : MonoBehaviour
     void Start()
     {
         playerRB = gameObject.GetComponent<Rigidbody>();
-        carEngineAudioScript = transform.gameObject.GetComponent<EngineAudioScript>();
+        //carEngineAudioScript = transform.gameObject.GetComponent<EngineAudioScript>();
         InstantiateSmoke();
         //wheelParticles.FRWheel.Play();
         //wheelParticles.FLWheel.Play();
@@ -219,7 +220,7 @@ public class CarController : MonoBehaviour
     {
         if (isDrifting1 || isDrifting2 || isDrifting3 || isDrifting4)
         {
-            carEngineAudioScript.drifting = true;
+            //carEngineAudioScript.drifting = true;
             if (driftCounter > 1)
             {
                 driftCounter += Time.deltaTime * 2;
@@ -236,16 +237,16 @@ public class CarController : MonoBehaviour
             {
                 driftCounter += Time.deltaTime;
             }
-            driftTextManager.updateText(driftCounter);
+            //driftTextManager.updateText(driftCounter);
         }
         else
         {
-            carEngineAudioScript.drifting = false;
+            //carEngineAudioScript.drifting = false;
             driftPoints += driftCounter;
-            expManager.addDriftPoints(driftCounter);
-            multManager.getDrift(driftCounter);
+            //expManager.addDriftPoints(driftCounter);
+            //multManager.getDrift(driftCounter);
             driftCounter = 0;
-            driftTextManager.stopText();
+            //driftTextManager.stopText();
         }
     }
 

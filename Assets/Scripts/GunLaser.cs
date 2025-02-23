@@ -9,7 +9,7 @@ public class GunLaser : MonoBehaviour
     [SerializeField] private Vector3[] allVectors;
     [SerializeField] private RaycastHit hit;
     [SerializeField] private GameObject laserHitObject;
-    [SerializeField] private GameObject laserHitsParent;
+    //[SerializeField] private GameObject laserHitsParent;
 
     public Vector3 yes;
 
@@ -30,7 +30,7 @@ public class GunLaser : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.forward, out hit, Mathf.Infinity, layerMask))
         {
             allVectors[1] = hit.point;
-            Instantiate(laserHitObject, hit.point, Quaternion.EulerRotation(hit.normal + yes), laserHitsParent.transform);
+            //Instantiate(laserHitObject, hit.point, Quaternion.EulerRotation(hit.normal + yes), laserHitsParent.transform);
         }
         else
         {
