@@ -10,20 +10,20 @@ public class SavingSystem : MonoBehaviour
     public string carWeaponStr;
     public string carPerkStr;
 
-    public int totalTargetsHit;
-    public int totalDriftPoints;
+    //public int totalTargetsHit;
+    //public int totalDriftPoints;
 
-    public exp xpManager;
-    public moneyManager moneyManager;
-    public mainUiManager uiManager;
+    //public exp xpManager;
+    //public moneyManager moneyManager;
+    //public mainUiManager uiManager;
 
     private void Awake()
     {
-        xpManager.setExp(LoadXp());
-        moneyManager.updateMoney(LoadMoney());
+        //xpManager.setExp(LoadXp());
+        //moneyManager.updateMoney(LoadMoney());
         LoadCar();
-        totalTargetsHit = loadTargetsHit();
-        totalDriftPoints = loadDriftPoints();
+        //totalTargetsHit = loadTargetsHit();
+        //totalDriftPoints = loadDriftPoints();
 
 
 
@@ -44,7 +44,7 @@ public class SavingSystem : MonoBehaviour
         PlayerPrefs.SetInt("PeachUnlock", 0);
         PlayerPrefs.SetInt("PinkUnlock", 0);
         PlayerPrefs.Save();
-        uiManager.checkForUnlocks();
+        //uiManager.checkForUnlocks();
     }
 
     public int loadTargetsHit()
@@ -61,15 +61,15 @@ public class SavingSystem : MonoBehaviour
 
     public void addToTargetsHit()
     {
-        totalTargetsHit++;
-        PlayerPrefs.SetInt("TotalTargetsHit", totalTargetsHit);
+        //totalTargetsHit++;
+        //PlayerPrefs.SetInt("TotalTargetsHit", totalTargetsHit);
         PlayerPrefs.Save();
     }
 
     public void addToDriftPoints(int driftPoints)
     {
-        totalDriftPoints += driftPoints;
-        PlayerPrefs.SetInt("TotalDriftPoints", totalDriftPoints);
+        //totalDriftPoints += driftPoints;
+        //PlayerPrefs.SetInt("TotalDriftPoints", totalDriftPoints);
         PlayerPrefs.Save();
     }
 
