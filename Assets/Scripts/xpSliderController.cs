@@ -12,6 +12,10 @@ public class xpSliderController : MonoBehaviour
     public TMPro.TextMeshProUGUI levelText;
     public TMPro.TextMeshProUGUI xpText;
 
+    public int fakeLevel;
+    public Color[] levelColours; 
+
+
     //testing
     public float xpTest;
     void Update()
@@ -40,6 +44,7 @@ public class xpSliderController : MonoBehaviour
         updateUI(level, newMax, xp);
     }
 
+
     public void setUp()
     {
         if (expScript.level == 0)
@@ -61,6 +66,33 @@ public class xpSliderController : MonoBehaviour
         levelText.text = "Level: " + newLevel.ToString();
         int flooredXp = Mathf.FloorToInt(newXp);
         xpText.text = flooredXp.ToString() + "/" + newMax.ToString();
+        levelText.color = calcColour();
+    }
+
+    public Color calcColour()
+    {
+        int index = 0;
+
+        if (expScript.level == 0 || expScript.level <= 1)
+        {
+            index = 0;
+        }
+        else if (expScript.level == 2|| expScript.level <= 5)
+        {
+            index = 1;
+
+        }
+        else if (expScript.level == 6 || expScript.level <= 10)
+        {
+            index = 2;
+
+        }
+        else if (expScript.level == 11 || expScript.level <= 15)
+        {
+            index = 3;
+
+        }
+        return levelColours[index];
     }
 
 }
