@@ -11,6 +11,7 @@ TagManager:
   - yellow
   - smash
   - uiparent
+  - turretBullet
   layers:
   - Default
   - TransparentFX

@@ -7,13 +7,17 @@ public class BulletForward : MonoBehaviour
 
     [SerializeField] private float bulletForce;
 
+    [SerializeField] private float lifeTimer;
+
     private Rigidbody bulletRb;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
         bulletRb = gameObject.GetComponent<Rigidbody>();
-        DestroyObject(gameObject, 1f);
+        DestroyObject(gameObject, lifeTimer);
         bulletRb.AddForce(transform.right * bulletForce, ForceMode.Impulse);
     }
 

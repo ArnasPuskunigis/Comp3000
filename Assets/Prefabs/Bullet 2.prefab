@@ -4844,9 +4844,10 @@ GameObject:
   - component: {fileID: 5631860977454688892}
   - component: {fileID: 953810832233943471}
   - component: {fileID: 8323171577936534965}
-  m_Layer: 6
-  m_Name: Bullet
-  m_TagString: bullet
+  - component: {fileID: 7201964588683915159}
+  m_Layer: 0
+  m_Name: Bullet 2
+  m_TagString: turretBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4946,7 +4947,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6265574777286009767}
   serializedVersion: 4
-  m_Mass: 0.001
+  m_Mass: 0.01
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -4960,11 +4961,11 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 3
 --- !u!114 &8323171577936534965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4978,4 +4979,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletForce: 1
-  lifeTimer: 1
+  lifeTimer: 33.35
+--- !u!114 &7201964588683915159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6265574777286009767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29cff3e6a97178248b1560a57180a05e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletForce: 20
