@@ -20160,6 +20160,7 @@ GameObject:
   - component: {fileID: 2317029579507895303}
   - component: {fileID: 3096648564823418524}
   - component: {fileID: 1859598047755267480}
+  - component: {fileID: 4057082336253268038}
   m_Layer: 6
   m_Name: carFastDisplay
   m_TagString: car
@@ -20265,6 +20266,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.7901204, y: 1.13, z: 3.75}
   m_Center: {x: 0, y: 1.15, z: 0.27}
+--- !u!114 &4057082336253268038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6672301554062592506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 951099334
+  AlwaysReplicateAsRoot: 0
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
 --- !u!1 &6773362301100400182
 GameObject:
   m_ObjectHideFlags: 0

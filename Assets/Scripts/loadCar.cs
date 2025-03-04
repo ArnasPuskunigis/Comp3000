@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
-using Unity.VisualScripting;
 using UnityEngine;
 using Cinemachine;
+using Unity.Netcode;
+using Unity.Networking;
 
-public class loadCar : MonoBehaviour
+public class loadCar : NetworkBehaviour
 {
     public SavingSystem SaveManagerScript;
     public Transform spawnPoint;
@@ -35,54 +36,69 @@ public class loadCar : MonoBehaviour
     public GameObject weaponSmgPrefab;
     public GameObject weaponRiflePrefab;
 
-    public Transform slowGunSocket;
-    public Transform mediumGunSocket;
-    public Transform fastGunSocket;
+    public Transform gunSocket;
 
     private GameObject smartCam;
     private CinemachineVirtualCamera virtualCam;
 
-    private GameObject instance;
+    private GameObject carInstance;
+
 
     void Start()
     {
-        smartCam = GameObject.Find("==== Default Stuff ====/CM vcam1");
         spawnPoint = GameObject.Find("CarSpawnPoint").transform;
-        virtualCam = smartCam.GetComponent<CinemachineVirtualCamera>();
         setUpCar();
     }
+
+    public void RequestSpawnCar()
+    {
+        if (IsOwner) // Ensures only the player who owns the object requests spawning
+        {
+            SpawnCarServerRpc(NetworkManager.Singleton.LocalClientId);
+        }
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void SpawnCarServerRpc(ulong clientId)
+    {
+        if (IsServer)
+        {
+            GameObject carPrefab = GetCarPrefabFromSaveData(); // Get correct car prefab
+            carInstance = Instantiate(carPrefab, spawnPoint.position, spawnPoint.rotation);
+
+            carInstance.GetComponent<NetworkObject>().SpawnWithOwnership(clientId);
+        }
+    }
+
+    private GameObject GetCarPrefabFromSaveData()
+    {
+        if (SaveManagerScript.carTypeStr == "slow")
+            return slowCarPrefab;
+        if (SaveManagerScript.carTypeStr == "medium")
+            return mediumCarPrefab;
+        if (SaveManagerScript.carTypeStr == "fast")
+            return fastCarPrefab;
+
+        return slowCarPrefab; // Default to slow car
+    }
+
     public void setUpCar()
     {
         if (SaveManagerScript != null)
         {
-            if (SaveManagerScript.carTypeStr == "slow")
-            {
-                instance = Instantiate(slowCarPrefab, spawnPoint.position, spawnPoint.rotation);
-                virtualCam.Follow = instance.transform;
-                virtualCam.LookAt = instance.transform;
-                currentCar = instance;
-                currentCarBody = instance.transform.GetChild(0).gameObject;
-                slowGunSocket = instance.transform.GetChild(1);
 
-            }
-            else if (SaveManagerScript.carTypeStr == "medium")
+            if (IsOwner)
             {
-                instance = Instantiate(mediumCarPrefab, spawnPoint.position, spawnPoint.rotation);
-                virtualCam.Follow = instance.transform;
-                virtualCam.LookAt = instance.transform;
-                currentCar = instance;
-                currentCarBody = instance.transform.GetChild(0).gameObject;
-                mediumGunSocket = instance.transform.GetChild(1);
+                RequestSpawnCar();
             }
-            else if (SaveManagerScript.carTypeStr == "fast")
-            {
-                instance = Instantiate(fastCarPrefab, spawnPoint.position, spawnPoint.rotation);
-                virtualCam.Follow = instance.transform;
-                virtualCam.LookAt = instance.transform;
-                currentCar = instance;
-                currentCarBody = instance.transform.GetChild(0).gameObject;
-                fastGunSocket = instance.transform.GetChild(1);
-            }
+
+            smartCam = GameObject.Find("==== Default Stuff ====/CM vcam1");
+            virtualCam = smartCam.GetComponent<CinemachineVirtualCamera>();
+            virtualCam.Follow = carInstance.transform;
+            virtualCam.LookAt = carInstance.transform;
+            currentCar = carInstance;
+            currentCarBody = carInstance.transform.GetChild(0).gameObject;
+            gunSocket = carInstance.transform.GetChild(1);
 
             if (SaveManagerScript.carColourStr == "green")
             {
@@ -204,15 +220,15 @@ public class loadCar : MonoBehaviour
 
                 if (SaveManagerScript.carTypeStr == "slow")
                 {
-                    Instantiate(weaponPistolPrefab, slowGunSocket.position, slowGunSocket.rotation, instance.transform);
+                    Instantiate(weaponPistolPrefab, gunSocket.position, gunSocket.rotation, carInstance.transform);
                 }
                 if (SaveManagerScript.carTypeStr == "medium")
                 {
-                    Instantiate(weaponPistolPrefab, mediumGunSocket.position, mediumGunSocket.rotation, instance.transform);
+                    Instantiate(weaponPistolPrefab, gunSocket.position, gunSocket.rotation, carInstance.transform);
                 }
                 if (SaveManagerScript.carTypeStr == "fast")
                 {
-                    Instantiate(weaponPistolPrefab, fastGunSocket.position, fastGunSocket.rotation, instance.transform);
+                    Instantiate(weaponPistolPrefab, gunSocket.position, gunSocket.rotation, carInstance.transform);
                 }
             }
             else if (SaveManagerScript.carWeaponStr == "smg")
@@ -220,15 +236,15 @@ public class loadCar : MonoBehaviour
 
                 if (SaveManagerScript.carTypeStr == "slow")
                 {
-                    Instantiate(weaponSmgPrefab, slowGunSocket.position, slowGunSocket.rotation, instance.transform);
+                    Instantiate(weaponSmgPrefab, gunSocket.position, gunSocket.rotation, carInstance.transform);
                 }
                 if (SaveManagerScript.carTypeStr == "medium")
                 {
-                    Instantiate(weaponSmgPrefab, mediumGunSocket.position, mediumGunSocket.rotation, instance.transform);
+                    Instantiate(weaponSmgPrefab, gunSocket.position, gunSocket.rotation, carInstance.transform);
                 }
                 if (SaveManagerScript.carTypeStr == "fast")
                 {
-                    Instantiate(weaponSmgPrefab, fastGunSocket.position, fastGunSocket.rotation, instance.transform);
+                    Instantiate(weaponSmgPrefab, gunSocket.position, gunSocket.rotation, carInstance.transform);
                 }
             }
             else if (SaveManagerScript.carWeaponStr == "rifle")
@@ -236,15 +252,15 @@ public class loadCar : MonoBehaviour
 
                 if (SaveManagerScript.carTypeStr == "slow")
                 {
-                    Instantiate(weaponRiflePrefab, slowGunSocket.position, slowGunSocket.rotation, instance.transform);
+                    Instantiate(weaponRiflePrefab, gunSocket.position, gunSocket.rotation, carInstance.transform);
                 }
                 if (SaveManagerScript.carTypeStr == "medium")
                 {
-                    Instantiate(weaponRiflePrefab, mediumGunSocket.position, mediumGunSocket.rotation, instance.transform);
+                    Instantiate(weaponRiflePrefab, gunSocket.position, gunSocket.rotation, carInstance.transform);
                 }
                 if (SaveManagerScript.carTypeStr == "fast")
                 {
-                    Instantiate(weaponRiflePrefab, fastGunSocket.position, fastGunSocket.rotation, instance.transform);
+                    Instantiate(weaponRiflePrefab, gunSocket.position, gunSocket.rotation, carInstance.transform);
                 }
             }
 
@@ -264,21 +280,22 @@ public class loadCar : MonoBehaviour
         }
         else
         {
-            instance = Instantiate(slowCarPrefab, spawnPoint.position, spawnPoint.rotation);
-            virtualCam.Follow = instance.transform;
-            virtualCam.LookAt = instance.transform;
-            currentCar = instance;
-            currentCarBody = instance.transform.GetChild(0).gameObject;
+            carInstance = Instantiate(slowCarPrefab, spawnPoint.position, spawnPoint.rotation);
+            virtualCam.Follow = carInstance.transform;
+            virtualCam.LookAt = carInstance.transform;
+            currentCar = carInstance;
+            currentCarBody = carInstance.transform.GetChild(0).gameObject;
 
             MeshRenderer carRenderer;
             carRenderer = currentCarBody.GetComponent<MeshRenderer>();
             carRenderer.material = redColour;
 
-            Instantiate(weaponPistolPrefab, slowGunSocket.position, slowGunSocket.rotation);
+            Instantiate(weaponPistolPrefab, gunSocket.position, gunSocket.rotation, carInstance.transform);
 
         }
 
 
-    }
 
+
+    }
 }

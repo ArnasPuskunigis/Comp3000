@@ -5257,7 +5257,8 @@ GameObject:
   - component: {fileID: 3261048276811079340}
   - component: {fileID: 8766872918021849567}
   - component: {fileID: 8421170352404458968}
-  - component: {fileID: -7677098082240653962}
+  - component: {fileID: 5517913194961617249}
+  - component: {fileID: -5991132865617816876}
   m_Layer: 6
   m_Name: carSlow 1
   m_TagString: car
@@ -5478,7 +5479,7 @@ MonoBehaviour:
   checkPointOffset: {x: 0, y: 2, z: 0}
   expManager: {fileID: 0}
   resetTargetsScript: {fileID: 0}
---- !u!114 &-7677098082240653962
+--- !u!114 &5517913194961617249
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5494,6 +5495,32 @@ MonoBehaviour:
   AlwaysReplicateAsRoot: 0
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
+--- !u!114 &-5991132865617816876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6052153700888929018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91795d0b52ad2094a9511269801f26c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SyncPositionX: 1
+  SyncPositionY: 1
+  SyncPositionZ: 1
+  SyncRotAngleX: 1
+  SyncRotAngleY: 1
+  SyncRotAngleZ: 1
+  SyncScaleX: 1
+  SyncScaleY: 1
+  SyncScaleZ: 1
+  PositionThreshold: 0.001
+  RotAngleThreshold: 0.01
+  ScaleThreshold: 0.01
+  InLocalSpace: 0
+  Interpolate: 1
 --- !u!1 &6105965248937788254
 GameObject:
   m_ObjectHideFlags: 0

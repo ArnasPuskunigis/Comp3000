@@ -706,8 +706,8 @@ GameObject:
   - component: {fileID: 3626554758144314589}
   - component: {fileID: 7105639635749836206}
   - component: {fileID: 7235615052901318393}
-  - component: {fileID: 3131367865720679425}
-  - component: {fileID: 6607941179647951741}
+  - component: {fileID: -5285581490343794224}
+  - component: {fileID: -5661045201137496378}
   m_Layer: 6
   m_Name: carMedium
   m_TagString: car
@@ -929,7 +929,7 @@ MonoBehaviour:
   checkPointOffset: {x: 0, y: 2, z: 0}
   expManager: {fileID: 0}
   resetTargetsScript: {fileID: 0}
---- !u!114 &3131367865720679425
+--- !u!114 &-5285581490343794224
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -945,7 +945,7 @@ MonoBehaviour:
   AlwaysReplicateAsRoot: 0
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
---- !u!114 &6607941179647951741
+--- !u!114 &-5661045201137496378
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

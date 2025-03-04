@@ -67,8 +67,9 @@ public class CarController : NetworkBehaviour
 
     void Update()
     {
-        if (!IsOwner) 
+        if (!IsOwner)
         {
+            Debug.Log("not owner");
             return;
         }
 
@@ -79,6 +80,7 @@ public class CarController : NetworkBehaviour
         ApplyBrake();
         CheckParticles();
         ApplyWheelPositions();
+        Debug.Log("driving");
     }
 
     void CheckInput()

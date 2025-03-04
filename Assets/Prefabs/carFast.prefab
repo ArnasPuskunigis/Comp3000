@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 339624019459246022}
   - component: {fileID: 1787290551643628114}
   - component: {fileID: 4113504067883502580}
-  - component: {fileID: -5361396594765192878}
+  - component: {fileID: -63680049936067136}
+  - component: {fileID: -7729261071272534880}
   m_Layer: 6
   m_Name: carFast
   m_TagString: car
@@ -198,7 +199,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 505692364712889139}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55d247dfd66ef9c48a89b735d89cd8d3, type: 3}
   m_Name: 
@@ -238,7 +239,7 @@ MonoBehaviour:
   checkPointOffset: {x: 0, y: 2, z: 0}
   expManager: {fileID: 0}
   resetTargetsScript: {fileID: 0}
---- !u!114 &-5361396594765192878
+--- !u!114 &-63680049936067136
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -254,6 +255,32 @@ MonoBehaviour:
   AlwaysReplicateAsRoot: 0
   DontDestroyWithOwner: 0
   AutoObjectParentSync: 1
+--- !u!114 &-7729261071272534880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505692364712889139}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91795d0b52ad2094a9511269801f26c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SyncPositionX: 1
+  SyncPositionY: 1
+  SyncPositionZ: 1
+  SyncRotAngleX: 1
+  SyncRotAngleY: 1
+  SyncRotAngleZ: 1
+  SyncScaleX: 0
+  SyncScaleY: 0
+  SyncScaleZ: 0
+  PositionThreshold: 0.001
+  RotAngleThreshold: 0.01
+  ScaleThreshold: 0.01
+  InLocalSpace: 0
+  Interpolate: 1
 --- !u!1 &1207309969341704537
 GameObject:
   m_ObjectHideFlags: 0
