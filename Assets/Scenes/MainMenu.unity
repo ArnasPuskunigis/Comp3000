@@ -24738,6 +24738,12 @@ MonoBehaviour:
   expScript: {fileID: 2128116926}
   levelText: {fileID: 4280644097766133890}
   xpText: {fileID: 4080142412074238467}
+  fakeLevel: 0
+  levelColours:
+  - {r: 0, g: 0.07727146, b: 1, a: 1}
+  - {r: 0, g: 0.74154997, b: 1, a: 1}
+  - {r: 0, g: 1, b: 0.9003706, a: 1}
+  - {r: 0, g: 1, b: 0.58708096, a: 1}
   xpTest: 1
 --- !u!114 &2128116926
 MonoBehaviour:

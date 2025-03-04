@@ -227,10 +227,15 @@ public class openCrate : MonoBehaviour
         {
             boxAnimManager.resetBox();
             moneyRewardText.gameObject.SetActive(false);
+            moneyRewardText.text = "";
             commonImage.GetComponent<Animator>().SetBool("fadeIn", false);
             rareImage.GetComponent<Animator>().SetBool("fadeIn", false);
             epicImage.GetComponent<Animator>().SetBool("fadeIn", false);
             legendaryImage.GetComponent<Animator>().SetBool("fadeIn", false);
+            commonImage.GetComponent<Animator>().StopPlayback();
+            rareImage.GetComponent<Animator>().StopPlayback();
+            epicImage.GetComponent<Animator>().StopPlayback();
+            legendaryImage.GetComponent<Animator>().StopPlayback();
         }
     }
     public void openTheCrate()
