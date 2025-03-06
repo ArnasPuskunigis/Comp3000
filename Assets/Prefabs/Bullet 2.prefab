@@ -4992,4 +4992,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29cff3e6a97178248b1560a57180a05e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletForce: 20
+  bulletForce: 196.99
