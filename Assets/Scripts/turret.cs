@@ -32,7 +32,7 @@ public class turret : MonoBehaviour
         if (timeElapsed > shotCooldown )
         {
             int random = Random.Range(0, bulletSpawnPoints.Length);
-            Instantiate(bullet, bulletSpawnPoints[random].position, bulletSpawnPoints[random].rotation * Quaternion.Euler(0,-90,0), bulletSpawnPoints[random]);
+            Instantiate(bullet, bulletSpawnPoints[random].position, bulletSpawnPoints[random].rotation * Quaternion.Euler(0,-90,0), destroy.transform);
             timeElapsed = 0f;
         }
     }
