@@ -509,8 +509,11 @@ MonoBehaviour:
   bulletForce: 5
   shotCooldown: 1
   timeElapsed: 0
-  destroy: {fileID: 0}
   turretHp: {fileID: 0}
+  carLoader: {fileID: 0}
+  carFound: 0
+  inRange: 0
+  range: 200
 --- !u!114 &4979689037183957239
 MonoBehaviour:
   m_ObjectHideFlags: 0

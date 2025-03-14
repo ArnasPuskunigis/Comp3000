@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem.Controls;
 using UnityEngine.Rendering;
 using UnityEngine.XR.Management;
+using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 public class turret : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class turret : MonoBehaviour
     public Health turretHp;
     public loadCar carLoader;
     public bool carFound;
+
+    public bool inRange;
+    public float range;
 
     // Start is called before the first frame update
     void Start()
@@ -42,13 +46,12 @@ public class turret : MonoBehaviour
     {
         if (carFound)
         {
-            turretGun.GetComponent<Transform>().LookAt(target.GetComponent<Transform>());
+            checkIfInRange();
+
             timeElapsed += Time.deltaTime;
-            if (timeElapsed > shotCooldown && turretHp.hp > 0)
+            if (timeElapsed > shotCooldown && turretHp.hp > 0 && inRange)
             {
-                int random = Random.Range(0, bulletSpawnPoints.Length);
-                Instantiate(bullet, bulletSpawnPoints[random].position, bulletSpawnPoints[random].rotation * Quaternion.Euler(0, -90, 0));
-                timeElapsed = 0f;
+                shoot();
             }
         }
 
@@ -57,6 +60,26 @@ public class turret : MonoBehaviour
             target = carLoader.currentCar;
             carFound= true;
         }
+    }
+
+    public void checkIfInRange()
+    {
+        if (Vector3.Distance(transform.position, target.transform.position) <= range)
+        {
+            inRange = true;
+            turretGun.GetComponent<Transform>().LookAt(target.GetComponent<Transform>());
+        }
+        else
+        {
+            inRange = false;
+        }
+    }
+
+    public void shoot()
+    {
+        int random = Random.Range(0, bulletSpawnPoints.Length);
+        Instantiate(bullet, bulletSpawnPoints[random].position, bulletSpawnPoints[random].rotation * Quaternion.Euler(0, -90, 0));
+        timeElapsed = 0f;
     }
 
 }
