@@ -1,3 +1,4 @@
+using Oculus.Interaction;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,27 +28,25 @@ public class targetDestroy : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.transform.tag == "bullet" || collision.transform.tag == "car")
+        if (collision.transform.tag == "bullet" || collision.transform.tag == "car")
         {
             Instantiate(destroyedTarget, transform.position, transform.rotation, targetsParent.transform);
             if (basic)
             {
                 //theScoreManager.addScore(1);
                 expManager.targetHit(1);
-                multManager.getTargets(1);
+                //multManager.getTargets(1);
                 saveManager.addToTargetsHit();
             }
             else
             {
                 //theScoreManager.addScore(3);
                 expManager.targetHit(25);
-                multManager.getTargets(25);
+                //multManager.getTargets(25);
             }
             gameObject.SetActive(false);
         }
     }
-
-
 
     // Update is called once per frame
     void FixedUpdate()

@@ -266,7 +266,7 @@ MonoBehaviour:
   theScoreManager: {fileID: 0}
   expManager: {fileID: 0}
   multManager: {fileID: 0}
-  xpAudio: {fileID: 8300000, guid: caba12505ec79004fa04c977e9b5bc95, type: 3}
+  saveManager: {fileID: 0}
 --- !u!54 &3577714166601334165
 Rigidbody:
   m_ObjectHideFlags: 0
