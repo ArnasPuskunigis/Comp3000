@@ -1,44 +1,9 @@
 fileFormatVersion: 2
-guid: 47ab6bd20fb2f2a49bd9831646d4b39f
+guid: 7edb699ca3561444d9488ff4d3c6f706
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Barrel1
-    second: {fileID: 2100000, guid: 301747e1d922e9d4eb81d2556d709b5c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Barrel2
-    second: {fileID: 2100000, guid: 8a9a3b7a00a65cd40b5e0ad92b9991ee, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Metal1
-    second: {fileID: 2100000, guid: 9033cd00c224f8e4c9719c1768fc50e2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Metal2
-    second: {fileID: 2100000, guid: 061a7deab3fef2f4aa9507950f92465d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Metal3
-    second: {fileID: 2100000, guid: 5f6c51ff920d08940a4e0e712fabbdcb, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Metal4
-    second: {fileID: 2100000, guid: ea082bffc350d7248ac1907b1e0d33b2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Metal5
-    second: {fileID: 2100000, guid: fe8c955acb982bd4f9d529f16e670627, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
