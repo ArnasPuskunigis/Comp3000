@@ -16,6 +16,7 @@ public class CarController : MonoBehaviour
     public float brakePower;
     public float slipAngle;
     public float speed;
+    public float maxSpeed = 60.0f;
     public AnimationCurve steeringCurve;
 
     public Mybutton gasPedal;
@@ -42,6 +43,8 @@ public class CarController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+
         playerRB = gameObject.GetComponent<Rigidbody>();
         carEngineAudioScript = transform.gameObject.GetComponent<EngineAudioScript>();
         InstantiateSmoke();
@@ -66,7 +69,7 @@ public class CarController : MonoBehaviour
 
     void Update()
     {
-        speed = playerRB.velocity.magnitude;
+        speed = playerRB.velocity.magnitude * 3.6f;
         CheckInput();
         ApplyMotor();
         ApplySteering();
@@ -141,8 +144,16 @@ public class CarController : MonoBehaviour
     }
     void ApplyMotor() {
 
-        colliders.RRWheel.motorTorque = motorPower * gasInput;
-        colliders.RLWheel.motorTorque = motorPower * gasInput;
+        if (speed < maxSpeed)
+        {
+            colliders.RRWheel.motorTorque = motorPower * gasInput;
+            colliders.RLWheel.motorTorque = motorPower * gasInput;
+        }
+        else
+        {
+            colliders.RRWheel.motorTorque = 0;
+            colliders.RLWheel.motorTorque = 0;
+        }
     }
     void ApplySteering()
     {

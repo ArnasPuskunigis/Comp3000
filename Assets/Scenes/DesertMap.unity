@@ -23355,6 +23355,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1787290551643628114, guid: 1381bd1a6ba88ef4b977152fb2924844,
         type: 3}
+      propertyPath: maxSpeed
+      value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 1787290551643628114, guid: 1381bd1a6ba88ef4b977152fb2924844,
+        type: 3}
       propertyPath: brakePower
       value: 100000
       objectReference: {fileID: 0}
@@ -24915,6 +24920,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7105639635749836206, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
         type: 3}
+      propertyPath: maxSpeed
+      value: 95
+      objectReference: {fileID: 0}
+    - target: {fileID: 7105639635749836206, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
+        type: 3}
       propertyPath: expManager
       value: 
       objectReference: {fileID: 649540946}
@@ -26100,6 +26110,11 @@ PrefabInstance:
         type: 3}
       propertyPath: EnableVR
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8766872918021849567, guid: 54612deb9d68572429c433477696517d,
+        type: 3}
+      propertyPath: maxSpeed
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 8766872918021849567, guid: 54612deb9d68572429c433477696517d,
         type: 3}
