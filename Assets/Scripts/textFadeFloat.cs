@@ -51,6 +51,11 @@ public class textFadeFloat : MonoBehaviour
                     textObj.text = "+" + 1 * expManager.expMultiplier + "XP HIT";
                     textObj.color = new Color(255, 255, 255, Mathf.Lerp(0, 1, percentageComplete));
                 }
+                else if (type == "hitTurret")
+                {
+                    textObj.text = "+" + 10 * expManager.expMultiplier + "XP TURRET DESTROYED" + "\n" + "+$1" ;
+                    textObj.color = new Color(255, 255, 255, Mathf.Lerp(0, 1, percentageComplete));
+                }
                 else if (type == "drift")
                 {
                     textObj.text = "+" + expManager.driftExpGain + "XP DRIFT";
@@ -79,6 +84,11 @@ public class textFadeFloat : MonoBehaviour
                     textObj.color = new Color(0, 255, 255, Mathf.Lerp(1, 0, percentageComplete));
                 }
                 else if (type == "hit")
+                {
+                    textObj.color = new Color(255, 255, 255, Mathf.Lerp(1, 0, percentageComplete));
+
+                }
+                else if (type == "hitTurret")
                 {
                     textObj.color = new Color(255, 255, 255, Mathf.Lerp(1, 0, percentageComplete));
 

@@ -29,6 +29,7 @@ public class exp : MonoBehaviour
 
     public GameObject lapText;
     public GameObject targetText;
+    public GameObject turretText;
     public GameObject goldTargetText;
     public GameObject driftText;
     public GameObject uiSpawner;
@@ -157,6 +158,13 @@ public class exp : MonoBehaviour
             Instantiate(goldTargetText, uiSpawner.transform.position, new Quaternion());
         }
         addExp(targetValue * expMultiplier);
+        targetsHit += 1;
+    }
+
+    public void turretDestroyed(float value)
+    {
+        Instantiate(turretText, uiSpawner.transform.position, new Quaternion());
+        addExp(value * expMultiplier);
         targetsHit += 1;
     }
 

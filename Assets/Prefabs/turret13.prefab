@@ -532,7 +532,8 @@ MonoBehaviour:
   explodedTurret: {fileID: 8681956693081942114, guid: bd76bfb1fbf0fb34c93ebf9725918ed6,
     type: 3}
   money: {fileID: 0}
-  reward: 5
+  moneyReward: 1
+  xpReward: 10
   isDead: 0
   temp: {fileID: 0}
 --- !u!65 &1690803248363845367

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7523470495059817194}
   - component: {fileID: 7903275914999580907}
   m_Layer: 5
-  m_Name: targetHitText
+  m_Name: turretDestroyedText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: +1XP HIT
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -154,4 +154,4 @@ MonoBehaviour:
   outTime: 1
   animateTarget: 0
   animateTargetOff: 0
-  type: hit
+  type: hitTurret

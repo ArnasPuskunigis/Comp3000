@@ -6411,6 +6411,8 @@ MonoBehaviour:
   lapText: {fileID: 4973352611561194632, guid: 18bf9a225f19626449510376d596bbca, type: 3}
   targetText: {fileID: 8504711178881763501, guid: 86161b46618b1b349b8dc6d9bdf52a71,
     type: 3}
+  turretText: {fileID: 8504711178881763501, guid: 2cc078c7cca8615479e12a1b684eeb27,
+    type: 3}
   goldTargetText: {fileID: 2869812216738197688, guid: ea5eb4bd8c991ef41951384048bd56e9,
     type: 3}
   driftText: {fileID: 8875624871322646619, guid: bc056a760ac871e429b4474f3b932b69,

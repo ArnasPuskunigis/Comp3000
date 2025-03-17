@@ -10,7 +10,9 @@ public class Health : MonoBehaviour
     public GameObject explosionParticles;
     public GameObject explodedTurret;
     public moneyManager money;
-    public int reward;
+    public exp xpManager;
+    public int moneyReward;
+    public int xpReward;
     public bool isDead;
     public Transform temp;
 
@@ -18,6 +20,7 @@ public class Health : MonoBehaviour
     void Start()
     {
         money = GameObject.Find("MoneyManager").GetComponent<moneyManager>();
+        xpManager = GameObject.Find("ExpManager").GetComponent<exp>();
     }
 
     // Update is called once per frame
@@ -40,7 +43,8 @@ public class Health : MonoBehaviour
     {
         if (hp <= 0)
         {
-            money.addToMoney(reward);
+            money.addToMoney(moneyReward);
+            xpManager.turretDestroyed(xpReward);
             DestroyTurret();
         }
     }
