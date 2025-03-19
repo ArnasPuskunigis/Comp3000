@@ -175,7 +175,7 @@ public class mainUiManager : MonoBehaviour
         garageBackButton.onClick.AddListener(garageBackPressed);
         playMenuItems.SetActive(false);
         garageMenuItems.SetActive(false);
-        xpSlider.localPosition = new Vector3(0f, -405f, 0f);
+        //xpSlider.localPosition = new Vector3(0f, -405f, 0f);
 
         bodyButton.onClick.AddListener(bodyButtonPressed);
         weaponButton.onClick.AddListener(weaponButtonPressed);
