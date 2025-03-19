@@ -243,7 +243,6 @@ public class openCrate : MonoBehaviour
         crateCount--;
         crateCountText.text = "Crates Remaining: " + crateCount;
         randomNumber = Random.Range(lower, upper);
-        print(randomNumber);
         boxAnimManager.explodeBox();
         boxAnimManager.exploded = true;
 

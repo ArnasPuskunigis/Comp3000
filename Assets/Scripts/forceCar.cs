@@ -23,7 +23,6 @@ public class forceCar : MonoBehaviour
     {
         if (collision.collider.tag == ("car"))
         {
-            Debug.Log(collision.collider);
             collision.collider.transform.GetComponent<Rigidbody>().AddForceAtPosition(transform.GetComponent<Rigidbody>().velocity * bulletForce, collision.GetContact(0).point, ForceMode.Impulse);
         }
     }

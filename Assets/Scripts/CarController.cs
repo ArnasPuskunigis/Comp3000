@@ -262,11 +262,11 @@ public class CarController : MonoBehaviour
             timeOutOfDrift += Time.deltaTime;
             float alpha = Mathf.Lerp(1, 0, timeOutOfDrift);
             driftTextManager.driftText.color = new Color (driftTextManager.driftText.color.r, driftTextManager.driftText.color.g, driftTextManager.driftText.color.b, alpha);
+            carEngineAudioScript.drifting = false;
         }
         else
         {
             timeOutOfDrift = 0;
-            carEngineAudioScript.drifting = false;
             driftPoints += driftCounter;
             expManager.addDriftPoints(driftCounter);
             multManager.getDrift(driftCounter);
