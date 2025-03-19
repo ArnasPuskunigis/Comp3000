@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CarController : MonoBehaviour
@@ -31,6 +32,9 @@ public class CarController : MonoBehaviour
 
     public float driftCounter;
     public float driftPoints;
+
+    private float driftThreshold = 2f;
+    private float timeOutOfDrift;
 
     public exp expManager;
     public multiplierManager multManager;
@@ -230,7 +234,10 @@ public class CarController : MonoBehaviour
     {
         if (isDrifting1 || isDrifting2 || isDrifting3 || isDrifting4)
         {
+            timeOutOfDrift = 0;
+            driftTextManager.driftText.color = new Color(driftTextManager.driftText.color.r, driftTextManager.driftText.color.g, driftTextManager.driftText.color.b, 1);
             carEngineAudioScript.drifting = true;
+            
             if (driftCounter > 1)
             {
                 driftCounter += Time.deltaTime * 2;
@@ -247,10 +254,18 @@ public class CarController : MonoBehaviour
             {
                 driftCounter += Time.deltaTime;
             }
+         
             driftTextManager.updateText(driftCounter);
+        }
+        else if (timeOutOfDrift < driftThreshold)
+        {
+            timeOutOfDrift += Time.deltaTime;
+            float alpha = Mathf.Lerp(1, 0, timeOutOfDrift);
+            driftTextManager.driftText.color = new Color (driftTextManager.driftText.color.r, driftTextManager.driftText.color.g, driftTextManager.driftText.color.b, alpha);
         }
         else
         {
+            timeOutOfDrift = 0;
             carEngineAudioScript.drifting = false;
             driftPoints += driftCounter;
             expManager.addDriftPoints(driftCounter);
@@ -258,6 +273,7 @@ public class CarController : MonoBehaviour
             driftCounter = 0;
             driftTextManager.stopText();
         }
+
     }
 
     void UpdateWheel(WheelCollider coll, MeshRenderer wheelMesh)
