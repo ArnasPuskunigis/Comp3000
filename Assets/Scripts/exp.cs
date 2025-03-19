@@ -52,6 +52,7 @@ public class exp : MonoBehaviour
 
     void Awake()
     {
+        setUpLevels();
         nextXp = allLevels[level];
     }
 
@@ -69,6 +70,20 @@ public class exp : MonoBehaviour
         {
             carType = "fast";
         }
+    }
+
+    public void setUpLevels()
+    {
+        allLevels = new float[100];
+
+        for (int i = 1; i < allLevels.Length - 1; i++)
+        {
+            allLevels[i] = 500 * i;
+        }
+        allLevels[0] = 100;
+        allLevels[1] = 250;
+        allLevels[1] = 600;
+        allLevels[1] = 1000;
     }
 
     public void addExp(float xpAmount)

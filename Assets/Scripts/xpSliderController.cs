@@ -77,20 +77,36 @@ public class xpSliderController : MonoBehaviour
         {
             index = 0;
         }
-        else if (expScript.level == 2|| expScript.level <= 5)
+        else if (expScript.level == 2|| expScript.level <= 4)
         {
             index = 1;
 
         }
-        else if (expScript.level == 6 || expScript.level <= 10)
+        else if (expScript.level == 5 || expScript.level <= 9)
         {
             index = 2;
 
         }
-        else if (expScript.level == 11 || expScript.level <= 15)
+        else if (expScript.level == 10 || expScript.level <= 14)
         {
             index = 3;
 
+        }
+        else if (expScript.level == 15 || expScript.level <= 19)
+        {
+            index = 4;
+        }
+        else if (expScript.level == 20 || expScript.level <= 29)
+        {
+            index = 5;
+        }
+        else if (expScript.level == 30 || expScript.level <= 49)
+        {
+            index = 6;
+        }
+        else if (expScript.level == 50 || expScript.level <= 1000000)
+        {
+            index = 7;
         }
         return levelColours[index];
     }

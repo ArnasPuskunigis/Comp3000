@@ -260,7 +260,7 @@ public class CarController : MonoBehaviour
         else if (timeOutOfDrift < driftThreshold)
         {
             timeOutOfDrift += Time.deltaTime;
-            float alpha = Mathf.Lerp(1, 0, timeOutOfDrift);
+            float alpha = Mathf.Lerp(1, 0, timeOutOfDrift/2);
             driftTextManager.driftText.color = new Color (driftTextManager.driftText.color.r, driftTextManager.driftText.color.g, driftTextManager.driftText.color.b, alpha);
             carEngineAudioScript.drifting = false;
         }
