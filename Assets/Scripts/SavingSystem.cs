@@ -17,16 +17,14 @@ public class SavingSystem : MonoBehaviour
     public moneyManager moneyManager;
     public mainUiManager uiManager;
 
+    public bool xpInitialised;
+
     private void Awake()
     {
-        xpManager.setExp(LoadXp());
         moneyManager.updateMoney(LoadMoney());
         LoadCar();
         totalTargetsHit = loadTargetsHit();
         totalDriftPoints = loadDriftPoints();
-
-
-
     }
 
     private void FixedUpdate()
@@ -116,6 +114,12 @@ public class SavingSystem : MonoBehaviour
 
     private void Update()
     {
+        if (xpManager.levelsInitialised && !xpInitialised)
+        {
+            xpManager.setExp(LoadXp());
+            xpInitialised = true;
+        }
+
         if (Input.GetKey(KeyCode.N) && Input.GetKey(KeyCode.RightControl))
         {
             PlayerPrefs.DeleteAll();

@@ -17,7 +17,7 @@ public class exp : MonoBehaviour
     public int level;
 
     public float[] allLevels;
-
+    public bool levelsInitialised;
     //public float targetMultiplierIncrement;
     //public float driftMultiplierIncrement;
     public float lapXpGain;
@@ -54,6 +54,7 @@ public class exp : MonoBehaviour
     {
         setUpLevels();
         nextXp = allLevels[level];
+        levelsInitialised = true;
     }
 
     private void Start()
@@ -82,8 +83,8 @@ public class exp : MonoBehaviour
         }
         allLevels[0] = 100;
         allLevels[1] = 250;
-        allLevels[1] = 600;
-        allLevels[1] = 1000;
+        allLevels[2] = 600;
+        allLevels[3] = 1000;
     }
 
     public void addExp(float xpAmount)
@@ -145,7 +146,7 @@ public class exp : MonoBehaviour
                 else
                 {
                     level = 999;
-                    nextXp = 99999999999999;
+                    nextXp = 9999999;
                 }
             }
         }

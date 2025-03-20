@@ -6428,6 +6428,7 @@ MonoBehaviour:
   - 9000
   - 9500
   - 10000
+  levelsInitialised: 0
   lapXpGain: 100
   expMultiplier: 2
   targetsHit: 0
@@ -6492,6 +6493,15 @@ MonoBehaviour:
   - {r: 0.9384004, g: 1, b: 0, a: 1}
   - {r: 1, g: 0.6664483, b: 0, a: 1}
   - {r: 1, g: 0.019788047, b: 0, a: 1}
+  levelNames:
+  - Rookie
+  - Sharpshooter
+  - Gunslinger
+  - Deadeye
+  - Outlaw
+  - Legend
+  - ULTIMATE GUNMAN
+  currentName: 
   xpTest: 1
 --- !u!1 &651125024
 GameObject:
@@ -8996,6 +9006,7 @@ MonoBehaviour:
   xpManager: {fileID: 649540946}
   moneyManager: {fileID: 224940238}
   uiManager: {fileID: 0}
+  xpInitialised: 0
 --- !u!4 &839795033
 Transform:
   m_ObjectHideFlags: 0
@@ -9967,8 +9978,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 3372220415
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.78431374}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9991,7 +10002,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -15923,8 +15934,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -240.2, y: 71.9}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -106.55408, y: 71.9}
+  m_SizeDelta: {x: 467.2919, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1487307623
 MonoBehaviour:
@@ -15946,7 +15957,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level: 0'
+  m_text: 'Level: 0 (Rookie)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15955,8 +15966,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 3372220415
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.78431374}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -15979,7 +15990,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -16009,7 +16020,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -0.77020264, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -18558,8 +18569,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 3372220415
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.78431374}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -18582,7 +18593,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
