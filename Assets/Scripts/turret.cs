@@ -1,12 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem.Controls;
-using UnityEngine.Rendering;
-using UnityEngine.XR.Management;
-using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 public class turret : MonoBehaviour
 {
@@ -81,5 +77,7 @@ public class turret : MonoBehaviour
         Instantiate(bullet, bulletSpawnPoints[random].position, bulletSpawnPoints[random].rotation * Quaternion.Euler(0, -90, 0));
         timeElapsed = 0f;
     }
+
+
 
 }
