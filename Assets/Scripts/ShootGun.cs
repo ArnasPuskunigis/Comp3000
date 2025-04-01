@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using Cinemachine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 
@@ -37,12 +37,15 @@ public class ShootGun : MonoBehaviour
 
     public bool EnableVR;
 
+    private CinemachineImpulseSource impulse;
+
     // Start is called before the first frame update
     void Start()
     {
         ammo = ammoCapacity;
         ammoText.text = "Ammo: " + ammoCapacity.ToString() + "/" + ammoCapacity.ToString();
         reloadText.gameObject.SetActive(false);
+        impulse = GetComponent<CinemachineImpulseSource>();
     }
 
     // Update is called once per frame
@@ -74,6 +77,8 @@ public class ShootGun : MonoBehaviour
                     }
 
                     AudioManager.instance.PlayRandomSfx(gunShotSfx, transform, 1f);
+
+                    CameraShakeManager.Instance.CameraShake(impulse);
 
                     ammo -= 1;
                     shootIntervalTimer = 0;
@@ -145,7 +150,7 @@ public class ShootGun : MonoBehaviour
                     }
 
                     AudioManager.instance.PlayRandomSfx(gunShotSfx, transform, 1f);
-
+                    CameraShakeManager.Instance.CameraShake(impulse);
                     ammo -= 1;
                     shootIntervalTimer = 0;
                     Vector3 newFoce = new Vector3(0, 0, 0);

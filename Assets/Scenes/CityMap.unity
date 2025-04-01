@@ -12692,6 +12692,18 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 172266846}
+    - targetCorrespondingSourceObject: {fileID: 7828415935357747184, guid: 1381bd1a6ba88ef4b977152fb2924844,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1781926662}
+    - targetCorrespondingSourceObject: {fileID: 6763050951039988630, guid: 1381bd1a6ba88ef4b977152fb2924844,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1633192769}
+    - targetCorrespondingSourceObject: {fileID: 5751403682964337384, guid: 1381bd1a6ba88ef4b977152fb2924844,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1391024193}
   m_SourcePrefab: {fileID: 100100000, guid: 1381bd1a6ba88ef4b977152fb2924844, type: 3}
 --- !u!1001 &490625935
 PrefabInstance:
@@ -15046,6 +15058,59 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1021732613}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &592167134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592167133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ImpulseDefinition:
+    m_ImpulseChannel: 1
+    m_ImpulseShape: 1
+    m_CustomImpulseShape:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_ImpulseDuration: 1
+    m_ImpulseType: 0
+    m_DissipationRate: 0.25
+    m_RawSignal: {fileID: 0}
+    m_AmplitudeGain: 1
+    m_FrequencyGain: 1
+    m_RepeatMode: 0
+    m_Randomize: 1
+    m_TimeEnvelope:
+      m_AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_AttackTime: 0
+      m_SustainTime: 0.2
+      m_DecayTime: 0.7
+      m_ScaleWithImpact: 1
+      m_HoldForever: 0
+    m_ImpactRadius: 100
+    m_DirectionMode: 0
+    m_DissipationMode: 2
+    m_DissipationDistance: 100
+    m_PropagationSpeed: 343
+  m_DefaultVelocity: {x: 0, y: -0.05, z: -0.2}
 --- !u!1001 &593813998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25112,6 +25177,18 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 147365181}
+    - targetCorrespondingSourceObject: {fileID: 3364541679968959694, guid: 54612deb9d68572429c433477696517d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1750712736}
+    - targetCorrespondingSourceObject: {fileID: 7546373804951980681, guid: 54612deb9d68572429c433477696517d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1603205697}
+    - targetCorrespondingSourceObject: {fileID: 3689197245552982261, guid: 54612deb9d68572429c433477696517d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 592167134}
   m_SourcePrefab: {fileID: 100100000, guid: 54612deb9d68572429c433477696517d, type: 3}
 --- !u!1001 &1022376158
 PrefabInstance:
@@ -30786,6 +30863,7 @@ Transform:
   - {fileID: 1781623991}
   - {fileID: 1631382650}
   - {fileID: 1797815637}
+  - {fileID: 2115549714}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1275614940
@@ -32971,12 +33049,118 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1739947962}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1389802939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389802938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ImpulseDefinition:
+    m_ImpulseChannel: 1
+    m_ImpulseShape: 1
+    m_CustomImpulseShape:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_ImpulseDuration: 1
+    m_ImpulseType: 0
+    m_DissipationRate: 0.25
+    m_RawSignal: {fileID: 0}
+    m_AmplitudeGain: 1
+    m_FrequencyGain: 1
+    m_RepeatMode: 0
+    m_Randomize: 1
+    m_TimeEnvelope:
+      m_AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_AttackTime: 0
+      m_SustainTime: 0.2
+      m_DecayTime: 0.7
+      m_ScaleWithImpact: 1
+      m_HoldForever: 0
+    m_ImpactRadius: 100
+    m_DirectionMode: 0
+    m_DissipationMode: 2
+    m_DissipationDistance: 100
+    m_PropagationSpeed: 343
+  m_DefaultVelocity: {x: 0, y: -0.05, z: -0.2}
 --- !u!1 &1391024192 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5751403682964337384, guid: 1381bd1a6ba88ef4b977152fb2924844,
     type: 3}
   m_PrefabInstance: {fileID: 489667939}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1391024193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391024192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ImpulseDefinition:
+    m_ImpulseChannel: 1
+    m_ImpulseShape: 1
+    m_CustomImpulseShape:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_ImpulseDuration: 1
+    m_ImpulseType: 0
+    m_DissipationRate: 0.25
+    m_RawSignal: {fileID: 0}
+    m_AmplitudeGain: 1
+    m_FrequencyGain: 1
+    m_RepeatMode: 0
+    m_Randomize: 1
+    m_TimeEnvelope:
+      m_AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_AttackTime: 0
+      m_SustainTime: 0.2
+      m_DecayTime: 0.7
+      m_ScaleWithImpact: 1
+      m_HoldForever: 0
+    m_ImpactRadius: 100
+    m_DirectionMode: 0
+    m_DissipationMode: 2
+    m_DissipationDistance: 100
+    m_PropagationSpeed: 343
+  m_DefaultVelocity: {x: 0, y: -0.05, z: -0.2}
 --- !u!4 &1394940594 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3881984799319873417, guid: 6721ea7e322cef749ad628abd1681436,
@@ -37583,6 +37767,59 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1021732613}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1603205697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603205696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ImpulseDefinition:
+    m_ImpulseChannel: 1
+    m_ImpulseShape: 1
+    m_CustomImpulseShape:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_ImpulseDuration: 1
+    m_ImpulseType: 0
+    m_DissipationRate: 0.25
+    m_RawSignal: {fileID: 0}
+    m_AmplitudeGain: 1
+    m_FrequencyGain: 1
+    m_RepeatMode: 0
+    m_Randomize: 1
+    m_TimeEnvelope:
+      m_AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_AttackTime: 0
+      m_SustainTime: 0.2
+      m_DecayTime: 0.7
+      m_ScaleWithImpact: 1
+      m_HoldForever: 0
+    m_ImpactRadius: 100
+    m_DirectionMode: 0
+    m_DissipationMode: 2
+    m_DissipationDistance: 100
+    m_PropagationSpeed: 343
+  m_DefaultVelocity: {x: 0, y: -0.05, z: -0.2}
 --- !u!1 &1607687757 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4121064981716344898, guid: 1381bd1a6ba88ef4b977152fb2924844,
@@ -38086,6 +38323,59 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1739947962}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1622562110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622562109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ImpulseDefinition:
+    m_ImpulseChannel: 1
+    m_ImpulseShape: 1
+    m_CustomImpulseShape:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_ImpulseDuration: 1
+    m_ImpulseType: 0
+    m_DissipationRate: 0.25
+    m_RawSignal: {fileID: 0}
+    m_AmplitudeGain: 1
+    m_FrequencyGain: 1
+    m_RepeatMode: 0
+    m_Randomize: 1
+    m_TimeEnvelope:
+      m_AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_AttackTime: 0
+      m_SustainTime: 0.2
+      m_DecayTime: 0.7
+      m_ScaleWithImpact: 1
+      m_HoldForever: 0
+    m_ImpactRadius: 100
+    m_DirectionMode: 0
+    m_DissipationMode: 2
+    m_DissipationDistance: 100
+    m_PropagationSpeed: 343
+  m_DefaultVelocity: {x: 0, y: -0.05, z: -0.2}
 --- !u!4 &1630013496 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7014275933529737027, guid: a4ba1a9c93c67c449a7a32926ad9b0c6,
@@ -38377,6 +38667,59 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 489667939}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1633192769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633192768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ImpulseDefinition:
+    m_ImpulseChannel: 1
+    m_ImpulseShape: 1
+    m_CustomImpulseShape:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_ImpulseDuration: 1
+    m_ImpulseType: 0
+    m_DissipationRate: 0.25
+    m_RawSignal: {fileID: 0}
+    m_AmplitudeGain: 1
+    m_FrequencyGain: 1
+    m_RepeatMode: 0
+    m_Randomize: 1
+    m_TimeEnvelope:
+      m_AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_AttackTime: 0
+      m_SustainTime: 0.2
+      m_DecayTime: 0.7
+      m_ScaleWithImpact: 1
+      m_HoldForever: 0
+    m_ImpactRadius: 100
+    m_DirectionMode: 0
+    m_DissipationMode: 2
+    m_DissipationDistance: 100
+    m_PropagationSpeed: 343
+  m_DefaultVelocity: {x: 0, y: -0.05, z: -0.2}
 --- !u!1001 &1639292366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40495,6 +40838,18 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 107424889}
+    - targetCorrespondingSourceObject: {fileID: 3580426259372173084, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1389802939}
+    - targetCorrespondingSourceObject: {fileID: 1571152117041747039, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2135221872}
+    - targetCorrespondingSourceObject: {fileID: 4529332962191474089, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1622562110}
   m_SourcePrefab: {fileID: 100100000, guid: d7e6d2a250ef02e409d3d53a25aa8e73, type: 3}
 --- !u!4 &1741178973 stripped
 Transform:
@@ -40654,6 +41009,59 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1021732613}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1750712736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750712735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ImpulseDefinition:
+    m_ImpulseChannel: 1
+    m_ImpulseShape: 1
+    m_CustomImpulseShape:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_ImpulseDuration: 1
+    m_ImpulseType: 0
+    m_DissipationRate: 0.25
+    m_RawSignal: {fileID: 0}
+    m_AmplitudeGain: 1
+    m_FrequencyGain: 1
+    m_RepeatMode: 0
+    m_Randomize: 1
+    m_TimeEnvelope:
+      m_AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_AttackTime: 0
+      m_SustainTime: 0.2
+      m_DecayTime: 0.7
+      m_ScaleWithImpact: 1
+      m_HoldForever: 0
+    m_ImpactRadius: 100
+    m_DirectionMode: 0
+    m_DissipationMode: 2
+    m_DissipationDistance: 100
+    m_PropagationSpeed: 343
+  m_DefaultVelocity: {x: 0, y: -0.05, z: -0.2}
 --- !u!4 &1751632462 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4253288604644767457, guid: af48b65a2b82c574cb57f16ab9181bf4,
@@ -40850,6 +41258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1781623991}
   - component: {fileID: 1781623990}
+  - component: {fileID: 1781623992}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -40912,12 +41321,88 @@ Transform:
   - {fileID: 2040722298}
   m_Father: {fileID: 1273008774}
   m_LocalEulerAnglesHint: {x: -8.056, y: -180, z: 0}
+--- !u!114 &1781623992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781623989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ApplyAfter: 2
+  m_ChannelMask: 1
+  m_Gain: 1
+  m_Use2DDistance: 0
+  m_UseCameraSpace: 1
+  m_ReactionSettings:
+    m_SecondaryNoise: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+    m_AmplitudeGain: 2
+    m_FrequencyGain: 1
+    m_Duration: 0.5
+    m_NoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &1781926661 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7828415935357747184, guid: 1381bd1a6ba88ef4b977152fb2924844,
     type: 3}
   m_PrefabInstance: {fileID: 489667939}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1781926662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781926661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ImpulseDefinition:
+    m_ImpulseChannel: 1
+    m_ImpulseShape: 1
+    m_CustomImpulseShape:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_ImpulseDuration: 1
+    m_ImpulseType: 0
+    m_DissipationRate: 0.25
+    m_RawSignal: {fileID: 0}
+    m_AmplitudeGain: 1
+    m_FrequencyGain: 1
+    m_RepeatMode: 0
+    m_Randomize: 1
+    m_TimeEnvelope:
+      m_AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_AttackTime: 0
+      m_SustainTime: 0.2
+      m_DecayTime: 0.7
+      m_ScaleWithImpact: 1
+      m_HoldForever: 0
+    m_ImpactRadius: 100
+    m_DirectionMode: 0
+    m_DissipationMode: 2
+    m_DissipationDistance: 100
+    m_PropagationSpeed: 343
+  m_DefaultVelocity: {x: 0, y: -0.05, z: -0.2}
 --- !u!4 &1788735491 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4253288604644767457, guid: af48b65a2b82c574cb57f16ab9181bf4,
@@ -47107,6 +47592,80 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3ac83672b767d840827250483ece822, type: 3}
+--- !u!1001 &2115549713
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1273008774}
+    m_Modifications:
+    - target: {fileID: 4886568560355937196, guid: 76aac8d400d2b2f46b660176719ccb9a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 174.80556
+      objectReference: {fileID: 0}
+    - target: {fileID: 4886568560355937196, guid: 76aac8d400d2b2f46b660176719ccb9a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 29.10629
+      objectReference: {fileID: 0}
+    - target: {fileID: 4886568560355937196, guid: 76aac8d400d2b2f46b660176719ccb9a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 16.029007
+      objectReference: {fileID: 0}
+    - target: {fileID: 4886568560355937196, guid: 76aac8d400d2b2f46b660176719ccb9a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4886568560355937196, guid: 76aac8d400d2b2f46b660176719ccb9a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4886568560355937196, guid: 76aac8d400d2b2f46b660176719ccb9a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4886568560355937196, guid: 76aac8d400d2b2f46b660176719ccb9a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4886568560355937196, guid: 76aac8d400d2b2f46b660176719ccb9a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4886568560355937196, guid: 76aac8d400d2b2f46b660176719ccb9a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4886568560355937196, guid: 76aac8d400d2b2f46b660176719ccb9a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462314195510171574, guid: 76aac8d400d2b2f46b660176719ccb9a,
+        type: 3}
+      propertyPath: m_Name
+      value: CameraShakeManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 76aac8d400d2b2f46b660176719ccb9a, type: 3}
+--- !u!4 &2115549714 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4886568560355937196, guid: 76aac8d400d2b2f46b660176719ccb9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2115549713}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2117354683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -47505,6 +48064,59 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1739947962}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2135221872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135221871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ImpulseDefinition:
+    m_ImpulseChannel: 1
+    m_ImpulseShape: 1
+    m_CustomImpulseShape:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_ImpulseDuration: 1
+    m_ImpulseType: 0
+    m_DissipationRate: 0.25
+    m_RawSignal: {fileID: 0}
+    m_AmplitudeGain: 1
+    m_FrequencyGain: 1
+    m_RepeatMode: 0
+    m_Randomize: 1
+    m_TimeEnvelope:
+      m_AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_AttackTime: 0
+      m_SustainTime: 0.2
+      m_DecayTime: 0.7
+      m_ScaleWithImpact: 1
+      m_HoldForever: 0
+    m_ImpactRadius: 100
+    m_DirectionMode: 0
+    m_DissipationMode: 2
+    m_DissipationDistance: 100
+    m_PropagationSpeed: 343
+  m_DefaultVelocity: {x: 0, y: -0.05, z: -0.2}
 --- !u!1001 &2138252305
 PrefabInstance:
   m_ObjectHideFlags: 0
