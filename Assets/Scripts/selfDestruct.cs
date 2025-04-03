@@ -13,6 +13,7 @@ public class selfDestruct : MonoBehaviour
         Destroy(gameObject, lifeSpan);
     }
 
+
     // Update is called once per frame
     void Update()
     {

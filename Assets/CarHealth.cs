@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class CarHealth : MonoBehaviour
 {
-    
     public int hp;
     public int maxHp;
     public TextMeshProUGUI hpText;
@@ -27,8 +26,17 @@ public class CarHealth : MonoBehaviour
         {
             hp = 0;
             isDead = true;
+            ExplodeCar.instance.DestroyCar();
+            Invoke("RestartCar", 2f);
         }
 
+        hpText.text = "HP: " + hp;
+    }
+
+    public void RestartCar()
+    {
+        hp = maxHp;
+        isDead = false;
         hpText.text = "HP: " + hp;
     }
 

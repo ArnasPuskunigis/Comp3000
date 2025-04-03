@@ -71,6 +71,7 @@ public class loadCar : MonoBehaviour
             {
                 Debug.Log("slow");
                 slowCar.SetActive(true);
+                ExplodeCar.instance.currentCar = slowCar;
                 virtualCam.Follow = slowCar.transform;
                 virtualCam.LookAt = slowCar.transform;
                 mediumCar.SetActive(false);
@@ -83,6 +84,7 @@ public class loadCar : MonoBehaviour
             {
 
                 mediumCar.SetActive(true);
+                ExplodeCar.instance.currentCar = mediumCar;
                 virtualCam.Follow = mediumCar.transform;
                 virtualCam.LookAt = mediumCar.transform;
                 slowCar.SetActive(false);
@@ -93,6 +95,7 @@ public class loadCar : MonoBehaviour
             else if (SaveManagerScript.carTypeStr == "fast")
             {
                 fastCar.SetActive(true);
+                ExplodeCar.instance.currentCar = fastCar;
                 virtualCam.Follow = fastCar.transform;
                 virtualCam.LookAt = fastCar.transform;
                 slowCar.SetActive(false);

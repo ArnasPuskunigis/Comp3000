@@ -32,6 +32,7 @@ public class CarFlip : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.F))
             {
                 theCar.transform.rotation = Quaternion.Euler(theCar.transform.rotation.x, theCar.transform.rotation.y, 0);
+                ExplodeCar.instance.DestroyCar();
             }
         }
         else if (!carFound && carLoader.currentCar != null)
