@@ -180,11 +180,11 @@ public class openCrate : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            crateCount += 5;
-            crateCountText.text = "Crates Remaining: " + crateCount;
-        }
+        //if (Input.GetKeyDown(KeyCode.UpArrow))
+        //{
+        //    crateCount += 5;
+        //    crateCountText.text = "Crates Remaining: " + crateCount;
+        //}
 
         if (EnableVR)
         {
