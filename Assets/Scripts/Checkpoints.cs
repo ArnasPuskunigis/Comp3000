@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Unity.Netcode;
 using UnityEngine;
 
-public class Checkpoints : MonoBehaviour
+public class Checkpoints : NetworkBehaviour
 {
 
     [SerializeField] private Collider[] trackColliders;
@@ -13,8 +14,8 @@ public class Checkpoints : MonoBehaviour
 
     [SerializeField] private int currentLap = 0;
 
-    [SerializeField] private LapUI LapUIManager;
-    [SerializeField] private Timer lapTimer;
+    //[SerializeField] private LapUI LapUIManager;
+    //[SerializeField] private Timer lapTimer;
 
     [SerializeField] private GameObject greenCp;
     [SerializeField] private GameObject yellowCp;
@@ -24,15 +25,26 @@ public class Checkpoints : MonoBehaviour
 
     public Vector3 checkPointOffset;
 
-    public exp expManager;
+    //public exp expManager;
 
-    public ResetTargets resetTargetsScript;
+    //public ResetTargets resetTargetsScript;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        resetTargetsScript = GameObject.Find("TargetsManager").GetComponent<ResetTargets>();
+        if (!IsOwner) return;
+
+        GameObject checkpoints = GameObject.Find("Checkpoints");
+        int childCount = checkpoints.transform.childCount;
+        trackColliders = new Collider[childCount];
+
+        for (int i = 0; i <= 16; i++)
+        {
+            trackColliders[i] = checkpoints.transform.GetChild(i).GetComponent<Collider>();
+        }
+
+        //resetTargetsScript = GameObject.Find("TargetsManager").GetComponent<ResetTargets>();
         currentCheckpoint = trackColliders[0];
         currentCheckpointInt = 0;
         currentLap = 1;
@@ -44,19 +56,21 @@ public class Checkpoints : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!IsOwner) return;
+
         if (other == trackColliders[trackColliders.Length - 1] && currentCheckpoint == trackColliders[trackColliders.Length - 1])
         {
             currentCheckpoint = trackColliders[0];
             currentLap += 1;
             //LapUIManager.AddToLap(currentLap);
-            lapTimer.resetTimer();
-            lapTimer.startTimer();
-            expManager.lapCompleted();
+            //lapTimer.resetTimer();
+            //lapTimer.startTimer();
+            //expManager.lapCompleted();
             DestroyObject(tempGreenCp);
             DestroyObject(tempYellowCp);
             tempGreenCp = Instantiate(greenCp, trackColliders[0].transform.position - checkPointOffset, trackColliders[0].transform.rotation);
             tempYellowCp = Instantiate(yellowCp, trackColliders[1].transform.position - checkPointOffset, trackColliders[1].transform.rotation);
-            resetTargetsScript.resetTargets();
+            //resetTargetsScript.resetTargets();
         }
 
         for (int i = 0; i < trackColliders.Length - 1; i++)

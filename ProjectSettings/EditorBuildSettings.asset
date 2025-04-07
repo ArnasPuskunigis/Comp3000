@@ -23,9 +23,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/VolcanoMap.unity
     guid: 5666753799b1b70408e1dcf59ccfebe0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MultDesertMap.unity
     guid: 4d1e92cd36a64ec469bbeca9d7d6112f
+  - enabled: 1
+    path: Assets/Mult.unity
+    guid: 300b8bfb5ff03e04791c16263fd7f90d
+  - enabled: 1
+    path: Assets/Scenes/MpDesertMap.unity
+    guid: 66a141836e9554c4999a1aba338054a8
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 119241e2d7a75c143864111fae2d879a,
       type: 2}

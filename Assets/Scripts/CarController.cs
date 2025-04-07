@@ -2,9 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.Netcode;
+using Cinemachine;
 
 public class CarController : NetworkBehaviour
 {
+    public NetworkVariable<Quaternion> carRotation = new NetworkVariable<Quaternion>(
+    writePerm: NetworkVariableWritePermission.Owner
+    );
+
     private Rigidbody playerRB;
     public WheelColliders colliders;
     public WheelMeshes wheelMeshes;
@@ -50,6 +55,20 @@ public class CarController : NetworkBehaviour
         //wheelParticles.FLWheel.Play();
         wheelParticles.RRWheel.Play();
         wheelParticles.RLWheel.Play();
+
+        if (!IsOwner)
+        {
+            return;
+        }
+
+        GameObject smartCam = GameObject.Find("==== Default Stuff ====/CM vcam1");
+        CinemachineVirtualCamera virtualCam = smartCam.GetComponent<CinemachineVirtualCamera>();
+        virtualCam.Follow = transform;
+        virtualCam.LookAt = transform;
+
+        int rng = Random.Range(150, 160);
+        transform.position = new Vector3(rng, 2, 20);
+        //transform.rotation = Quaternion.Euler(0,160,0);
     }
      
     void InstantiateSmoke()
@@ -67,9 +86,17 @@ public class CarController : NetworkBehaviour
 
     void Update()
     {
+        if (IsOwner)
+        {
+            carRotation.Value = transform.rotation;
+        }
+        else
+        {
+            transform.rotation = carRotation.Value;
+        }
+
         if (!IsOwner)
         {
-            Debug.Log("not owner");
             return;
         }
 
@@ -80,7 +107,7 @@ public class CarController : NetworkBehaviour
         ApplyBrake();
         CheckParticles();
         ApplyWheelPositions();
-        Debug.Log("driving");
+        //Debug.Log("driving");
     }
 
     void CheckInput()
