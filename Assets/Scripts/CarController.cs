@@ -6,6 +6,21 @@ using Cinemachine;
 
 public class CarController : NetworkBehaviour
 {
+
+    public NetworkVariable<bool> canMove = new NetworkVariable<bool>(
+    writePerm: NetworkVariableWritePermission.Owner,
+    readPerm: NetworkVariableReadPermission.Everyone
+    );
+
+    [ClientRpc]
+    public void AllowMovementOnClientsClientRpc()
+    {
+        if (IsOwner)
+        {
+            canMove.Value = true;
+        }
+    }
+
     private Rigidbody playerRB;
     public WheelColliders colliders;
     public WheelMeshes wheelMeshes;
@@ -46,15 +61,14 @@ public class CarController : NetworkBehaviour
     {
         //carEngineAudioScript = transform.gameObject.GetComponent<EngineAudioScript>();
         InstantiateSmoke();
-        //wheelParticles.FRWheel.Play();
-        //wheelParticles.FLWheel.Play();
-        wheelParticles.RRWheel.Play();
-        wheelParticles.RLWheel.Play();
 
         if (!IsOwner)
         {
             return;
         }
+
+        wheelParticles.RRWheel.Play();
+        wheelParticles.RLWheel.Play();
 
         playerRB = gameObject.GetComponent<Rigidbody>();
         gameObject.transform.rotation = Quaternion.Euler(0,180,0);
@@ -84,10 +98,8 @@ public class CarController : NetworkBehaviour
 
     void Update()
     {
-        if (!IsOwner)
-        {
-            return;
-        }
+        if (!IsOwner) return;
+        if (canMove.Value == false) return;
 
         speed = playerRB.velocity.magnitude;
         CheckInput();

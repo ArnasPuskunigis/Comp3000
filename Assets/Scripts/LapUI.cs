@@ -16,7 +16,7 @@ public class LapUI : MonoBehaviour
 
     public void AddToLap(int lap)
     {
-        lapText.text = lap + "/3";
+        lapText.text = "Current Lap: " + lap + "/3";
     }
 
     // Update is called once per frame

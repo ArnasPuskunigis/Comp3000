@@ -851,6 +851,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c91923d7d9ce74bb9b3ef109bd805144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canMove:
+    m_InternalValue: 0
   colliders:
     FRWheel: {fileID: 916361434395133985}
     FLWheel: {fileID: 2700082082322458736}
@@ -951,7 +953,7 @@ MonoBehaviour:
   RotAngleThreshold: 0.001
   ScaleThreshold: 0.01
   InLocalSpace: 0
-  Interpolate: 0
+  Interpolate: 1
 --- !u!114 &2904834272647719518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -970,10 +972,12 @@ MonoBehaviour:
     m_InternalValue: 0
   racePosition:
     m_InternalValue: 0
+  currentLap:
+    m_InternalValue: 0
   trackColliders: []
   currentCheckpoint: {fileID: 0}
   currentCheckpointInt: 0
-  currentLap: 0
+  LapUIManager: {fileID: 0}
   greenCp: {fileID: 6543019913904720053, guid: ba379518f842b6e4faff3aa084aabf77, type: 3}
   yellowCp: {fileID: 9032734485615322398, guid: 06616c2ac3bc51945bb17b487bce26c0,
     type: 3}
