@@ -26,7 +26,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/MultDesertMap.unity
     guid: 4d1e92cd36a64ec469bbeca9d7d6112f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Mult.unity
     guid: 300b8bfb5ff03e04791c16263fd7f90d
   - enabled: 1

@@ -1,12 +1,6 @@
-using Mono.Cecil.Cil;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using TMPro;
 using Unity.Netcode;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class Checkpoints : NetworkBehaviour
 {
