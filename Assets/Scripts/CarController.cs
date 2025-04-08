@@ -6,10 +6,6 @@ using Cinemachine;
 
 public class CarController : NetworkBehaviour
 {
-    public NetworkVariable<Quaternion> carRotation = new NetworkVariable<Quaternion>(
-    writePerm: NetworkVariableWritePermission.Owner
-    );
-
     private Rigidbody playerRB;
     public WheelColliders colliders;
     public WheelMeshes wheelMeshes;
@@ -48,7 +44,6 @@ public class CarController : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerRB = gameObject.GetComponent<Rigidbody>();
         //carEngineAudioScript = transform.gameObject.GetComponent<EngineAudioScript>();
         InstantiateSmoke();
         //wheelParticles.FRWheel.Play();
@@ -60,6 +55,9 @@ public class CarController : NetworkBehaviour
         {
             return;
         }
+
+        playerRB = gameObject.GetComponent<Rigidbody>();
+        gameObject.transform.rotation = Quaternion.Euler(0,180,0);
 
         GameObject smartCam = GameObject.Find("==== Default Stuff ====/CM vcam1");
         CinemachineVirtualCamera virtualCam = smartCam.GetComponent<CinemachineVirtualCamera>();
@@ -86,15 +84,6 @@ public class CarController : NetworkBehaviour
 
     void Update()
     {
-        if (IsOwner)
-        {
-            carRotation.Value = transform.rotation;
-        }
-        else
-        {
-            transform.rotation = carRotation.Value;
-        }
-
         if (!IsOwner)
         {
             return;
