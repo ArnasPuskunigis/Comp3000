@@ -1,5 +1,6 @@
 using TMPro;
 using Unity.Netcode;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MultiplayerCheckpoints : NetworkBehaviour
@@ -25,8 +26,6 @@ public class MultiplayerCheckpoints : NetworkBehaviour
         readPerm: NetworkVariableReadPermission.Everyone
     );
 
-
-
     [SerializeField] private Collider[] trackColliders;
 
     [SerializeField] private Collider currentCheckpoint;
@@ -50,7 +49,7 @@ public class MultiplayerCheckpoints : NetworkBehaviour
     //public ResetTargets resetTargetsScript;
 
     public TextMeshProUGUI racePosText;
-    public RaceManager raceManager;
+    //public RaceManager raceManager;
 
     // RPC to update the position on all clients
     [ClientRpc]
@@ -141,8 +140,6 @@ public class MultiplayerCheckpoints : NetworkBehaviour
         }
 
     }
-
-
 
     void FixedUpdate()
     {

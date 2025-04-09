@@ -9,6 +9,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Unity.Services.Core;
 using Unity.Services.Authentication;
+using Unity.Collections;
 
 public class NetCodeUI : NetworkBehaviour
 {
