@@ -30,6 +30,7 @@ public class RaceManager : NetworkBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             SetUpPlayers();
+            NetCodeUI.Instance.instructionsUI.SetActive(false);
         }
 
         if (!canUpdate) return;

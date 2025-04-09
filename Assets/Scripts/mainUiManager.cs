@@ -389,6 +389,11 @@ public class mainUiManager : MonoBehaviour
         SceneManager.LoadScene(3);
     }
 
+    public void multiplayerBtnPressed()
+    {
+        SceneManager.LoadScene(5);
+    }
+
     public void cityBtnPressed()
     {
         SceneManager.LoadScene(2);

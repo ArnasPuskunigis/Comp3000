@@ -13,15 +13,26 @@ using Unity.Services.Authentication;
 public class NetCodeUI : NetworkBehaviour
 {
 
+    public static NetCodeUI Instance;
+
     [SerializeField] private TMP_InputField joinCodeInput;
     [SerializeField] private TextMeshProUGUI roomCode;
     
     [SerializeField] private Button hostBtn;
     [SerializeField] private Button clientBtn;
 
+    public GameObject networkingUI;
+    public GameObject roomCodeUI;
+    public GameObject instructionsUI;
+
     private void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
 
+        instructionsUI.SetActive(false);
         hostBtn.onClick.AddListener(() => {
             StartServer();
         });
@@ -43,12 +54,17 @@ public class NetCodeUI : NetworkBehaviour
             await UnityServices.InitializeAsync();
         }
 
-        await AuthenticationService.Instance.SignInAnonymouslyAsync();
+        if (!AuthenticationService.Instance.IsSignedIn)
+        {
+            await AuthenticationService.Instance.SignInAnonymouslyAsync();
+        }
 
         string joinCode = joinCodeInput.text;
         JoinAllocation joinAllocation = await JoinRelay(joinCode);
         NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(new RelayServerData(joinAllocation, "dtls"));
         NetworkManager.Singleton.StartClient();
+        networkingUI.SetActive(false);
+        roomCodeUI.SetActive(false);
     }
 
   
@@ -90,13 +106,18 @@ public class NetCodeUI : NetworkBehaviour
             await UnityServices.InitializeAsync();
         }
 
-        await AuthenticationService.Instance.SignInAnonymouslyAsync();
+        if (!AuthenticationService.Instance.IsSignedIn)
+        {
+            await AuthenticationService.Instance.SignInAnonymouslyAsync();
+        }
 
         Allocation allocation = await AllocateRelay();
         string relayJoinCode = await GetRelayJoinCode(allocation);
         NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(new RelayServerData(allocation, "dtls"));
-        roomCode.text = relayJoinCode;
+        roomCode.text = "ROOM CODE: " + relayJoinCode;
         NetworkManager.Singleton.StartHost();
+        networkingUI.SetActive(false);
+        instructionsUI.SetActive(true);
     }
 
     private async Task<string> GetRelayJoinCode(Allocation allocation)
