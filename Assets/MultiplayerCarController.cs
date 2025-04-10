@@ -67,6 +67,18 @@ public class MultiplayerCarController : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (NetworkManager.Singleton != null && IsOwner && !IsServer)
+        {
+            NetworkManager.Singleton.OnClientDisconnectCallback += (clientId) =>
+            {
+                if (clientId == NetworkManager.Singleton.LocalClientId)
+                {
+                    Debug.Log("Disconnected from host!");
+                    HandleHostDisconnect();
+                }
+            };
+        }
+
         //carEngineAudioScript = transform.gameObject.GetComponent<EngineAudioScript>();
         InstantiateSmoke();
 
@@ -95,7 +107,12 @@ public class MultiplayerCarController : NetworkBehaviour
         transform.position = new Vector3(rng, 2, 20);
         //transform.rotation = Quaternion.Euler(0,160,0);
     }
-     
+
+    private void HandleHostDisconnect()
+    {
+        NetworkManager.Singleton.Shutdown();
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+    }
     void InstantiateSmoke()
     {
         wheelParticles.FRWheel = Instantiate(smokePrefab, colliders.FRWheel.transform.position-Vector3.up*colliders.FRWheel.radius, Quaternion.identity, colliders.FRWheel.transform)
@@ -306,4 +323,6 @@ public class MultiplayerCarController : NetworkBehaviour
         wheelMesh.transform.position = position;
         wheelMesh.transform.rotation = quat;
     }
+
+
 }

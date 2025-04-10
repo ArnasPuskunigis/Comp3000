@@ -75,6 +75,8 @@ public class MultiplayerCheckpoints : NetworkBehaviour
         }
     }
 
+  
+
     string GetSuffix(int number)
     {
         int lastTwoDigits = number % 100;
