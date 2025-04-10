@@ -1,9 +1,9 @@
-using OVR.OpenVR;
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using Unity.Netcode;
+using Unity.Services.Relay;
 using UnityEngine;
 
 public class RaceManager : NetworkBehaviour
@@ -14,10 +14,15 @@ public class RaceManager : NetworkBehaviour
     public List<MultiplayerCheckpoints> players = new List<MultiplayerCheckpoints>();
     public List<MultiplayerCheckpoints> playersOld = new List<MultiplayerCheckpoints>();
 
+    //public List<string> playerNames = new List<string>();
+
     public TextMeshProUGUI racePosText;
     public bool canUpdate = false;
     public bool textInit = false;
     public bool playerInit = false;
+
+    public int lapLimit = 1;
+    public int racersFinished;
 
     public void Awake()
     {
@@ -46,12 +51,11 @@ public class RaceManager : NetworkBehaviour
             // Get the player's NetworkObject
             var playerNetworkObject = client.Value.PlayerObject;
 
-            // Get the Checkpoints component from the player's NetworkObject
             var playerCheckpoints = playerNetworkObject.GetComponent<MultiplayerCheckpoints>();
+            //var playerName = playerNetworkObject.GetComponent<MultiplayerCarController>();
 
             if (playerCheckpoints != null)
             {
-                // Add the Checkpoints component to your players list
                 players.Add(playerCheckpoints);
             }
         }
@@ -81,6 +85,8 @@ public class RaceManager : NetworkBehaviour
             return player1.distanceToCP.Value.CompareTo(player2.distanceToCP.Value);
         });
 
+        checkIfRacerFinished();
+        //Used to check if the list has changed based on an old list, if so then return, else update everyones race positions and send the respective position data to all clients
         if (playersOld.Count > 1 &&
         playersOld.Select(p => p.OwnerClientId).SequenceEqual(players.Select(p => p.OwnerClientId))) return;
         
@@ -88,9 +94,36 @@ public class RaceManager : NetworkBehaviour
 
         for (int i = 0; i < players.Count; i++)
         {
-            //Send player race position data to players for them to display
-            players[i].UpdateRacePositionOnClientsClientRpc(i + 1, players.Count);
+            //Send player race position data to players for them to display unless they have been announced already
+            if (players[i].transform.GetComponent<playerUsername>().positionAnnounced.Value == false)
+            {
+                players[i].UpdateRacePositionOnClientsClientRpc(i + 1, players.Count);
+            }
         }
     }
+
+    public void checkIfRacerFinished()
+    {
+        for (int i = 0; i < players.Count; i++)
+        {
+            if (players[i].currentLap.Value > lapLimit)
+            {
+                if (players[i].transform.GetComponent<playerUsername>().positionAnnounced.Value == true) return;
+                racersFinished++;
+                AnnounceWinner(players[i].transform.GetComponent<playerUsername>().username.Value.ToString());
+                players[i].transform.GetComponent<playerUsername>().positionAnnounced.Value = true;
+            }
+        }
+    }
+
+    private void AnnounceWinner(string name)
+    {
+        for (int i = 0; i < players.Count; i++)
+        {
+            players[i].ShowWhoFinishedTheRaceClientRpc(name, racersFinished);
+        }
+    }
+
+
 
 }

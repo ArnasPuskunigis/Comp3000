@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.Netcode;
 using Cinemachine;
+using Unity.Collections;
 
 public class MultiplayerCarController : NetworkBehaviour
 {
 
     public NetworkVariable<bool> canMove = new NetworkVariable<bool>(
+    writePerm: NetworkVariableWritePermission.Owner,
+    readPerm: NetworkVariableReadPermission.Everyone
+    );
+
+    public NetworkVariable<FixedString32Bytes> playerName = new NetworkVariable<FixedString32Bytes>(
     writePerm: NetworkVariableWritePermission.Owner,
     readPerm: NetworkVariableReadPermission.Everyone
     );
@@ -34,6 +40,8 @@ public class MultiplayerCarController : NetworkBehaviour
     public float slipAngle;
     public float speed;
     public AnimationCurve steeringCurve;
+
+    public TMPro.TMP_InputField nameInput;
 
     //public Mybutton gasPedal;
     //public Mybutton brakePedal;
@@ -66,6 +74,9 @@ public class MultiplayerCarController : NetworkBehaviour
         {
             return;
         }
+
+        //playerName.Value = nameInput.text;
+        //nameInput.gameObject.SetActive(false);
 
         wheelParticles.RRWheel.Play();
         wheelParticles.RLWheel.Play();
@@ -101,6 +112,7 @@ public class MultiplayerCarController : NetworkBehaviour
     {
         if (!IsOwner) return;
         if (canMove.Value == false) return;
+        
 
         speed = playerRB.velocity.magnitude;
         CheckInput();

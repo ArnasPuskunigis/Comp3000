@@ -741,6 +741,7 @@ GameObject:
   - component: {fileID: 8697294089153657345}
   - component: {fileID: -3607367531251979946}
   - component: {fileID: 5886822006822840854}
+  - component: {fileID: -8735798661235266442}
   m_Layer: 6
   m_Name: carMedium
   m_TagString: car
@@ -879,6 +880,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canMove:
     m_InternalValue: 0
+  playerName:
+    m_InternalValue:
+      utf8LengthInBytes: 0
+      bytes:
+        offset0000:
+          byte0000: 0
+          byte0001: 0
+          byte0002: 0
+          byte0003: 0
+          byte0004: 0
+          byte0005: 0
+          byte0006: 0
+          byte0007: 0
+          byte0008: 0
+          byte0009: 0
+          byte0010: 0
+          byte0011: 0
+          byte0012: 0
+          byte0013: 0
+          byte0014: 0
+          byte0015: 0
+        byte0016: 0
+        byte0017: 0
+        byte0018: 0
+        byte0019: 0
+        byte0020: 0
+        byte0021: 0
+        byte0022: 0
+        byte0023: 0
+        byte0024: 0
+        byte0025: 0
+        byte0026: 0
+        byte0027: 0
+        byte0028: 0
+        byte0029: 0
   colliders:
     FRWheel: {fileID: 916361434395133985}
     FLWheel: {fileID: 2700082082322458736}
@@ -931,6 +967,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  nameInput: {fileID: 0}
   isDrifting1: 0
   isDrifting2: 0
   isDrifting3: 0
@@ -966,8 +1003,9 @@ MonoBehaviour:
   yellowCp: {fileID: 9032734485615322398, guid: 06616c2ac3bc51945bb17b487bce26c0,
     type: 3}
   checkPointOffset: {x: 0, y: 2, z: 0}
+  whoFinishedRaceText: {fileID: 8504711178881763501, guid: 9bed3e4d9dcde374cb75fdab0ac55893,
+    type: 3}
   racePosText: {fileID: 0}
-  raceManager: {fileID: 0}
 --- !u!114 &-3607367531251979946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1011,6 +1049,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6c0be61502bb534f922ebb746851216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8735798661235266442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2935202571189132627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec00f7f8d9373e542a7217ba3bb499a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  username:
+    m_InternalValue:
+      utf8LengthInBytes: 0
+      bytes:
+        offset0000:
+          byte0000: 0
+          byte0001: 0
+          byte0002: 0
+          byte0003: 0
+          byte0004: 0
+          byte0005: 0
+          byte0006: 0
+          byte0007: 0
+          byte0008: 0
+          byte0009: 0
+          byte0010: 0
+          byte0011: 0
+          byte0012: 0
+          byte0013: 0
+          byte0014: 0
+          byte0015: 0
+        byte0016: 0
+        byte0017: 0
+        byte0018: 0
+        byte0019: 0
+        byte0020: 0
+        byte0021: 0
+        byte0022: 0
+        byte0023: 0
+        byte0024: 0
+        byte0025: 0
+        byte0026: 0
+        byte0027: 0
+        byte0028: 0
+        byte0029: 0
+  positionAnnounced:
+    m_InternalValue: 0
 --- !u!1 &3247950688622740158
 GameObject:
   m_ObjectHideFlags: 0

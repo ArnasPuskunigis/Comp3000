@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using Unity.Netcode;
 
 public class PauseManager : MonoBehaviour
 {
@@ -18,12 +19,21 @@ public class PauseManager : MonoBehaviour
     public GameObject defaultSelectedButton; // Assign your starting button in the Inspector
     public GameObject current;
 
+    public bool multiplayer = false;
+
     // Start is called before the first frame update
     void Start()
     {
         resumeBtn.onClick.AddListener(resumeClicked);
         exitBtn.onClick.AddListener(exitClicked);
-        Cursor.visible = false;
+        if (multiplayer)
+        {
+            Cursor.visible = true;
+        }
+        else
+        {
+            Cursor.visible = false;
+        }
         current = defaultSelectedButton;
     }
 
@@ -68,7 +78,14 @@ public class PauseManager : MonoBehaviour
                 {
                     pauseMenu.SetActive(false);
                     paused = false;
-                    Cursor.visible = false;
+                    if (!multiplayer)
+                    {
+                        Cursor.visible = false;
+                    }
+                    else
+                    {
+                        Cursor.visible = true;
+                    }
                 }
                 else
                 {
@@ -101,7 +118,14 @@ public class PauseManager : MonoBehaviour
 
     public void resumeClicked()
     {
-        Cursor.visible = false;
+        if (!multiplayer)
+        {
+            Cursor.visible = false;
+        }
+        else
+        {
+            Cursor.visible = true;
+        }
         pauseMenu.SetActive(false);
         paused = false;
     }
@@ -109,8 +133,22 @@ public class PauseManager : MonoBehaviour
     public void exitClicked()
     {
         Cursor.visible = true;
+
+        if (multiplayer)
+        {
+            if (NetworkManager.Singleton.IsHost || NetworkManager.Singleton.IsServer)
+            {
+                NetworkManager.Singleton.Shutdown();
+            }
+            else if (NetworkManager.Singleton.IsClient || NetworkManager.Singleton.IsConnectedClient)
+            {
+                NetworkManager.Singleton.Shutdown();
+            }
+        }
+
         SceneManager.LoadScene("MainMenu");
         paused = false;
+
     }
 
 }

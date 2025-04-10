@@ -10,13 +10,15 @@ using UnityEngine.UI;
 using Unity.Services.Core;
 using Unity.Services.Authentication;
 using Unity.Collections;
+using System;
 
 public class NetCodeUI : NetworkBehaviour
 {
-
     public static NetCodeUI Instance;
 
     [SerializeField] private TMP_InputField joinCodeInput;
+    [SerializeField] private TMP_InputField usernameInput;
+
     [SerializeField] private TextMeshProUGUI roomCode;
     
     [SerializeField] private Button hostBtn;
@@ -25,6 +27,10 @@ public class NetCodeUI : NetworkBehaviour
     public GameObject networkingUI;
     public GameObject roomCodeUI;
     public GameObject instructionsUI;
+
+    public string username;
+
+    private string roomAllocId;
 
     private void Awake()
     {
@@ -61,6 +67,7 @@ public class NetCodeUI : NetworkBehaviour
         }
 
         string joinCode = joinCodeInput.text;
+        username = usernameInput.text;
         JoinAllocation joinAllocation = await JoinRelay(joinCode);
         NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(new RelayServerData(joinAllocation, "dtls"));
         NetworkManager.Singleton.StartClient();
@@ -75,7 +82,7 @@ public class NetCodeUI : NetworkBehaviour
         try
         {
             Allocation allocation = await RelayService.Instance.CreateAllocationAsync(4 - 1);
-
+            roomAllocId = allocation.AllocationId.ToString();
             return allocation;
         }
         catch (RelayServiceException e)
@@ -114,6 +121,7 @@ public class NetCodeUI : NetworkBehaviour
 
         Allocation allocation = await AllocateRelay();
         string relayJoinCode = await GetRelayJoinCode(allocation);
+        username = usernameInput.text;
         NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(new RelayServerData(allocation, "dtls"));
         roomCode.text = "ROOM CODE: " + relayJoinCode;
         NetworkManager.Singleton.StartHost();
@@ -135,5 +143,6 @@ public class NetCodeUI : NetworkBehaviour
         }
 
     }
+
 
 }

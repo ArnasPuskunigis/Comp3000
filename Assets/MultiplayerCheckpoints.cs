@@ -2,6 +2,7 @@ using TMPro;
 using Unity.Netcode;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Timeline;
 
 public class MultiplayerCheckpoints : NetworkBehaviour
 {
@@ -48,7 +49,9 @@ public class MultiplayerCheckpoints : NetworkBehaviour
 
     //public ResetTargets resetTargetsScript;
 
+    public GameObject whoFinishedRaceText;
     public TextMeshProUGUI racePosText;
+    public GameObject UICanvas;
     //public RaceManager raceManager;
 
     // RPC to update the position on all clients
@@ -57,16 +60,45 @@ public class MultiplayerCheckpoints : NetworkBehaviour
     {
         if (IsOwner)
         {
-            // Update the UI to reflect the new position
-            //racePosText.text = $"Position: {newPosition}";
             racePosText.text = $"POS : {newPosition}" + "/" + playerCount;
         }
+    }
+
+    [ClientRpc]
+    public void ShowWhoFinishedTheRaceClientRpc(string playerName, int playerPosition)
+    {
+        if (IsOwner)
+        {
+            GameObject finishedtext = Instantiate(whoFinishedRaceText, UICanvas.transform);
+            string suffix = GetSuffix(playerPosition);
+            finishedtext.GetComponent<TextMeshProUGUI>().text = playerName + " FINISHED IN " + playerPosition + suffix + "!";
+        }
+    }
+
+    string GetSuffix(int number)
+    {
+        int lastTwoDigits = number % 100;
+        int lastDigit = number % 10;
+
+        if (lastTwoDigits >= 11 && lastTwoDigits <= 13)
+        {
+            return "TH";
+        }
+
+        return lastDigit switch
+        {
+            1 => "ST",
+            2 => "ND",
+            3 => "RD",
+            _ => "TH",
+        };
     }
 
     void Start()
     {
         if (!IsOwner) return;
 
+        UICanvas = GameObject.Find("==== UI ====");
         //raceManager = GameObject.Find("RaceManager").GetComponent<RaceManager>();
         //raceManager.AddPlayer(this);
         LapUIManager = GameObject.Find("LapUiManager").GetComponent<LapUI>();
