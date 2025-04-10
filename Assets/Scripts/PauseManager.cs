@@ -37,6 +37,8 @@ public class PauseManager : MonoBehaviour
         current = defaultSelectedButton;
     }
 
+
+
     // Update is called once per frame
     void Update()
     {
@@ -150,5 +152,7 @@ public class PauseManager : MonoBehaviour
         paused = false;
 
     }
+
+    
 
 }
