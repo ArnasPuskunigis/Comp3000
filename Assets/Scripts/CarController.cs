@@ -99,7 +99,7 @@ public class CarController : MonoBehaviour
                 gasInput = 0;
             }
 
-            steeringInput = Input.GetAxis("Horizontal");
+            steeringInput = CustomMobileInput.GetAxis("Horizontal");
             slipAngle = Vector3.Angle(transform.forward, playerRB.velocity - transform.forward);
 
             float movingDirection = Vector3.Dot(transform.forward, playerRB.velocity);
@@ -118,8 +118,8 @@ public class CarController : MonoBehaviour
         }
         else
         {
-            gasInput = Input.GetAxis("Vertical");
-            steeringInput = Input.GetAxis("Horizontal");
+            gasInput = CustomMobileInput.GetAxis("Vertical");
+            steeringInput = CustomMobileInput.GetAxis("Horizontal");
             slipAngle = Vector3.Angle(transform.forward, playerRB.velocity - transform.forward);
 
             float movingDirection = Vector3.Dot(transform.forward, playerRB.velocity);
