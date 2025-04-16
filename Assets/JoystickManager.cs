@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class JoystickManager : MonoBehaviour
 {
-    public FixedJoystick joystick;
+    public FixedJoystick joystickL;
+    public FixedJoystick joystickR;
 
     // Start is called before the first frame update
     void Start()
     {
-        CustomMobileInput.joystick = joystick;
+        CustomMobileInput.joystickLeft = joystickL;
+        CustomMobileInput.joystickRight = joystickR;
     }
 
     // Update is called once per frame

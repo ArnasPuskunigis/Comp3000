@@ -4,17 +4,28 @@ using UnityEngine;
 
 public static class CustomMobileInput
 {
-    public static FixedJoystick joystick;
-
+    public static FixedJoystick joystickLeft;
+    public static FixedJoystick joystickRight;
     public static float GetAxis(string axisName)
     {
-        if (joystick != null)
+        if (joystickLeft != null)
         {
-            if (axisName == "Horizontal") return joystick.Horizontal;
-            if (axisName == "Vertical") return joystick.Vertical;
+            if (axisName == "Horizontal") return joystickLeft.Horizontal;
+            if (axisName == "Vertical") return joystickLeft.Vertical;
         }
 
         return Input.GetAxis(axisName);
     }
+
+    public static float GetAimX()
+    {
+        return joystickRight.Horizontal;
+    }
+
+    public static float GetAimY()
+    {
+        return joystickRight.Vertical;
+    }
+
 
 }

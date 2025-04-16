@@ -19,8 +19,11 @@ public class SpinGun : MonoBehaviour
     public bool EnableVR;
     public GameObject rightHand;
 
+    public bool EnableMobile = true;
+    public float spinMult;
     private void Start()
     {
+        Debug.LogError("Mobile input set to default!");
         Cursor.visible = false;
     }
 
@@ -44,7 +47,11 @@ public class SpinGun : MonoBehaviour
             gunRot.eulerAngles = newRot;
         }
 
-        if (mouseControls)
+        if (EnableMobile)
+        {
+            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x + (CustomMobileInput.GetAimY() * -spinMult), transform.rotation.eulerAngles.y + (CustomMobileInput.GetAimX() * spinMult), transform.rotation.eulerAngles.z);
+        }
+        else // if (mouseControls)
         {
             if (EnableVR) 
             {

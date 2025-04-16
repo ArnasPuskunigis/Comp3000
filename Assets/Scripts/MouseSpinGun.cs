@@ -10,7 +10,6 @@ public class MouseSpinGun : MonoBehaviour
 
     private void Start()
     {
-    
     }
 
     // Update is called once per frame
