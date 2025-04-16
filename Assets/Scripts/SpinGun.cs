@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -19,8 +20,8 @@ public class SpinGun : MonoBehaviour
     public bool EnableVR;
     public GameObject rightHand;
 
-    public bool EnableMobile = true;
-    public float spinMult;
+    private bool EnableMobile = true;
+    [SerializeField] private float spinMult = 0.1f;
     private void Start()
     {
         Debug.LogError("Mobile input set to default!");

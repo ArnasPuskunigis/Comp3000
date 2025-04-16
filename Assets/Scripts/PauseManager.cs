@@ -76,26 +76,31 @@ public class PauseManager : MonoBehaviour
         {
             if ((Input.GetKeyDown(KeyCode.P) || (Input.GetKeyDown(KeyCode.Escape))))
             {
-                if (paused)
-                {
-                    pauseMenu.SetActive(false);
-                    paused = false;
-                    if (!multiplayer)
-                    {
-                        Cursor.visible = false;
-                    }
-                    else
-                    {
-                        Cursor.visible = true;
-                    }
-                }
-                else
-                {
-                    Cursor.visible = true;
-                    pauseMenu.SetActive(true);
-                    paused = true;
-                }
+                PressedPause();
             }
+        }
+    }
+
+    public void PressedPause()
+    {
+        if (paused)
+        {
+            pauseMenu.SetActive(false);
+            paused = false;
+            if (!multiplayer)
+            {
+                Cursor.visible = false;
+            }
+            else
+            {
+                Cursor.visible = true;
+            }
+        }
+        else
+        {
+            Cursor.visible = true;
+            pauseMenu.SetActive(true);
+            paused = true;
         }
     }
 

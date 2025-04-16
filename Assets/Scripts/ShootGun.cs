@@ -39,6 +39,8 @@ public class ShootGun : MonoBehaviour
 
     private CinemachineImpulseSource impulse;
 
+    [SerializeField] private Button mobileReloadButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +48,7 @@ public class ShootGun : MonoBehaviour
         ammoText.text = "Ammo: " + ammoCapacity.ToString() + "/" + ammoCapacity.ToString();
         reloadText.gameObject.SetActive(false);
         impulse = GetComponent<CinemachineImpulseSource>();
+        mobileReloadButton.onClick.AddListener(reloadGun);
     }
 
     // Update is called once per frame
@@ -176,11 +179,10 @@ public class ShootGun : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.R))
                 {
-                    reloading = true;
-                    AudioManager.instance.PlaySfx(reloadSfx, transform, 0.5f);
+                    reloadGun();
                 }
             }
-
+            
             if (reloading)
             {
                 reloadTimer += Time.deltaTime;
@@ -196,6 +198,12 @@ public class ShootGun : MonoBehaviour
             }
         }
 
+    }
+
+    public void reloadGun()
+    {
+        reloading = true;
+        AudioManager.instance.PlaySfx(reloadSfx, transform, 0.5f);
     }
 
     public void enableFlash()
