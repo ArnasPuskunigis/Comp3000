@@ -44,11 +44,12 @@ public class CarController : MonoBehaviour
 
     public bool EnableVR;
 
+    [SerializeField] private bool EnableMobile = true;
+
     // Start is called before the first frame update
     void Start()
     {
-
-
+        Debug.LogError("Mobile input set to default!");
         playerRB = gameObject.GetComponent<Rigidbody>();
         carEngineAudioScript = transform.gameObject.GetComponent<EngineAudioScript>();
         InstantiateSmoke();
@@ -118,8 +119,17 @@ public class CarController : MonoBehaviour
         }
         else
         {
-            gasInput = CustomMobileInput.GetAxis("Vertical");
-            steeringInput = CustomMobileInput.GetAxis("Horizontal");
+            if (EnableMobile)
+            {
+                gasInput = CustomMobileInput.GetAxis("Vertical");
+                steeringInput = CustomMobileInput.GetAxis("Horizontal");
+            }
+            else
+            {
+                gasInput = Input.GetAxis("Vertical");
+                steeringInput = Input.GetAxis("Horizontal");
+            }
+            
             slipAngle = Vector3.Angle(transform.forward, playerRB.velocity - transform.forward);
 
             float movingDirection = Vector3.Dot(transform.forward, playerRB.velocity);

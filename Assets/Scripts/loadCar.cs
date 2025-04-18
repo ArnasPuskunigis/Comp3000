@@ -56,6 +56,8 @@ public class loadCar : MonoBehaviour
 
     public CinemachineVirtualCamera virtualCam;
 
+    public GameObject currentGun;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -225,18 +227,21 @@ public class loadCar : MonoBehaviour
                 if (SaveManagerScript.carTypeStr == "slow")
                 {
                     slowCarWeaponPistol.SetActive(true);
+                    currentGun = slowCarWeaponPistol;
                     slowCarWeaponSmg.SetActive(false);
                     slowCarWeaponRifle.SetActive(false);
                 }
                 if (SaveManagerScript.carTypeStr == "medium")
                 {
                     mediumCarWeaponPistol.SetActive(true);
+                    currentGun = mediumCarWeaponPistol;
                     mediumCarWeaponSmg.SetActive(false);
                     mediumCarWeaponRifle.SetActive(false);
                 }
                 if (SaveManagerScript.carTypeStr == "fast")
                 {
                     fastCarWeaponPistol.SetActive(true);
+                    currentGun = fastCarWeaponPistol;
                     fastCarWeaponSmg.SetActive(false);
                     fastCarWeaponRifle.SetActive(false);
                 }
@@ -248,18 +253,21 @@ public class loadCar : MonoBehaviour
                 {
                     slowCarWeaponPistol.SetActive(false);
                     slowCarWeaponSmg.SetActive(true);
+                    currentGun = slowCarWeaponSmg;
                     slowCarWeaponRifle.SetActive(false);
                 }
                 if (SaveManagerScript.carTypeStr == "medium")
                 {
                     mediumCarWeaponPistol.SetActive(false);
                     mediumCarWeaponSmg.SetActive(true);
+                    currentGun = mediumCarWeaponSmg;
                     mediumCarWeaponRifle.SetActive(false);
                 }
                 if (SaveManagerScript.carTypeStr == "fast")
                 {
                     fastCarWeaponPistol.SetActive(false);
                     fastCarWeaponSmg.SetActive(true);
+                    currentGun = fastCarWeaponSmg;
                     fastCarWeaponRifle.SetActive(false);
                 }
             }
@@ -271,18 +279,21 @@ public class loadCar : MonoBehaviour
                     slowCarWeaponPistol.SetActive(false);
                     slowCarWeaponSmg.SetActive(false);
                     slowCarWeaponRifle.SetActive(true);
+                    currentGun = slowCarWeaponRifle;
                 }
                 if (SaveManagerScript.carTypeStr == "medium")
                 {
                     mediumCarWeaponPistol.SetActive(false);
                     mediumCarWeaponSmg.SetActive(false);
                     mediumCarWeaponRifle.SetActive(true);
+                    currentGun = mediumCarWeaponRifle;
                 }
                 if (SaveManagerScript.carTypeStr == "fast")
                 {
                     fastCarWeaponPistol.SetActive(false);
                     fastCarWeaponSmg.SetActive(false);
                     fastCarWeaponRifle.SetActive(true);
+                    currentGun = fastCarWeaponRifle;
                 }
             }
 
@@ -308,6 +319,7 @@ public class loadCar : MonoBehaviour
             slowCar.SetActive(false);
             fastCar.SetActive(false);
             currentCar = mediumCar;
+            currentGun = mediumCarWeaponRifle;
             currentCarBody = mediumCarBody;
 
             MeshRenderer carRenderer;

@@ -238,6 +238,20 @@ public class openCrate : MonoBehaviour
             legendaryImage.GetComponent<Animator>().StopPlayback();
         }
     }
+
+    public void mobileOpenCrate() 
+    {
+        if (boxAnimManager.exploded)
+        {
+            resetBoxUI();
+        }
+        else
+        {
+            openTheCrate();
+        }
+    }
+
+
     public void openTheCrate()
     {
         crateCount--;
@@ -259,7 +273,7 @@ public class openCrate : MonoBehaviour
 
         if (randomNumber <= commonChance)
         {
-            print("common");
+            //print("common");
             recentRarirty = "common";
 
             commonImage.SetActive(true);
@@ -276,7 +290,7 @@ public class openCrate : MonoBehaviour
             {
                 recentItem = null;
             }
-            print("rare");
+            //print("rare");
             recentRarirty = "rare";
             rareImage.SetActive(true);
             showRarity(rareImage.GetComponent<Animator>());
@@ -284,7 +298,7 @@ public class openCrate : MonoBehaviour
         }
         else if (randomNumber > commonChance + rareChance && randomNumber <= 100 - legendaryChance)
         {
-            print("epic");
+            //print("epic");
             recentRarirty = "epic";
             epicImage.SetActive(true);
             showRarity(epicImage.GetComponent<Animator>());
@@ -292,7 +306,7 @@ public class openCrate : MonoBehaviour
         }
         else if (randomNumber > commonChance + rareChance + epicChance && randomNumber <= 100)
         {
-            print("legendary");
+            //print("legendary");
             recentRarirty = "legendary";
             legendaryImage.SetActive(true);
             showRarity(legendaryImage.GetComponent<Animator>());
