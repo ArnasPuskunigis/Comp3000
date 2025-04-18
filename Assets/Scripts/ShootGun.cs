@@ -43,8 +43,6 @@ public class ShootGun : MonoBehaviour
     [SerializeField] private bool enableMobile = true;
     [SerializeField] private Button mobileReloadButton;
     public bool mobileIsShooting;
-    //public ShootGun gunShooterScript;
-    //public loadCar carLoader;
 
     // Start is called before the first frame update
     void Start()
@@ -55,8 +53,6 @@ public class ShootGun : MonoBehaviour
         reloadText.gameObject.SetActive(false);
         impulse = GetComponent<CinemachineImpulseSource>();
         mobileReloadButton.onClick.AddListener(reloadGun);
-        //carLoader = GameObject.Find("CarLoader").GetComponent<loadCar>();
-        //gunShooterScript = carLoader.currentGun.GetComponent<ShootGun>();
     }
 
     public void setShooting(bool shooting)

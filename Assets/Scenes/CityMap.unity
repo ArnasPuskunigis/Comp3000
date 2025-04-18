@@ -17227,6 +17227,7 @@ MonoBehaviour:
   mainCamera: {fileID: 1631382654}
   smartCam: {fileID: 1781623989}
   virtualCam: {fileID: 1781623990}
+  currentGun: {fileID: 0}
 --- !u!4 &693052813 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2477023668023824484, guid: 4811efc6277964c48a37c7a3fb6d4cbd,
@@ -47521,6 +47522,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: MobileUI
       objectReference: {fileID: 0}
+    - target: {fileID: 6700949222242776368, guid: ce95c4cecfb9922449b0b6fc57046989,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 688345322}
+    - target: {fileID: 6700949222242776368, guid: ce95c4cecfb9922449b0b6fc57046989,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 688345322}
+    - target: {fileID: 6700949222242776368, guid: ce95c4cecfb9922449b0b6fc57046989,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: weaponShooting
+      objectReference: {fileID: 0}
+    - target: {fileID: 6700949222242776368, guid: ce95c4cecfb9922449b0b6fc57046989,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: weaponShooting
+      objectReference: {fileID: 0}
     - target: {fileID: 7056750005287380628, guid: ce95c4cecfb9922449b0b6fc57046989,
         type: 3}
       propertyPath: m_Pivot.x
@@ -47620,6 +47641,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7667335623507629463, guid: ce95c4cecfb9922449b0b6fc57046989,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 688345322}
+    - target: {fileID: 7667335623507629463, guid: ce95c4cecfb9922449b0b6fc57046989,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 688345322}
+    - target: {fileID: 7667335623507629463, guid: ce95c4cecfb9922449b0b6fc57046989,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: weaponShooting
+      objectReference: {fileID: 0}
+    - target: {fileID: 7667335623507629463, guid: ce95c4cecfb9922449b0b6fc57046989,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: weaponShooting
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

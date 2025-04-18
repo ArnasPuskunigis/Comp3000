@@ -287,234 +287,6 @@ Transform:
   - {fileID: 667740451}
   m_Father: {fileID: 1383937479}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &13692490
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 13692491}
-  - component: {fileID: 13692494}
-  - component: {fileID: 13692493}
-  - component: {fileID: 13692492}
-  m_Layer: 5
-  m_Name: ShootBtnR
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &13692491
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 13692490}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1939971399}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 715.01, y: 162.6}
-  m_SizeDelta: {x: 240, y: 240}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &13692492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 13692490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 13692493}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1714834664}
-        m_TargetAssemblyTypeName: ShootGun, Assembly-CSharp
-        m_MethodName: shootGunMobile
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1714834663}
-        m_TargetAssemblyTypeName: ShootGun, Assembly-CSharp
-        m_MethodName: shootGunMobile
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1714834662}
-        m_TargetAssemblyTypeName: ShootGun, Assembly-CSharp
-        m_MethodName: shootGunMobile
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1347238014}
-        m_TargetAssemblyTypeName: ShootGun, Assembly-CSharp
-        m_MethodName: shootGunMobile
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1347238013}
-        m_TargetAssemblyTypeName: ShootGun, Assembly-CSharp
-        m_MethodName: shootGunMobile
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1347238012}
-        m_TargetAssemblyTypeName: ShootGun, Assembly-CSharp
-        m_MethodName: shootGunMobile
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 672655906}
-        m_TargetAssemblyTypeName: ShootGun, Assembly-CSharp
-        m_MethodName: shootGunMobile
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 672655905}
-        m_TargetAssemblyTypeName: ShootGun, Assembly-CSharp
-        m_MethodName: shootGunMobile
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 672655904}
-        m_TargetAssemblyTypeName: ShootGun, Assembly-CSharp
-        m_MethodName: shootGunMobile
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &13692493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 13692490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0c0ca13921ccbdd459eb32ad35802faa, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &13692494
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 13692490}
-  m_CullTransparentMesh: 1
 --- !u!1 &16409551
 GameObject:
   m_ObjectHideFlags: 0
@@ -3933,6 +3705,7 @@ MonoBehaviour:
   mainCamera: {fileID: 330585545}
   smartCam: {fileID: 458410234}
   virtualCam: {fileID: 458410235}
+  currentGun: {fileID: 0}
 --- !u!4 &374141359
 Transform:
   m_ObjectHideFlags: 0
@@ -4194,234 +3967,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 876639238}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &394347162
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 394347163}
-  - component: {fileID: 394347166}
-  - component: {fileID: 394347165}
-  - component: {fileID: 394347164}
-  m_Layer: 5
-  m_Name: ShootBtnL
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &394347163
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 394347162}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1939971399}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -614.5, y: 162.6}
-  m_SizeDelta: {x: 240, y: 240}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &394347164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 394347162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 394347165}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1714834664}
-        m_TargetAssemblyTypeName: ShootGun, Assembly-CSharp
-        m_MethodName: shootGunMobile
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1714834663}
-        m_TargetAssemblyTypeName: ShootGun, Assembly-CSharp
-        m_MethodName: shootGunMobile
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1714834662}
-        m_TargetAssemblyTypeName: ShootGun, Assembly-CSharp
-        m_MethodName: shootGunMobile
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1347238014}
-        m_TargetAssemblyTypeName: ShootGun, Assembly-CSharp
-        m_MethodName: shootGunMobile
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1347238013}
-        m_TargetAssemblyTypeName: ShootGun, Assembly-CSharp
-        m_MethodName: shootGunMobile
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1347238012}
-        m_TargetAssemblyTypeName: ShootGun, Assembly-CSharp
-        m_MethodName: shootGunMobile
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 672655906}
-        m_TargetAssemblyTypeName: ShootGun, Assembly-CSharp
-        m_MethodName: shootGunMobile
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 672655905}
-        m_TargetAssemblyTypeName: ShootGun, Assembly-CSharp
-        m_MethodName: shootGunMobile
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 672655904}
-        m_TargetAssemblyTypeName: ShootGun, Assembly-CSharp
-        m_MethodName: shootGunMobile
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &394347165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 394347162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0c0ca13921ccbdd459eb32ad35802faa, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &394347166
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 394347162}
-  m_CullTransparentMesh: 1
 --- !u!1001 &398500376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7482,42 +7027,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 321166273}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &672655904 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4681469906523298572, guid: 54612deb9d68572429c433477696517d,
-    type: 3}
-  m_PrefabInstance: {fileID: 7247640272918309808}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7247640272918309810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2b209f6ec16e99469923a3ca750f751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &672655905 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2020567743422181095, guid: 54612deb9d68572429c433477696517d,
-    type: 3}
-  m_PrefabInstance: {fileID: 7247640272918309808}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7247640272918309812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2b209f6ec16e99469923a3ca750f751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &672655906 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2360263072515941903, guid: 54612deb9d68572429c433477696517d,
-    type: 3}
-  m_PrefabInstance: {fileID: 7247640272918309808}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7247640272918309811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2b209f6ec16e99469923a3ca750f751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &673777126
 GameObject:
   m_ObjectHideFlags: 0
@@ -15032,42 +14541,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1828339125}
   m_LocalEulerAnglesHint: {x: 0, y: 2.628, z: 0}
---- !u!114 &1347238012 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 552792410742213248, guid: 1381bd1a6ba88ef4b977152fb2924844,
-    type: 3}
-  m_PrefabInstance: {fileID: 4535151114185965136}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4535151114185965137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2b209f6ec16e99469923a3ca750f751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1347238013 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1812431862865609435, guid: 1381bd1a6ba88ef4b977152fb2924844,
-    type: 3}
-  m_PrefabInstance: {fileID: 4535151114185965136}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4535151114185965138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2b209f6ec16e99469923a3ca750f751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1347238014 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 852793589731585584, guid: 1381bd1a6ba88ef4b977152fb2924844,
-    type: 3}
-  m_PrefabInstance: {fileID: 4535151114185965136}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4535151114185965139}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2b209f6ec16e99469923a3ca750f751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1351799548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19737,42 +19210,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1713994558}
   m_CullTransparentMesh: 1
---- !u!114 &1714834662 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8193966286444298675, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
-    type: 3}
-  m_PrefabInstance: {fileID: 6091605651877689942}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6091605651877689944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2b209f6ec16e99469923a3ca750f751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1714834663 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1214300641852454729, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
-    type: 3}
-  m_PrefabInstance: {fileID: 6091605651877689942}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6091605651877689946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2b209f6ec16e99469923a3ca750f751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1714834664 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7090623433213263604, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
-    type: 3}
-  m_PrefabInstance: {fileID: 6091605651877689942}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6091605651877689945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2b209f6ec16e99469923a3ca750f751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1729090078
 GameObject:
   m_ObjectHideFlags: 0
@@ -25022,6 +24459,11 @@ PrefabInstance:
       objectReference: {fileID: 100423527}
     - target: {fileID: 552792410742213248, guid: 1381bd1a6ba88ef4b977152fb2924844,
         type: 3}
+      propertyPath: enableMobile
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 552792410742213248, guid: 1381bd1a6ba88ef4b977152fb2924844,
+        type: 3}
       propertyPath: mobileReloadButton
       value: 
       objectReference: {fileID: 233430279}
@@ -25096,6 +24538,11 @@ PrefabInstance:
       propertyPath: bulletParent
       value: 
       objectReference: {fileID: 100423527}
+    - target: {fileID: 852793589731585584, guid: 1381bd1a6ba88ef4b977152fb2924844,
+        type: 3}
+      propertyPath: enableMobile
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 852793589731585584, guid: 1381bd1a6ba88ef4b977152fb2924844,
         type: 3}
       propertyPath: shootInterval
@@ -25267,6 +24714,11 @@ PrefabInstance:
       propertyPath: bulletParent
       value: 
       objectReference: {fileID: 100423527}
+    - target: {fileID: 1812431862865609435, guid: 1381bd1a6ba88ef4b977152fb2924844,
+        type: 3}
+      propertyPath: enableMobile
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1812431862865609435, guid: 1381bd1a6ba88ef4b977152fb2924844,
         type: 3}
       propertyPath: mobileReloadButton
@@ -26396,16 +25848,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 353147238}
     m_Modifications:
-    - target: {fileID: 1340411635087089687, guid: ce95c4cecfb9922449b0b6fc57046989,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 633
-      objectReference: {fileID: 0}
-    - target: {fileID: 1340411635087089687, guid: ce95c4cecfb9922449b0b6fc57046989,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -73
-      objectReference: {fileID: 0}
     - target: {fileID: 1470351986322742727, guid: ce95c4cecfb9922449b0b6fc57046989,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -26416,6 +25858,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: MobileUI
       objectReference: {fileID: 0}
+    - target: {fileID: 6700949222242776368, guid: ce95c4cecfb9922449b0b6fc57046989,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 374141358}
+    - target: {fileID: 6700949222242776368, guid: ce95c4cecfb9922449b0b6fc57046989,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 374141358}
     - target: {fileID: 7056750005287380628, guid: ce95c4cecfb9922449b0b6fc57046989,
         type: 3}
       propertyPath: m_Pivot.x
@@ -26516,27 +25968,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8166941552381530016, guid: ce95c4cecfb9922449b0b6fc57046989,
+    - target: {fileID: 7667335623507629463, guid: ce95c4cecfb9922449b0b6fc57046989,
         type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 1457.2451
-      objectReference: {fileID: 0}
-    - target: {fileID: 8166941552381530016, guid: ce95c4cecfb9922449b0b6fc57046989,
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 374141358}
+    - target: {fileID: 7667335623507629463, guid: ce95c4cecfb9922449b0b6fc57046989,
         type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -391.31094
-      objectReference: {fileID: 0}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 374141358}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 7056750005287380628, guid: ce95c4cecfb9922449b0b6fc57046989,
-        type: 3}
-      insertIndex: 4
-      addedObject: {fileID: 394347163}
-    - targetCorrespondingSourceObject: {fileID: 7056750005287380628, guid: ce95c4cecfb9922449b0b6fc57046989,
-        type: 3}
-      insertIndex: 5
-      addedObject: {fileID: 13692491}
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce95c4cecfb9922449b0b6fc57046989, type: 3}
 --- !u!1001 &6091605651877689942
@@ -26597,6 +26041,11 @@ PrefabInstance:
       propertyPath: bulletParent
       value: 
       objectReference: {fileID: 100423527}
+    - target: {fileID: 1214300641852454729, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
+        type: 3}
+      propertyPath: enableMobile
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1214300641852454729, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
         type: 3}
       propertyPath: mobileReloadButton
@@ -26999,6 +26448,11 @@ PrefabInstance:
       objectReference: {fileID: 100423527}
     - target: {fileID: 7090623433213263604, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
         type: 3}
+      propertyPath: enableMobile
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7090623433213263604, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
+        type: 3}
       propertyPath: shootInterval
       value: 0.1
       objectReference: {fileID: 0}
@@ -27262,6 +26716,11 @@ PrefabInstance:
       propertyPath: bulletParent
       value: 
       objectReference: {fileID: 100423527}
+    - target: {fileID: 8193966286444298675, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
+        type: 3}
+      propertyPath: enableMobile
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8193966286444298675, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
         type: 3}
       propertyPath: mobileReloadButton
@@ -27747,6 +27206,11 @@ PrefabInstance:
       objectReference: {fileID: 100423527}
     - target: {fileID: 2020567743422181095, guid: 54612deb9d68572429c433477696517d,
         type: 3}
+      propertyPath: enableMobile
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020567743422181095, guid: 54612deb9d68572429c433477696517d,
+        type: 3}
       propertyPath: mobileReloadButton
       value: 
       objectReference: {fileID: 233430279}
@@ -27912,6 +27376,11 @@ PrefabInstance:
       objectReference: {fileID: 100423527}
     - target: {fileID: 2360263072515941903, guid: 54612deb9d68572429c433477696517d,
         type: 3}
+      propertyPath: enableMobile
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2360263072515941903, guid: 54612deb9d68572429c433477696517d,
+        type: 3}
       propertyPath: shootInterval
       value: 0.1
       objectReference: {fileID: 0}
@@ -28035,6 +27504,11 @@ PrefabInstance:
       propertyPath: bulletParent
       value: 
       objectReference: {fileID: 100423527}
+    - target: {fileID: 4681469906523298572, guid: 54612deb9d68572429c433477696517d,
+        type: 3}
+      propertyPath: enableMobile
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4681469906523298572, guid: 54612deb9d68572429c433477696517d,
         type: 3}
       propertyPath: mobileReloadButton

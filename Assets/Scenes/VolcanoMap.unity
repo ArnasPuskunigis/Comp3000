@@ -1655,6 +1655,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: MobileUI
       objectReference: {fileID: 0}
+    - target: {fileID: 6700949222242776368, guid: ce95c4cecfb9922449b0b6fc57046989,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1071351575}
+    - target: {fileID: 6700949222242776368, guid: ce95c4cecfb9922449b0b6fc57046989,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1071351575}
+    - target: {fileID: 6700949222242776368, guid: ce95c4cecfb9922449b0b6fc57046989,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: weaponShooting
+      objectReference: {fileID: 0}
+    - target: {fileID: 6700949222242776368, guid: ce95c4cecfb9922449b0b6fc57046989,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: weaponShooting
+      objectReference: {fileID: 0}
     - target: {fileID: 7056750005287380628, guid: ce95c4cecfb9922449b0b6fc57046989,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1754,6 +1774,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7667335623507629463, guid: ce95c4cecfb9922449b0b6fc57046989,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1071351575}
+    - target: {fileID: 7667335623507629463, guid: ce95c4cecfb9922449b0b6fc57046989,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1071351575}
+    - target: {fileID: 7667335623507629463, guid: ce95c4cecfb9922449b0b6fc57046989,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: weaponShooting
+      objectReference: {fileID: 0}
+    - target: {fileID: 7667335623507629463, guid: ce95c4cecfb9922449b0b6fc57046989,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: weaponShooting
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31147,6 +31187,7 @@ MonoBehaviour:
   mainCamera: {fileID: 1406481400}
   smartCam: {fileID: 2093717247}
   virtualCam: {fileID: 2093717248}
+  currentGun: {fileID: 0}
 --- !u!4 &1074686082 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1831322979069690054, guid: 64bc74b6b3ad7e549b253dbe1b275247,

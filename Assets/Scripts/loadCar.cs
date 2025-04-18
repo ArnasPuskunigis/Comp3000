@@ -65,6 +65,11 @@ public class loadCar : MonoBehaviour
         virtualCam = smartCam.GetComponent<CinemachineVirtualCamera>();
     }
 
+    public void weaponShooting(bool enable)
+    {
+        currentGun.GetComponent<ShootGun>().mobileIsShooting = enable;
+    }
+
     public void setUpCar()
     {
         if (SaveManagerScript != null)
