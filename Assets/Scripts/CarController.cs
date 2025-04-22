@@ -100,7 +100,7 @@ public class CarController : MonoBehaviour
                 gasInput = 0;
             }
 
-            steeringInput = CustomMobileInput.GetAxis("Horizontal");
+            steeringInput = Input.GetAxis("Horizontal");
             slipAngle = Vector3.Angle(transform.forward, playerRB.velocity - transform.forward);
 
             float movingDirection = Vector3.Dot(transform.forward, playerRB.velocity);

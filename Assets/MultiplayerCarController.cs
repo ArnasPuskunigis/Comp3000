@@ -65,6 +65,8 @@ public class MultiplayerCarController : NetworkBehaviour
     public bool EnableVR;
     [SerializeField] private bool EnableMobile = true;
 
+    public GameObject vrplayerController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -99,10 +101,24 @@ public class MultiplayerCarController : NetworkBehaviour
         playerRB = gameObject.GetComponent<Rigidbody>();
         gameObject.transform.rotation = Quaternion.Euler(0,180,0);
 
-        GameObject smartCam = GameObject.Find("==== Default Stuff ====/CM vcam1");
-        CinemachineVirtualCamera virtualCam = smartCam.GetComponent<CinemachineVirtualCamera>();
-        virtualCam.Follow = transform;
-        virtualCam.LookAt = transform;
+        vrplayerController = GameObject.Find("OVRPlayerController");
+
+        if (EnableVR)
+        {
+            GameObject smartCam = GameObject.Find("==== Default Stuff ====/CM vcam1");
+            vrplayerController.transform.parent = transform;
+
+            //CinemachineVirtualCamera virtualCam = smartCam.GetComponent<CinemachineVirtualCamera>();
+            //virtualCam.Follow = transform;
+            //virtualCam.LookAt = transform;
+        }
+        else
+        {
+            GameObject smartCam = GameObject.Find("==== Default Stuff ====/CM vcam1");
+            CinemachineVirtualCamera virtualCam = smartCam.GetComponent<CinemachineVirtualCamera>();
+            virtualCam.Follow = transform;
+            virtualCam.LookAt = transform;
+        }
 
         int rng = Random.Range(150, 160);
         transform.position = new Vector3(rng, 2, 20);
@@ -159,7 +175,7 @@ public class MultiplayerCarController : NetworkBehaviour
                 gasInput = 0;
             }
 
-            steeringInput = CustomMobileInput.GetAxis("Horizontal");
+            steeringInput = Input.GetAxis("Horizontal");
             slipAngle = Vector3.Angle(transform.forward, playerRB.velocity - transform.forward);
 
             float movingDirection = Vector3.Dot(transform.forward, playerRB.velocity);

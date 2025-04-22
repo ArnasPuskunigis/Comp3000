@@ -461,6 +461,7 @@ MonoBehaviour:
   mousePos: {x: 0, y: 0}
   EnableVR: 0
   rightHand: {fileID: 0}
+  spinMult: 0.1
 --- !u!114 &1214300641852454729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,6 +499,9 @@ MonoBehaviour:
   reloadSfx: {fileID: 0}
   clickSfx: {fileID: 0}
   EnableVR: 0
+  enableMobile: 1
+  mobileReloadButton: {fileID: 0}
+  mobileIsShooting: 0
 --- !u!1 &2173946652317076993
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,7 +978,8 @@ MonoBehaviour:
   isDrifting4: 0
   driftCounter: 0
   driftPoints: 0
-  EnableVR: 0
+  EnableVR: 1
+  EnableMobile: 0
 --- !u!114 &8697294089153657345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1006,6 +1011,7 @@ MonoBehaviour:
   whoFinishedRaceText: {fileID: 8504711178881763501, guid: 9bed3e4d9dcde374cb75fdab0ac55893,
     type: 3}
   racePosText: {fileID: 0}
+  UICanvas: {fileID: 0}
 --- !u!114 &-3607367531251979946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1255,6 +1261,9 @@ MonoBehaviour:
   reloadSfx: {fileID: 0}
   clickSfx: {fileID: 0}
   EnableVR: 0
+  enableMobile: 1
+  mobileReloadButton: {fileID: 0}
+  mobileIsShooting: 0
 --- !u!114 &8064139703768980118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1276,6 +1285,7 @@ MonoBehaviour:
   mousePos: {x: 0, y: 0}
   EnableVR: 0
   rightHand: {fileID: 0}
+  spinMult: 0.1
 --- !u!1 &4093899801358177913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,6 +1513,7 @@ MonoBehaviour:
   mousePos: {x: 0, y: 0}
   EnableVR: 0
   rightHand: {fileID: 0}
+  spinMult: 0.1
 --- !u!114 &8193966286444298675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1540,6 +1551,9 @@ MonoBehaviour:
   reloadSfx: {fileID: 0}
   clickSfx: {fileID: 0}
   EnableVR: 0
+  enableMobile: 1
+  mobileReloadButton: {fileID: 0}
+  mobileIsShooting: 0
 --- !u!1 &4747021789595187450
 GameObject:
   m_ObjectHideFlags: 0
