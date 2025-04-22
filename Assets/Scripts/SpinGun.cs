@@ -20,11 +20,11 @@ public class SpinGun : MonoBehaviour
     public bool EnableVR;
     public GameObject rightHand;
 
-    private bool EnableMobile = true;
+    private bool EnableMobile = false;
     [SerializeField] private float spinMult = 0.1f;
     private void Start()
     {
-        Debug.LogError("Mobile input set to default!");
+        Debug.LogError("Mobile input set to off default!");
         Cursor.visible = false;
     }
 

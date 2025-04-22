@@ -19,6 +19,9 @@ public class VrInputManager : MonoBehaviour
     public OVRVirtualKeyboard vrKeyboard;
     public TMPro.TMP_InputField inputField;
 
+    private float inputCooldown = 1f; 
+    private float lastInputTime = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,10 +33,14 @@ public class VrInputManager : MonoBehaviour
 
     void Update()
     {
-        if (OVRInput.GetDown(OVRInput.Button.One)) // Simulate Submit
+        if (Time.time - lastInputTime > inputCooldown)
         {
-            ExecuteEvents.Execute(EventSystem.current.currentSelectedGameObject, new BaseEventData(EventSystem.current), ExecuteEvents.submitHandler);
-            Debug.Log("Submit Triggered");
+            if (OVRInput.GetDown(OVRInput.Button.One))
+            {
+                lastInputTime = Time.time;
+                ExecuteEvents.Execute(EventSystem.current.currentSelectedGameObject, new BaseEventData(EventSystem.current), ExecuteEvents.submitHandler);
+                Debug.Log("Submit Triggered");
+            }
         }
 
         //if (OVRInput.GetDown(OVRInput.Button.One)) //a

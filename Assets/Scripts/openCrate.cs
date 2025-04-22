@@ -241,6 +241,7 @@ public class openCrate : MonoBehaviour
 
     public void mobileOpenCrate() 
     {
+        if (crateCount <= 0) return; 
         if (boxAnimManager.exploded)
         {
             resetBoxUI();

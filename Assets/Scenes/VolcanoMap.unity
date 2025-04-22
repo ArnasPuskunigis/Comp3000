@@ -1655,6 +1655,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MobileUI
       objectReference: {fileID: 0}
+    - target: {fileID: 3701367725825284203, guid: ce95c4cecfb9922449b0b6fc57046989,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6700949222242776368, guid: ce95c4cecfb9922449b0b6fc57046989,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -16627,6 +16632,134 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 580105466}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &581897562
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5583450562490482989, guid: 35b8871b3f6d0bc4ab596ab6a48a9898,
+        type: 3}
+      propertyPath: m_Name
+      value: OVRPlayerController
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358955859621295255, guid: 35b8871b3f6d0bc4ab596ab6a48a9898,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 212.38998
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358955859621295255, guid: 35b8871b3f6d0bc4ab596ab6a48a9898,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5099995
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358955859621295255, guid: 35b8871b3f6d0bc4ab596ab6a48a9898,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 27.490002
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358955859621295255, guid: 35b8871b3f6d0bc4ab596ab6a48a9898,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358955859621295255, guid: 35b8871b3f6d0bc4ab596ab6a48a9898,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358955859621295255, guid: 35b8871b3f6d0bc4ab596ab6a48a9898,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9975297
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358955859621295255, guid: 35b8871b3f6d0bc4ab596ab6a48a9898,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.07024638
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358955859621295255, guid: 35b8871b3f6d0bc4ab596ab6a48a9898,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358955859621295255, guid: 35b8871b3f6d0bc4ab596ab6a48a9898,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358955859621295255, guid: 35b8871b3f6d0bc4ab596ab6a48a9898,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7358955859621295255, guid: 35b8871b3f6d0bc4ab596ab6a48a9898,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1262308835}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5583450562490482989, guid: 35b8871b3f6d0bc4ab596ab6a48a9898,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 581897566}
+  m_SourcePrefab: {fileID: 100100000, guid: 35b8871b3f6d0bc4ab596ab6a48a9898, type: 3}
+--- !u!4 &581897563 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7358955859621295255, guid: 35b8871b3f6d0bc4ab596ab6a48a9898,
+    type: 3}
+  m_PrefabInstance: {fileID: 581897562}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &581897564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7453490604329954601, guid: 35b8871b3f6d0bc4ab596ab6a48a9898,
+    type: 3}
+  m_PrefabInstance: {fileID: 581897562}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &581897565 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5583450562490482989, guid: 35b8871b3f6d0bc4ab596ab6a48a9898,
+    type: 3}
+  m_PrefabInstance: {fileID: 581897562}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &581897566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581897565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowDebugText: 0
+  m_ShowCameraFrustum: 1
+  m_IgnoreTimeScale: 0
+  m_WorldUpOverride: {fileID: 0}
+  m_UpdateMethod: 2
+  m_BlendUpdateMethod: 1
+  m_DefaultBlend:
+    m_Style: 1
+    m_Time: 2
+    m_CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  m_CustomBlends: {fileID: 0}
+  m_CameraCutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &583786945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19120,7 +19253,7 @@ MonoBehaviour:
   resumeBtn: {fileID: 1201228595}
   exitBtn: {fileID: 1917998696}
   paused: 0
-  EnableVR: 0
+  EnableVR: 1
   defaultSelectedButton: {fileID: 1201228593}
   current: {fileID: 0}
   multiplayer: 0
@@ -29042,12 +29175,22 @@ PrefabInstance:
     - target: {fileID: 525034112336266422, guid: 54612deb9d68572429c433477696517d,
         type: 3}
       propertyPath: EnableVR
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 525034112336266422, guid: 54612deb9d68572429c433477696517d,
         type: 3}
       propertyPath: rightHand
       value: 
+      objectReference: {fileID: 581897564}
+    - target: {fileID: 525034112336266422, guid: 54612deb9d68572429c433477696517d,
+        type: 3}
+      propertyPath: mouseControls
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 525034112336266422, guid: 54612deb9d68572429c433477696517d,
+        type: 3}
+      propertyPath: rotationSpeed
+      value: 0.29
       objectReference: {fileID: 0}
     - target: {fileID: 905094753839006478, guid: 54612deb9d68572429c433477696517d,
         type: 3}
@@ -29072,7 +29215,7 @@ PrefabInstance:
     - target: {fileID: 2020567743422181095, guid: 54612deb9d68572429c433477696517d,
         type: 3}
       propertyPath: EnableVR
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2020567743422181095, guid: 54612deb9d68572429c433477696517d,
         type: 3}
@@ -29104,6 +29247,11 @@ PrefabInstance:
       propertyPath: bulletParent
       value: 
       objectReference: {fileID: 630920652}
+    - target: {fileID: 2020567743422181095, guid: 54612deb9d68572429c433477696517d,
+        type: 3}
+      propertyPath: enableMobile
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2020567743422181095, guid: 54612deb9d68572429c433477696517d,
         type: 3}
       propertyPath: mobileReloadButton
@@ -29237,7 +29385,7 @@ PrefabInstance:
     - target: {fileID: 2360263072515941903, guid: 54612deb9d68572429c433477696517d,
         type: 3}
       propertyPath: EnableVR
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2360263072515941903, guid: 54612deb9d68572429c433477696517d,
         type: 3}
@@ -29269,6 +29417,11 @@ PrefabInstance:
       propertyPath: bulletParent
       value: 
       objectReference: {fileID: 630920652}
+    - target: {fileID: 2360263072515941903, guid: 54612deb9d68572429c433477696517d,
+        type: 3}
+      propertyPath: enableMobile
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2360263072515941903, guid: 54612deb9d68572429c433477696517d,
         type: 3}
       propertyPath: shootInterval
@@ -29362,7 +29515,7 @@ PrefabInstance:
     - target: {fileID: 4681469906523298572, guid: 54612deb9d68572429c433477696517d,
         type: 3}
       propertyPath: EnableVR
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4681469906523298572, guid: 54612deb9d68572429c433477696517d,
         type: 3}
@@ -29394,6 +29547,11 @@ PrefabInstance:
       propertyPath: bulletParent
       value: 
       objectReference: {fileID: 630920652}
+    - target: {fileID: 4681469906523298572, guid: 54612deb9d68572429c433477696517d,
+        type: 3}
+      propertyPath: enableMobile
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4681469906523298572, guid: 54612deb9d68572429c433477696517d,
         type: 3}
       propertyPath: mobileReloadButton
@@ -29467,12 +29625,22 @@ PrefabInstance:
     - target: {fileID: 4795486515033443005, guid: 54612deb9d68572429c433477696517d,
         type: 3}
       propertyPath: EnableVR
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4795486515033443005, guid: 54612deb9d68572429c433477696517d,
         type: 3}
       propertyPath: rightHand
       value: 
+      objectReference: {fileID: 581897564}
+    - target: {fileID: 4795486515033443005, guid: 54612deb9d68572429c433477696517d,
+        type: 3}
+      propertyPath: mouseControls
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4795486515033443005, guid: 54612deb9d68572429c433477696517d,
+        type: 3}
+      propertyPath: rotationSpeed
+      value: 0.29
       objectReference: {fileID: 0}
     - target: {fileID: 4803506792109662930, guid: 54612deb9d68572429c433477696517d,
         type: 3}
@@ -29532,12 +29700,22 @@ PrefabInstance:
     - target: {fileID: 7417974293026435704, guid: 54612deb9d68572429c433477696517d,
         type: 3}
       propertyPath: EnableVR
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7417974293026435704, guid: 54612deb9d68572429c433477696517d,
         type: 3}
       propertyPath: rightHand
       value: 
+      objectReference: {fileID: 581897564}
+    - target: {fileID: 7417974293026435704, guid: 54612deb9d68572429c433477696517d,
+        type: 3}
+      propertyPath: mouseControls
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7417974293026435704, guid: 54612deb9d68572429c433477696517d,
+        type: 3}
+      propertyPath: rotationSpeed
+      value: 0.29
       objectReference: {fileID: 0}
     - target: {fileID: 7501728556697353997, guid: 54612deb9d68572429c433477696517d,
         type: 3}
@@ -29808,7 +29986,7 @@ PrefabInstance:
     - target: {fileID: 8766872918021849567, guid: 54612deb9d68572429c433477696517d,
         type: 3}
       propertyPath: EnableVR
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8766872918021849567, guid: 54612deb9d68572429c433477696517d,
         type: 3}
@@ -29825,6 +30003,11 @@ PrefabInstance:
       propertyPath: multManager
       value: 
       objectReference: {fileID: 1615031538}
+    - target: {fileID: 8766872918021849567, guid: 54612deb9d68572429c433477696517d,
+        type: 3}
+      propertyPath: EnableMobile
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8766872918021849567, guid: 54612deb9d68572429c433477696517d,
         type: 3}
       propertyPath: driftTextManager
@@ -38185,7 +38368,7 @@ RectTransform:
   - {fileID: 297585361}
   - {fileID: 963985285}
   - {fileID: 58343584}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 581897563}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -43284,7 +43467,7 @@ GameObject:
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1406481396
 Transform:
   m_ObjectHideFlags: 0
@@ -55530,8 +55713,8 @@ RectTransform:
   m_GameObject: {fileID: 1830969505}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.04, y: 0.84, z: 0.45}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.4, y: 0.32307693, z: 0.17307693}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 859622839}
   - {fileID: 229695121}
@@ -55543,7 +55726,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 94.2}
+  m_AnchoredPosition: {x: 0, y: 401.23}
   m_SizeDelta: {x: 690, y: 96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1830969507
@@ -58399,7 +58582,7 @@ PrefabInstance:
     - target: {fileID: 552792410742213248, guid: 1381bd1a6ba88ef4b977152fb2924844,
         type: 3}
       propertyPath: EnableVR
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 552792410742213248, guid: 1381bd1a6ba88ef4b977152fb2924844,
         type: 3}
@@ -58436,6 +58619,11 @@ PrefabInstance:
       propertyPath: bulletParent
       value: 
       objectReference: {fileID: 630920652}
+    - target: {fileID: 552792410742213248, guid: 1381bd1a6ba88ef4b977152fb2924844,
+        type: 3}
+      propertyPath: enableMobile
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 552792410742213248, guid: 1381bd1a6ba88ef4b977152fb2924844,
         type: 3}
       propertyPath: mobileReloadButton
@@ -58480,7 +58668,7 @@ PrefabInstance:
     - target: {fileID: 852793589731585584, guid: 1381bd1a6ba88ef4b977152fb2924844,
         type: 3}
       propertyPath: EnableVR
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 852793589731585584, guid: 1381bd1a6ba88ef4b977152fb2924844,
         type: 3}
@@ -58512,6 +58700,11 @@ PrefabInstance:
       propertyPath: bulletParent
       value: 
       objectReference: {fileID: 630920652}
+    - target: {fileID: 852793589731585584, guid: 1381bd1a6ba88ef4b977152fb2924844,
+        type: 3}
+      propertyPath: enableMobile
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 852793589731585584, guid: 1381bd1a6ba88ef4b977152fb2924844,
         type: 3}
       propertyPath: shootInterval
@@ -58555,12 +58748,22 @@ PrefabInstance:
     - target: {fileID: 1301688279736605395, guid: 1381bd1a6ba88ef4b977152fb2924844,
         type: 3}
       propertyPath: EnableVR
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1301688279736605395, guid: 1381bd1a6ba88ef4b977152fb2924844,
         type: 3}
       propertyPath: rightHand
       value: 
+      objectReference: {fileID: 581897564}
+    - target: {fileID: 1301688279736605395, guid: 1381bd1a6ba88ef4b977152fb2924844,
+        type: 3}
+      propertyPath: mouseControls
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301688279736605395, guid: 1381bd1a6ba88ef4b977152fb2924844,
+        type: 3}
+      propertyPath: rotationSpeed
+      value: 0.29
       objectReference: {fileID: 0}
     - target: {fileID: 1348529201709694095, guid: 1381bd1a6ba88ef4b977152fb2924844,
         type: 3}
@@ -58616,7 +58819,7 @@ PrefabInstance:
     - target: {fileID: 1787290551643628114, guid: 1381bd1a6ba88ef4b977152fb2924844,
         type: 3}
       propertyPath: EnableVR
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1787290551643628114, guid: 1381bd1a6ba88ef4b977152fb2924844,
         type: 3}
@@ -58645,13 +58848,18 @@ PrefabInstance:
       objectReference: {fileID: 1615031538}
     - target: {fileID: 1787290551643628114, guid: 1381bd1a6ba88ef4b977152fb2924844,
         type: 3}
+      propertyPath: EnableMobile
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1787290551643628114, guid: 1381bd1a6ba88ef4b977152fb2924844,
+        type: 3}
       propertyPath: driftTextManager
       value: 
       objectReference: {fileID: 1968328711}
     - target: {fileID: 1812431862865609435, guid: 1381bd1a6ba88ef4b977152fb2924844,
         type: 3}
       propertyPath: EnableVR
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1812431862865609435, guid: 1381bd1a6ba88ef4b977152fb2924844,
         type: 3}
@@ -58683,6 +58891,11 @@ PrefabInstance:
       propertyPath: bulletParent
       value: 
       objectReference: {fileID: 630920652}
+    - target: {fileID: 1812431862865609435, guid: 1381bd1a6ba88ef4b977152fb2924844,
+        type: 3}
+      propertyPath: enableMobile
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1812431862865609435, guid: 1381bd1a6ba88ef4b977152fb2924844,
         type: 3}
       propertyPath: mobileReloadButton
@@ -58826,12 +59039,22 @@ PrefabInstance:
     - target: {fileID: 2431624246912824816, guid: 1381bd1a6ba88ef4b977152fb2924844,
         type: 3}
       propertyPath: EnableVR
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2431624246912824816, guid: 1381bd1a6ba88ef4b977152fb2924844,
         type: 3}
       propertyPath: rightHand
       value: 
+      objectReference: {fileID: 581897564}
+    - target: {fileID: 2431624246912824816, guid: 1381bd1a6ba88ef4b977152fb2924844,
+        type: 3}
+      propertyPath: mouseControls
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2431624246912824816, guid: 1381bd1a6ba88ef4b977152fb2924844,
+        type: 3}
+      propertyPath: rotationSpeed
+      value: 0.29
       objectReference: {fileID: 0}
     - target: {fileID: 2469775782127789521, guid: 1381bd1a6ba88ef4b977152fb2924844,
         type: 3}
@@ -58956,12 +59179,22 @@ PrefabInstance:
     - target: {fileID: 3335713110638162336, guid: 1381bd1a6ba88ef4b977152fb2924844,
         type: 3}
       propertyPath: EnableVR
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3335713110638162336, guid: 1381bd1a6ba88ef4b977152fb2924844,
         type: 3}
       propertyPath: rightHand
       value: 
+      objectReference: {fileID: 581897564}
+    - target: {fileID: 3335713110638162336, guid: 1381bd1a6ba88ef4b977152fb2924844,
+        type: 3}
+      propertyPath: mouseControls
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3335713110638162336, guid: 1381bd1a6ba88ef4b977152fb2924844,
+        type: 3}
+      propertyPath: rotationSpeed
+      value: 0.29
       objectReference: {fileID: 0}
     - target: {fileID: 3374694883604154254, guid: 1381bd1a6ba88ef4b977152fb2924844,
         type: 3}
@@ -65508,7 +65741,7 @@ PrefabInstance:
     - target: {fileID: 1214300641852454729, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
         type: 3}
       propertyPath: EnableVR
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1214300641852454729, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
         type: 3}
@@ -65540,6 +65773,11 @@ PrefabInstance:
       propertyPath: bulletParent
       value: 
       objectReference: {fileID: 630920652}
+    - target: {fileID: 1214300641852454729, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
+        type: 3}
+      propertyPath: enableMobile
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1214300641852454729, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
         type: 3}
       propertyPath: mobileReloadButton
@@ -65673,12 +65911,22 @@ PrefabInstance:
     - target: {fileID: 1522330184891557492, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
         type: 3}
       propertyPath: EnableVR
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1522330184891557492, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
         type: 3}
       propertyPath: rightHand
       value: 
+      objectReference: {fileID: 581897564}
+    - target: {fileID: 1522330184891557492, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
+        type: 3}
+      propertyPath: mouseControls
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522330184891557492, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
+        type: 3}
+      propertyPath: rotationSpeed
+      value: 0.29
       objectReference: {fileID: 0}
     - target: {fileID: 1566553367464040805, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
         type: 3}
@@ -65908,7 +66156,7 @@ PrefabInstance:
     - target: {fileID: 7090623433213263604, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
         type: 3}
       propertyPath: EnableVR
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7090623433213263604, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
         type: 3}
@@ -65942,6 +66190,11 @@ PrefabInstance:
       objectReference: {fileID: 630920652}
     - target: {fileID: 7090623433213263604, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
         type: 3}
+      propertyPath: enableMobile
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7090623433213263604, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
+        type: 3}
       propertyPath: shootInterval
       value: 0.1
       objectReference: {fileID: 0}
@@ -65973,7 +66226,7 @@ PrefabInstance:
     - target: {fileID: 7105639635749836206, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
         type: 3}
       propertyPath: EnableVR
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7105639635749836206, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
         type: 3}
@@ -65990,6 +66243,11 @@ PrefabInstance:
       propertyPath: multManager
       value: 
       objectReference: {fileID: 1615031538}
+    - target: {fileID: 7105639635749836206, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
+        type: 3}
+      propertyPath: EnableMobile
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7105639635749836206, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
         type: 3}
       propertyPath: driftTextManager
@@ -66163,12 +66421,22 @@ PrefabInstance:
     - target: {fileID: 8064139703768980118, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
         type: 3}
       propertyPath: EnableVR
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8064139703768980118, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
         type: 3}
       propertyPath: rightHand
       value: 
+      objectReference: {fileID: 581897564}
+    - target: {fileID: 8064139703768980118, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
+        type: 3}
+      propertyPath: mouseControls
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8064139703768980118, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
+        type: 3}
+      propertyPath: rotationSpeed
+      value: 0.29
       objectReference: {fileID: 0}
     - target: {fileID: 8070401300462971445, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
         type: 3}
@@ -66178,7 +66446,7 @@ PrefabInstance:
     - target: {fileID: 8193966286444298675, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
         type: 3}
       propertyPath: EnableVR
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8193966286444298675, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
         type: 3}
@@ -66210,6 +66478,11 @@ PrefabInstance:
       propertyPath: bulletParent
       value: 
       objectReference: {fileID: 630920652}
+    - target: {fileID: 8193966286444298675, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
+        type: 3}
+      propertyPath: enableMobile
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8193966286444298675, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
         type: 3}
       propertyPath: mobileReloadButton
@@ -66279,12 +66552,22 @@ PrefabInstance:
     - target: {fileID: 9042023277460601830, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
         type: 3}
       propertyPath: EnableVR
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9042023277460601830, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
         type: 3}
       propertyPath: rightHand
       value: 
+      objectReference: {fileID: 581897564}
+    - target: {fileID: 9042023277460601830, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
+        type: 3}
+      propertyPath: mouseControls
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9042023277460601830, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
+        type: 3}
+      propertyPath: rotationSpeed
+      value: 0.29
       objectReference: {fileID: 0}
     - target: {fileID: 9079431395045324088, guid: d7e6d2a250ef02e409d3d53a25aa8e73,
         type: 3}
@@ -67673,4 +67956,4 @@ SceneRoots:
   - {fileID: 365576129}
   - {fileID: 151465080}
   - {fileID: 1118784063}
-  - {fileID: 1262308835}
+  - {fileID: 581897562}
