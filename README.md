@@ -10,11 +10,11 @@ https://youtu.be/VR1oaOKUCyM
 
 ## How to install
 
-Open the “Download Link” .txt file where you will be navigated to a Google Drive folder, there you can download the correct build, for example if you are on mobile then get the Android.apk, for vr get the VR.apk and for PC, install the PCfolder.
-For VR and Android you will have to open the .apk and allow it to install, if prompted with “not allowed to download from unknown sources” or something similar, typically there is a prompt which you can navigate to which allows you to install it anyways. This is because the app is not widely recognised yet and it is not because it is flagged as suspicious, it is just unknown because it is new.
-Once installed, navigate to it and open it.
-On PC, run the .exe file.
-On all platforms the game will load for about a minute or two as the music and other settings are loaded.
+- Open the “Download Link” .txt file where you will be navigated to a Google Drive folder, there you can download the correct build, for example if you are on mobile then get the Android.apk, for vr get the VR.apk and for PC, install the PCfolder.
+- For VR and Android you will have to open the .apk and allow it to install, if prompted with “not allowed to download from unknown sources” or something similar, typically there is a prompt which you can navigate to which allows you to install it anyways. This is because the app is not widely recognised yet and it is not because it is flagged as suspicious, it is just unknown because it is new.
+- Once installed, navigate to it and open it.
+- On PC, run the .exe file.
+- On all platforms the game will load for about a minute or two as the music and other settings are loaded.
 
 Windows 10 and 11 were used to create and test Gunman Drift PC.
 Android 14 and 15 were used to create and test Gunman Drift Android.
@@ -40,7 +40,7 @@ Specifications of the devices used are considered to be above average and no oth
 
 ### Touch controls for mobile
 
-
+![Mobile Controls](/Images/image.png)
 
 - Left Joystick - Drive and steer
 - Right Joystick - Aim / Rotate weapon
@@ -48,6 +48,8 @@ Specifications of the devices used are considered to be above average and no oth
 - Reload button on the right - Reload weapon
 
 ### VR controls for Meta Quest 2
+
+![VR Controls](/Images/VR-controls.png)
 
 - Left Index Trigger - Drive
 - Left Trigger - Reverse
@@ -59,7 +61,7 @@ Specifications of the devices used are considered to be above average and no oth
 - B - Reload
 - A - Confirm within menus
 
-
+![Cross-play](/Images/Cross-play.png)
 
 ## Devlogs
 - 1 https://youtu.be/k16GoCjuX84 
