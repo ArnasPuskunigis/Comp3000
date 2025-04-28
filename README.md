@@ -4,6 +4,10 @@
 
 Gunman Drift is a stylised, 3D driving, drifting, and shooting game originally developed as a Personal Computer (PC) prototype. It now has been upgraded and has support for Meta Quest 2 VR and Android devices, has AI enemies and support simple racing multiplayer mechanics which work between all platforms.
 
+## Video
+
+https://youtu.be/VR1oaOKUCyM 
+
 ## How to install
 
 Download the source code from the GitHub repository found here: https://github.com/ArnasPuskunigis/Comp3000.
