@@ -10,8 +10,7 @@ https://youtu.be/VR1oaOKUCyM
 
 ## How to install
 
-Download the source code from the GitHub repository found here: https://github.com/ArnasPuskunigis/Comp3000.
-Open the “Download Link” text file where you will be navigated to a Google Drive folder, there you can download the correct build, for example if you are on mobile then get the Android.apk, for vr get the VR.apk and for PC, install the PCfolder.
+Open the “Download Link” .txt file where you will be navigated to a Google Drive folder, there you can download the correct build, for example if you are on mobile then get the Android.apk, for vr get the VR.apk and for PC, install the PCfolder.
 For VR and Android you will have to open the .apk and allow it to install, if prompted with “not allowed to download from unknown sources” or something similar, typically there is a prompt which you can navigate to which allows you to install it anyways. This is because the app is not widely recognised yet and it is not because it is flagged as suspicious, it is just unknown because it is new.
 Once installed, navigate to it and open it.
 On PC, run the .exe file.
@@ -27,38 +26,38 @@ Specifications of the devices used are considered to be above average and no oth
 
 ### Keyboard controls for PC
 
-W - Accelerate
-S - Reverse
-A - Turn Left
-D - Turn Right
-V - Change Song
-R - Reload
-Esc/P - Pause
-Space Bar - Open Crate
-Space Bar - Begin Multiplayer Race
-Mouse - Aim weapon
-Left Mouse Button - Shoot weapon
+- W - Accelerate
+- S - Reverse
+- A - Turn Left
+- D - Turn Right
+- V - Change Song
+- R - Reload
+- Esc/P - Pause
+- Space Bar - Open Crate
+- Space Bar - Begin Multiplayer Race
+- Mouse - Aim weapon
+- Left Mouse Button - Shoot weapon
 
 ### Touch controls for mobile
 
 
 
-Left Joystick - Drive and steer
-Right Joystick - Aim / Rotate weapon
-Crosshair Buttons either side - Shoot weapon
-Reload button on the right - Reload weapon
+- Left Joystick - Drive and steer
+- Right Joystick - Aim / Rotate weapon
+- Crosshair Buttons either side - Shoot weapon
+- Reload button on the right - Reload weapon
 
 ### VR controls for Meta Quest 2
 
-Left Index Trigger - Drive
-Left Trigger - Reverse
-Left Joystick - Steer
-Left Joystick - Navigate menus
-Y - Pause menu
-Right Controller - Aim weapon
-Right Index Trigger - Shoot weapon
-B - Reload
-A - Confirm within menus
+- Left Index Trigger - Drive
+- Left Trigger - Reverse
+- Left Joystick - Steer
+- Left Joystick - Navigate menus
+- Y - Pause menu
+- Right Controller - Aim weapon
+- Right Index Trigger - Shoot weapon
+- B - Reload
+- A - Confirm within menus
 
 
 
