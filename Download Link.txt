@@ -1,10 +1,6 @@
-# Comp3000
+Google Drive link: https://drive.google.com/drive/folders/1BuzplopGkFwNsZLfXzoLO5dYgxW4k__k?usp=sharing 
 
-## Gameplay
-
-Gunman Drift is a stylised, 3D driving, drifting, and shooting game originally developed as a Personal Computer (PC) prototype. It now has been upgraded and has support for Meta Quest 2 VR and Android devices, has AI enemies and support simple racing multiplayer mechanics which work between all platforms.
-
-## How to install
+How to install
 
 Download the source code from the GitHub repository found here: https://github.com/ArnasPuskunigis/Comp3000.
 Open the “Download Link” text file where you will be navigated to a Google Drive folder, there you can download the correct build, for example if you are on mobile then get the Android.apk, for vr get the VR.apk and for PC, install the PCfolder.
@@ -19,9 +15,9 @@ Meta Quest 2 was used to create and test Gunman Drift VR.
 
 Specifications of the devices used are considered to be above average and no other device specifications have been noted therefore there is a limited amount of data on what devices can run it, however informal data shows that around 20% of a Ryzen 7 5700X3D processor and 3GB of ram are used by the game. This could suggest that a Ryzen 5 2600 would also be able to run the game. Minimum graphics card is likely an Nvidia GeForce GTX 1050Ti, possibly even weaker.
 
-## Controls
+Controls
 
-### Keyboard controls for PC
+Keyboard controls for PC
 
 W - Accelerate
 S - Reverse
@@ -35,7 +31,7 @@ Space Bar - Begin Multiplayer Race
 Mouse - Aim weapon
 Left Mouse Button - Shoot weapon
 
-### Touch controls for mobile
+Touch controls for mobile
 
 
 
@@ -44,7 +40,7 @@ Right Joystick - Aim / Rotate weapon
 Crosshair Buttons either side - Shoot weapon
 Reload button on the right - Reload weapon
 
-### VR controls for Meta Quest 2
+VR controls for Meta Quest 2
 
 Left Index Trigger - Drive
 Left Trigger - Reverse
@@ -56,12 +52,3 @@ Right Index Trigger - Shoot weapon
 B - Reload
 A - Confirm within menus
 
-
-
-## Devlogs
-- 1 https://youtu.be/k16GoCjuX84 
-- 2 https://youtu.be/Hs37mPJeCVE 
-- 3 https://youtu.be/YeSt0DCmpHE 
-- 4 https://youtu.be/Y4t2Tod4VGw 
-- 5 https://youtu.be/XSF7MNd71p0
-- 6 https://youtu.be/b35XiCWpgl0
