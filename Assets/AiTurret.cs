@@ -40,8 +40,8 @@ public class AiTurret : MonoBehaviour
 
     private void followTarget()
     {
-        float distance = distanceBetween;
-        if (Vector3.Distance(transform.position, targetObject.transform.position) > distanceLimit)
+        distanceBetween = Vector3.Distance(transform.position, targetObject.transform.position);
+        if (distanceBetween < distanceLimit)
         {
             navAgent.SetDestination(targetObject.transform.position);
         }

@@ -12,6 +12,13 @@ TagManager:
   - smash
   - uiparent
   - turretBullet
+  - Road
+  - DirtRoad
+  - Trailer
+  - Vehicle
+  - EnterExitPoint
+  - Wheel
+  - IgnoreDamage
   layers:
   - Default
   - TransparentFX
@@ -27,7 +34,7 @@ TagManager:
   - target
   - brokenTarget
   - enemy
-  - background
+  - 
   - 
   - 
   - 
