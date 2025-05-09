@@ -54,7 +54,7 @@ MonoBehaviour:
     initialized: 0
     lodIndex: -1
   - fullName: NWH.VehiclePhysics2.Modules.Aerodynamics.AerodynamicsModule
-    isEnabled: 0
+    isEnabled: 1
     initialized: 0
     lodIndex: -1
   - fullName: NWH.VehiclePhysics2.Modules.AirSteer.AirSteerModule

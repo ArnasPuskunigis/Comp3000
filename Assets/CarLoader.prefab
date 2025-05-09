@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3802262857544565316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4839078561554152094}
+  - component: {fileID: 4303627047795565038}
+  m_Layer: 0
+  m_Name: CarLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4839078561554152094
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3802262857544565316}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 905.7913, y: 394.39633, z: -25.569267}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4303627047795565038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3802262857544565316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f91c337104e55f4db539b4aaa645993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SaveManager: {fileID: 0}
+  SaveManagerScript: {fileID: 0}
+  spawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  slowCar: {fileID: 5870789602662788887, guid: 3dd0190b76f31cc4b9a17adef1b90335, type: 3}
+  mediumCar: {fileID: 4939507543234653664, guid: f87cf4ecbcd1b8f409b23c17b2e4988e,
+    type: 3}
+  fastCar: {fileID: 3605968660320343712, guid: f5fdf47f57059d94b8cbc186ce6dfe31, type: 3}
+  currentCar: {fileID: 0}
+  currentCarBody: {fileID: 0}
+  redColour: {fileID: 2100000, guid: 5f8274c96edf0324bbd3e35650104eb0, type: 2}
+  blueColour: {fileID: 2100000, guid: 71f4123858492fc4898afdf1a3fe7682, type: 2}
+  greenColour: {fileID: 2100000, guid: 9ab9cbcbeea0c534da13fdae1e1d621f, type: 2}
+  purpleColour: {fileID: 2100000, guid: 48476a15ad6755145a00c40330faea1a, type: 2}
+  yellowColour: {fileID: 2100000, guid: d8ad139f60fdeb04db24b7832855396b, type: 2}
+  cyanColour: {fileID: 2100000, guid: 43a095858c85e8c4b8c9b89388b1e8cc, type: 2}
+  lavenderColour: {fileID: 2100000, guid: 3487197174f60844a9bbfff641fc9961, type: 2}
+  peachColour: {fileID: 2100000, guid: 8751941ab5b04554099f0d8993030c52, type: 2}
+  pinkColour: {fileID: 2100000, guid: 74126c34b9e79ae4bbcc6a49da3c6660, type: 2}
+  bronzeColour: {fileID: 2100000, guid: 40958b145f905e845bd1c1fbc6764b2d, type: 2}
+  silverColour: {fileID: 2100000, guid: df2ecd11508fe13489d55c84bb958001, type: 2}
+  goldColour: {fileID: 2100000, guid: 426ea42629003c04a96152548e05a433, type: 2}
+  tintWindowsColour: {fileID: 2100000, guid: 498319704a0bcfe49962304bf0f0cb83, type: 2}
+  gunSocket: {fileID: 0}
+  pistolWeapon: {fileID: 1816694225204088956, guid: ea2425d40d839d948b5a35615a7c2308,
+    type: 3}
+  smgWeapon: {fileID: 4035288348645271417, guid: e339305536d96f54ba83f7ed2db13c26,
+    type: 3}
+  rifleWeapon: {fileID: 610727720545493768, guid: e87d30d54cbc6234cbe2fd045b4d1383,
+    type: 3}
+  mainCamera: {fileID: 0}
+  smartCam: {fileID: 0}
+  virtualCam: {fileID: 0}
+  carsSpawned: 0
