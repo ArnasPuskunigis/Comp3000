@@ -19,6 +19,8 @@ TagManager:
   - EnterExitPoint
   - Wheel
   - IgnoreDamage
+  - Sand
+  - Rock
   layers:
   - Default
   - TransparentFX

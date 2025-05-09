@@ -30,13 +30,13 @@ MonoBehaviour:
   skidSoundClip: {fileID: 8300000, guid: a2a31d70250395f42ae658a9f1a2a453, type: 3}
   playSkidSounds: 1
   skidSoundPitch: 0.82
-  skidSoundVolume: 0.05
+  skidSoundVolume: 0.5
   slipFactor: 0
   slipSensitiveSurfaceSound: 0
   playSurfaceSounds: 1
   surfaceSoundClip: {fileID: 8300000, guid: a2a31d70250395f42ae658a9f1a2a453, type: 3}
   surfaceSoundPitch: 0.75
-  surfaceSoundVolume: 0.03
+  surfaceSoundVolume: 0.5
   drawSkidmarks: 1
   skidmarkMaterial: {fileID: 2100000, guid: 449bf69ad657ea4429f852bc77906eee, type: 2}
   skidmarkBaseIntensity: 0.787

@@ -16,7 +16,7 @@ MonoBehaviour:
   particleColor: {r: 0.9528302, g: 0.9528302, b: 0.9528302, a: 1}
   maxParticleEmissionRateOverDistance: 0.978
   particleSize: 2.4
-  emitParticles: 1
+  emitParticles: 0
   emitChunks: 0
   maxChunkEmissionRateOverDistance: 1
   chunkLifeDistance: 3
@@ -29,14 +29,14 @@ MonoBehaviour:
   name: Asphalt
   skidSoundClip: {fileID: 8300000, guid: 23786ba668590b8418f6771116dbaf09, type: 3}
   playSkidSounds: 1
-  skidSoundPitch: 1.29
-  skidSoundVolume: 0.6
+  skidSoundPitch: 2
+  skidSoundVolume: 1
   slipFactor: 1
   slipSensitiveSurfaceSound: 1
   playSurfaceSounds: 1
   surfaceSoundClip: {fileID: 8300000, guid: 77d6eaeb41d727a4681a2cc8654c60b2, type: 3}
-  surfaceSoundPitch: 1
-  surfaceSoundVolume: 0.25
+  surfaceSoundPitch: 2
+  surfaceSoundVolume: 1
   drawSkidmarks: 1
   skidmarkMaterial: {fileID: 2100000, guid: ca984932f6957a744bdc716a2ac03220, type: 2}
   skidmarkBaseIntensity: 0

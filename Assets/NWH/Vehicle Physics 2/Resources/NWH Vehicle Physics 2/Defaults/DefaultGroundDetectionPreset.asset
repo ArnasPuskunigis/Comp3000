@@ -26,7 +26,8 @@ MonoBehaviour:
     terrainTextureIndices: 04000000
   - name: Sand
     surfacePreset: {fileID: 11400000, guid: 00235ad97f72a8c478ab876499603179, type: 2}
-    tags: []
+    tags:
+    - Sand
     terrainTextureIndices: 00000000
   - name: Grass
     surfacePreset: {fileID: 11400000, guid: be05cb2bebbf7ed4584dd87d3d9945a6, type: 2}
@@ -34,7 +35,8 @@ MonoBehaviour:
     terrainTextureIndices: 01000000
   - name: Rock
     surfacePreset: {fileID: 11400000, guid: 866ffe46e83212b4682663d0bacc7011, type: 2}
-    tags: []
+    tags:
+    - Rock
     terrainTextureIndices: 03000000
   - name: Gravel
     surfacePreset: {fileID: 11400000, guid: 5740b23f6dc2d574cadb54413a6f7a54, type: 2}
