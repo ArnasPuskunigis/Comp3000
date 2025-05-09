@@ -3,7 +3,14 @@ guid: 55d247dfd66ef9c48a89b735d89cd8d3
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - currentCheckpoint: {instanceID: 0}
+  - greenCp: {instanceID: 0}
+  - yellowCp: {instanceID: 0}
+  - LapUIManager: {instanceID: 0}
+  - lapTimer: {instanceID: 0}
+  - expManager: {instanceID: 0}
+  - resetTargetsScript: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

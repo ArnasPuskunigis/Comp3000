@@ -685,6 +685,8 @@ GameObject:
   - component: {fileID: 6810891447980912169}
   - component: {fileID: 2513660297438394213}
   - component: {fileID: 940862876267445987}
+  - component: {fileID: -2308689262624377571}
+  - component: {fileID: 5594412551834283805}
   m_Layer: 6
   m_Name: CarFast
   m_TagString: Vehicle
@@ -700,7 +702,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2956720194690272856}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -717,7 +719,7 @@ Transform:
   - {fileID: 6383562774954977925}
   - {fileID: 816991435386901518}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &6810891447980912169
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1400,6 +1402,46 @@ MonoBehaviour:
     simulateDrag: 1
     lateralDragForce: 0
     longitudinalDragForce: 0
+--- !u!114 &-2308689262624377571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2956720194690272856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0bd8751e03b86b46b552cfa1a0cbf3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 0
+  maxHp: 0
+  hpText: {fileID: 7401913806669958869}
+  isDead: 0
+--- !u!114 &5594412551834283805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2956720194690272856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55d247dfd66ef9c48a89b735d89cd8d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trackColliders: []
+  currentCheckpoint: {fileID: 0}
+  currentCheckpointInt: 0
+  currentLap: 0
+  greenCp: {fileID: 6543019913904720053, guid: ba379518f842b6e4faff3aa084aabf77, type: 3}
+  yellowCp: {fileID: 9032734485615322398, guid: 06616c2ac3bc51945bb17b487bce26c0,
+    type: 3}
+  checkPointOffset: {x: 0, y: 0, z: 0}
+  LapUIManager: {fileID: 0}
+  lapTimer: {fileID: 0}
+  expManager: {fileID: 0}
+  resetTargetsScript: {fileID: 0}
 --- !u!1 &3708481418700531076
 GameObject:
   m_ObjectHideFlags: 0
@@ -12101,7 +12143,7 @@ PrefabInstance:
     - target: {fileID: 5771252710154323720, guid: 5e569eccee96e7c44ad74a5314e7ad60,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12114,3 +12156,15 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 9079708118999708964}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7401913806669958869 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1781590429434280945, guid: 5e569eccee96e7c44ad74a5314e7ad60,
+    type: 3}
+  m_PrefabInstance: {fileID: 9079708118999708964}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

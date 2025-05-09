@@ -5692,6 +5692,8 @@ GameObject:
   - component: {fileID: 7654156837970292816}
   - component: {fileID: 5127601973734210327}
   - component: {fileID: 5775686198488902555}
+  - component: {fileID: 9210621362333544563}
+  - component: {fileID: 686778106646874197}
   m_Layer: 6
   m_Name: CarSlow
   m_TagString: Vehicle
@@ -6405,6 +6407,46 @@ MonoBehaviour:
     simulateDrag: 1
     lateralDragForce: 0
     longitudinalDragForce: 0
+--- !u!114 &9210621362333544563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5870789602662788887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0bd8751e03b86b46b552cfa1a0cbf3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 0
+  maxHp: 0
+  hpText: {fileID: 8145847183610264449}
+  isDead: 0
+--- !u!114 &686778106646874197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5870789602662788887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55d247dfd66ef9c48a89b735d89cd8d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trackColliders: []
+  currentCheckpoint: {fileID: 0}
+  currentCheckpointInt: 0
+  currentLap: 0
+  greenCp: {fileID: 6543019913904720053, guid: ba379518f842b6e4faff3aa084aabf77, type: 3}
+  yellowCp: {fileID: 9032734485615322398, guid: 06616c2ac3bc51945bb17b487bce26c0,
+    type: 3}
+  checkPointOffset: {x: 0, y: 0, z: 0}
+  LapUIManager: {fileID: 0}
+  lapTimer: {fileID: 0}
+  expManager: {fileID: 0}
+  resetTargetsScript: {fileID: 0}
 --- !u!1 &6407701960557816345
 GameObject:
   m_ObjectHideFlags: 0
@@ -7264,13 +7306,25 @@ PrefabInstance:
     - target: {fileID: 5771252710154323720, guid: 5e569eccee96e7c44ad74a5314e7ad60,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e569eccee96e7c44ad74a5314e7ad60, type: 3}
+--- !u!114 &8145847183610264449 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1781590429434280945, guid: 5e569eccee96e7c44ad74a5314e7ad60,
+    type: 3}
+  m_PrefabInstance: {fileID: 7616334451833749616}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &8309524839732550524 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1937668260649884428, guid: 5e569eccee96e7c44ad74a5314e7ad60,
